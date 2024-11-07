@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'DiodrumRegular'; /* Give your font a name */
+    src: url('../asset/fonts/DiodrumArabic-Regular.ttf') format('truetype'); /* Adjust path as needed */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DiodrumMedium'; /* Give your font a name */
+    src: url('../asset/fonts/DiodrumArabic-Medium.ttf') format('truetype'); /* Adjust path as needed */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DiodrumBold'; /* Give your font a name */
+    src: url('../asset/fonts/arfonts-diodrum-arabic-bold.ttf') format('truetype'); /* Adjust path as needed */
+    font-weight: normal;
+    font-style: normal;
+}
