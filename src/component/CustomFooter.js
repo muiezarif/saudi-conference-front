@@ -1,7 +1,12 @@
 import React from 'react';
-import {Col, Container, FormGroup, Input, Label, Row} from 'reactstrap';
-import {FaFacebook, FaInstagram, FaLinkedin, FaSnapchat, FaTwitter, FaYoutube} from 'react-icons/fa';
-import logo from '../asset/HeaderLogo.png'
+import { Col, Container, FormGroup, Input, Label, Row } from 'reactstrap';
+import logo from '../asset/HeaderLogo.png';
+import img1 from "../asset/socialMedia/img1.png";
+import img2 from "../asset/socialMedia/img2.png";
+import img3 from "../asset/socialMedia/img3.png";
+import img4 from "../asset/socialMedia/img4.png";
+import img5 from "../asset/socialMedia/img5.png";
+import img6 from "../asset/socialMedia/img6.png";
 
 const CustomFooter = () => {
     const style = {
@@ -9,71 +14,71 @@ const CustomFooter = () => {
             backgroundColor: '#6f7dbb',
             borderRadius: '20px',
             color: '#ffffff',
-            textAlign: 'right'
+            textAlign: 'right',
         }
-    }
+    };
 
     return (
-        <div style={{backgroundColor: '#0b1a8a', color: '#ffffff', padding: '20px 0', marginTop: "200px"}}>
+        <div style={{ backgroundColor: '#0b1a8a', color: '#ffffff', padding: '20px 0', marginTop: "200px" }}>
             <Container>
-                <Row>
-                    <Col className="text-center m-2">
-                        <h5 style={{color: 'white', textAlign: 'right', fontFamily: "DiodrumBold"}}>
-                            تواصل معنا</h5>
+                <Row className="justify-content-center">
+                    <Col xs={12} className="text-center mb-3">
+                        <h5 style={{ color: 'white', textAlign: 'right', fontFamily: "DiodrumBold" }}>
+                            تواصل معنا
+                        </h5>
                     </Col>
                 </Row>
-                <Row style={{textAlign: 'right', fontFamily: "DiodrumRegular"}}>
-                    <Col md={6}>
+
+                {/* Form Section */}
+                <Row style={{ textAlign: 'right', fontFamily: "DiodrumRegular" }}>
+                    <Col xs={12} md={6} className="mb-3">
                         <FormGroup>
-                            <Label for="firstName" style={{textAlign: 'right', fontFamily: ""}}>البريد
-                                الإلكتروني</Label>
-                            <Input type="text" name="firstName" id="firstName" placeholder="" style={style.textField}/>
+                            <Label for="firstName">البريد الإلكتروني</Label>
+                            <Input type="text" id="firstName" placeholder="" style={style.textField} />
                         </FormGroup>
                     </Col>
-                    <Col md={6} style={{textAlign: 'right'}}>
+                    <Col xs={12} md={6} className="mb-3">
                         <FormGroup>
                             <Label for="email">الاسم</Label>
-                            <Input type="email" name="email" id="email" placeholder="" style={style.textField}/>
+                            <Input type="email" id="email" placeholder="" style={style.textField} />
                         </FormGroup>
                     </Col>
                 </Row>
-                <Row style={{textAlign: 'right', fontFamily: "DiodrumRegular"}}>
-                    <Col md={6}>
+
+                <Row style={{ textAlign: 'right', fontFamily: "DiodrumRegular" }}>
+                    <Col xs={12} md={6} className="mb-3">
                         <FormGroup>
-                            <Label for="firstName" style={{textAlign: 'right'}}>الرسالة</Label>
-                            <Input type="text" name="firstName" id="firstName" placeholder="" style={style.textField}/>
+                            <Label for="message">الرسالة</Label>
+                            <Input type="text" id="message" placeholder="" style={style.textField} />
                         </FormGroup>
                     </Col>
-                    <Col md={6} style={{textAlign: 'right'}}>
+                    <Col xs={12} md={6} className="mb-3">
                         <FormGroup>
-                            <Label for="email">الجوال</Label>
-                            <Input type="email" name="email" id="email" placeholder="" style={style.textField}/>
+                            <Label for="phone">الجوال</Label>
+                            <Input type="text" id="phone" placeholder="" style={style.textField} />
                         </FormGroup>
                     </Col>
                 </Row>
-                <Row className="justify-content-center mt-2">
-                    <Col md="4" className='d-flex mt-3'>
-                        <FaTwitter size={28} style={{margin: '0 10px', color: '#ffffff'}}/>
-                        <FaFacebook size={28} style={{margin: '0 10px', color: '#ffffff'}}/>
-                        <FaInstagram size={28} style={{margin: '0 10px', color: '#ffffff'}}/>
-                        <FaSnapchat size={28} style={{margin: '0 10px', color: '#ffffff'}}/>
-                        <FaLinkedin size={28} style={{margin: '0 10px', color: '#ffffff'}}/>
-                        <FaYoutube size={28} style={{margin: '0 10px', color: '#ffffff'}}/>
-                    </Col>
-                    <Col md={4} className="text-center mt-3" style={{fontWeight: 'bold', fontFamily: "DiodrumBold"}}>
-                        <p>جميع الحقوق محفوظة 2024</p>
-                    </Col>
-                    <Col md={4} className='d-flex justify-content-end' style={{textAlign: 'right'}}>
-                        <img src={logo} alt="Logo" style={{width: '50%'}}/>
+
+                {/* Social Media and Footer Info */}
+                <Row className="justify-content-between align-items-center mt-4">
+                    <Col xs={12} md={4} className="d-flex justify-content-center mb-3">
+                        <img src={img1} alt="Twitter" style={{ width: 28, height: 28, margin: '0 5px' }} />
+                        <img src={img2} alt="Facebook" style={{ width: 28, height: 28, margin: '0 5px' }} />
+                        <img src={img3} alt="Instagram" style={{ width: 28, height: 28, margin: '0 5px' }} />
+                        <img src={img4} alt="Snapchat" style={{ width: 28, height: 28, margin: '0 5px' }} />
+                        <img src={img5} alt="LinkedIn" style={{ width: 28, height: 28, margin: '0 5px' }} />
+                        <img src={img6} alt="YouTube" style={{ width: 28, height: 28, margin: '0 5px' }} />
                     </Col>
 
+                    <Col xs={12} md={4} className="text-center mb-3" style={{ fontWeight: 'bold', fontFamily: "DiodrumBold" }}>
+                        <p>جميع الحقوق محفوظة 2024</p>
+                    </Col>
+
+                    <Col xs={12} md={4} className="d-flex justify-content-center justify-content-md-end">
+                        <img src={logo} alt="Logo" style={{ width: '50%', maxWidth: '150px' }} />
+                    </Col>
                 </Row>
-                {/*<Row className="justify-content-center mt-4">*/}
-                {/*    <Col md="6" className="text-center">*/}
-                {/*        <p>جميع الحقوق محفوظة 2024</p>*/}
-                {/*        <p>مؤتمر المحاماة السعودي<br/>Saudi Lawyers Conference</p>*/}
-                {/*    </Col>*/}
-                {/*</Row>*/}
             </Container>
         </div>
     );

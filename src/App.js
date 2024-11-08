@@ -5,6 +5,7 @@ import RegistrationForm2 from '../src/pages/RegistrationForm2'
 import BoxesDetails from './component/HomeComponentSecThree'
 import Calendar from '../src/pages/Calendar'
 import ConferencePage from '../src/pages/ConferencePage'
+import MainPage from './component/MainPage'
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {Home} from "./pages/Home";
 import {RegMethodOne} from "./pages/RegMethodOne";
@@ -20,6 +21,7 @@ function App() {
                 <Route path="/cal" element={<Calendar/>}/>
                 <Route path="/con" element={<ConferencePage/>}/>
                 <Route path="/regmethod" element={<RegMethodOne/>}/>
+                <Route path="/main" element={<MainPage/>}/>
             </Routes>
         </BrowserRouter>
     );

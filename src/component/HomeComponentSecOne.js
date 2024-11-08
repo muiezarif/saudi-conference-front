@@ -15,6 +15,7 @@ export function HomeComponentSecOne() {
             flexDirection: "column", // Aligns items vertically
             justifyContent: "center",
             alignItems: "center",
+            marginBottom: '15px',
         },
         cardLeft: {borderTopLeftRadius: "15px", borderBottomLeftRadius: "15px"},
         cardRight: {borderTopRightRadius: "15px", borderBottomRightRadius: "15px"},
@@ -45,17 +46,21 @@ export function HomeComponentSecOne() {
             textAlign: "right",
             fontSize: "70px",
             color: "rgb(12,12,150)",
-        }
+        },
+        image: {
+            maxWidth: "100%",
+            height: "auto"
+        },
     };
 
     return (
         <Container style={styles.customFont}>
             <Row className="d-flex justify-content-between">
-                <Col xl={4} md={4} sm={4}>
-                    <img src={personImage} alt="Person"/>
+                <Col xl={4} md={4} sm={12} className="mb-3">
+                    <img src={personImage} alt="Person" style={styles.image} />
                 </Col>
-                <Col xl={6} md={6} sm={6} style={{textAlign: "right"}}>
-                    <div className="d-inline-flex gap-4">
+                <Col xl={6} md={6} sm={12} style={{textAlign: "right"}}>
+                    <div className="d-inline-flex flex-wrap justify-content-between gap-4">
                         {['ﺍﻻﻳﺎﻡ', 'ﺍﻟﺴﺎﻋﺎﺕ', 'ﺍﻟﺪﻗﺎﺋﻖ', 'ﺍﻟﺜﻮﺍﻧﻲ'].map((text, index) => (
                             <div
                                 key={index}
