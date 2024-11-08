@@ -1,6 +1,5 @@
 import React from 'react';
 import {Container, Row, Col} from 'reactstrap';
-import {Base} from "../component/Base";
 import image1 from "../asset/companyLogo/Asset 1.png";
 import image2 from "../asset/companyLogo/Asset 2.png";
 import image3 from "../asset/companyLogo/Asset 3.png";
