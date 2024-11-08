@@ -14,18 +14,19 @@ const CustomFooter = () => {
     }
 
     return (
-        <div style={{backgroundColor: '#0b1a8a', color: '#ffffff', padding: '20px 0'}}>
+        <div style={{backgroundColor: '#0b1a8a', color: '#ffffff', padding: '20px 0', marginTop: "200px"}}>
             <Container>
                 <Row>
                     <Col className="text-center m-2">
-                        <h5 className="" style={{color: 'white', textAlign: 'right', fontWeight: 'bold'}}>تواصل
-                            معنا</h5>
+                        <h5 style={{color: 'white', textAlign: 'right', fontFamily: "DiodrumBold"}}>
+                            تواصل معنا</h5>
                     </Col>
                 </Row>
-                <Row style={{textAlign: 'right'}}>
+                <Row style={{textAlign: 'right', fontFamily: "DiodrumRegular"}}>
                     <Col md={6}>
                         <FormGroup>
-                            <Label for="firstName" style={{textAlign: 'right'}}>البريد الإلكتروني</Label>
+                            <Label for="firstName" style={{textAlign: 'right', fontFamily: ""}}>البريد
+                                الإلكتروني</Label>
                             <Input type="text" name="firstName" id="firstName" placeholder="" style={style.textField}/>
                         </FormGroup>
                     </Col>
@@ -36,7 +37,7 @@ const CustomFooter = () => {
                         </FormGroup>
                     </Col>
                 </Row>
-                <Row style={{textAlign: 'right'}}>
+                <Row style={{textAlign: 'right', fontFamily: "DiodrumRegular"}}>
                     <Col md={6}>
                         <FormGroup>
                             <Label for="firstName" style={{textAlign: 'right'}}>الرسالة</Label>
@@ -59,7 +60,7 @@ const CustomFooter = () => {
                         <FaLinkedin size={28} style={{margin: '0 10px', color: '#ffffff'}}/>
                         <FaYoutube size={28} style={{margin: '0 10px', color: '#ffffff'}}/>
                     </Col>
-                    <Col md={4} className="text-center mt-3" style={{fontWeight: 'bold'}}>
+                    <Col md={4} className="text-center mt-3" style={{fontWeight: 'bold', fontFamily: "DiodrumBold"}}>
                         <p>جميع الحقوق محفوظة 2024</p>
                     </Col>
                     <Col md={4} className='d-flex justify-content-end' style={{textAlign: 'right'}}>

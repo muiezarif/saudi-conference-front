@@ -20,7 +20,7 @@ import image4 from '../asset/SliderImage/4.png';
 import image5 from '../asset/SliderImage/5.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const ConferenceSection = () => {
+const HomeComponentSecTwo = () => {
     const cardData = [
         {
             title: "أ. إبتسام محمد الناصر",
@@ -170,4 +170,4 @@ const ConferenceSection = () => {
     );
 };
 
-export default ConferenceSection;
+export default HomeComponentSecTwo;

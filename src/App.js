@@ -2,7 +2,7 @@ import './App.css';
 import RegistrationForm from '../src/pages/RegistrationForm';
 import RegistrationForm1 from '../src/pages/RegistrationForm1'
 import RegistrationForm2 from '../src/pages/RegistrationForm2'
-import BoxesDetails from './pages/BoxesDetails'
+import BoxesDetails from './component/HomeComponentSecThree'
 import Calendar from '../src/pages/Calendar'
 import ConferencePage from '../src/pages/ConferencePage'
 import {BrowserRouter, Route, Routes} from "react-router-dom";

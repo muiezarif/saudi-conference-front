@@ -2,7 +2,7 @@ import {Col, Container, Row} from "reactstrap";
 import personImage from '../asset/Person.png';
 import "../style/fonts.css";
 
-export function HomeComponentOne() {
+export function HomeComponentSecOne() {
     const styles = {
         customFont: {fontFamily: "DiodrumMedium"},
         cardBase: {
