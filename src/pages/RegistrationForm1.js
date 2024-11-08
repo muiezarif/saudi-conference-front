@@ -24,8 +24,8 @@ const RegistrationForm1 = () => {
                 <Row>
                     <Col className="text-center">
                         <h2 style={{color: '#0b1a8a', textAlign: 'right', fontFamily: "DiodrumBold"}}>فئات التذاكر</h2>
-                        <h3 style={{color: '#009688', textAlign: 'right', fontFamily: "DiodrumBold"}}>مزايا فئة
-                            VIP:</h3>
+                        <h3 style={{color: '#009688', textAlign: 'right', fontFamily: "DiodrumBold"}}>:مزايا فئة
+                            VIP</h3>
                     </Col>
                 </Row>
                 <Row className='mt-2' style={{textAlign: "right", fontFamily: "DiodrumRegular"}}>
