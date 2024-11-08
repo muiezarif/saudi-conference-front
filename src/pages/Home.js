@@ -9,12 +9,10 @@ import HomeComponentSecThree from "../component/HomeComponentSecThree";
 export function Home() {
     return (
         <Base>
-            <HomeComponentOne/>
-            <ConferenceSection/>
-            <LogoPage/>
-            {/*<HomeComponentSecOne/>*/}
-            {/*<HomeComponentSecTwo/>*/}
+            <HomeComponentSecOne/>
+            <HomeComponentSecTwo/>
             <HomeComponentSecThree/>
+            <LogoPage/>
         </Base>
     )
 }
