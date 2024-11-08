@@ -8,7 +8,6 @@ import ConferencePage from '../src/pages/ConferencePage'
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {Home} from "./pages/Home";
 import {RegMethodOne} from "./pages/RegMethodOne";
-
 function App() {
     return (
         <BrowserRouter>
