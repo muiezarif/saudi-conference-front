@@ -23,7 +23,6 @@ export function RegMethodOne() {
             textAlign: "right",
             marginBottom: "1rem",
             color: "black"
-
         }
     }
     return (
@@ -81,7 +80,8 @@ export function RegMethodOne() {
                     <Row>
                         <div className="flex flex-col items-end">
                             {/* Label for file upload */}
-                            <label className="text-gray-500 mb-4 mt-3" style={style.labelStyle}>إرفاق الملف التعريفي</label>
+                            <label className="text-gray-500 mb-4 mt-3" style={style.labelStyle}>إرفاق الملف
+                                التعريفي</label>
                             <div className="w-full h-20 bg-gray-200 rounded-lg flex justify-center items-center"
                                  style={{padding: "70px"}}>
                                 <input

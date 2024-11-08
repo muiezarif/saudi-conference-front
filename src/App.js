@@ -23,6 +23,7 @@ function App() {
                 <Route path="/box" element={<BoxesDetails/>}/>
                 <Route path="/cal" element={<Calendar/>}/>
                 <Route path="/regmethod" element={<RegMethodOne/>}/>
+                <Route path="/regmethod" element={<RegMethodOne/>}/>
                 <Route path="/main" element={<MainPage/>}/>
             </Routes>
         </BrowserRouter>

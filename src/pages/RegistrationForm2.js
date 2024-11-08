@@ -14,8 +14,14 @@ const RegistrationForm2 = () => {
         textField: {
             backgroundColor: 'rgb(237, 237, 237)',
             borderRadius: '20px',
-            color: '#ffffff',
+            color: 'black',
             textAlign: 'right'
+        },
+        labelStyle: {
+            fontFamily: "DiodrumBold",
+            textAlign: "right",
+            marginBottom: "1rem",
+            color: "black"
         }
     }
     return (
@@ -24,8 +30,8 @@ const RegistrationForm2 = () => {
                 <Row>
                     <Col className="text-center">
                         <h2 style={{color: '#0b1a8a', textAlign: 'right', fontFamily: "DiodrumBold"}}>فئات التذاكر</h2>
-                        <h3 style={{color: '#009688', textAlign: 'right', fontFamily: "DiodrumBold"}}>مزايا فئة
-                            VIP:</h3>
+                        <h3 style={{color: '#009688', textAlign: 'right', fontFamily: "DiodrumBold"}}>:مزايا فئة
+                            VIP</h3>
                     </Col>
                 </Row>
                 <Row className='mt-2' style={{textAlign: "right", fontFamily: "DiodrumRegular"}}>
@@ -51,14 +57,14 @@ const RegistrationForm2 = () => {
                     <Row form>
                         <Col md={6}>
                             <FormGroup>
-                                <Label for="firstName" style={{textAlign: 'right'}}>الاسم الأول</Label>
+                                <Label for="firstName" style={style.labelStyle}>الاسم الأول</Label>
                                 <Input type="text" name="firstName" id="firstName" placeholder=""
                                        style={style.textField}/>
                             </FormGroup>
                         </Col>
                         <Col md={6} style={{textAlign: 'right'}}>
                             <FormGroup>
-                                <Label for="email">البريد الإلكتروني</Label>
+                                <Label for="email" style={style.labelStyle}>البريد الإلكتروني</Label>
                                 <Input type="email" name="email" id="email" placeholder="" style={style.textField}/>
                             </FormGroup>
                         </Col>
@@ -67,13 +73,13 @@ const RegistrationForm2 = () => {
                     <Row form>
                         <Col md={6}>
                             <FormGroup>
-                                <Label for="phone">رقم الجوال</Label>
+                                <Label for="phone" style={style.labelStyle}>رقم الجوال</Label>
                                 <Input type="text" name="phone" id="phone" placeholder="" style={style.textField}/>
                             </FormGroup>
                         </Col>
                         <Col md={6}>
                             <FormGroup>
-                                <Label for="jobTitle">المسمى الوظيفي</Label>
+                                <Label for="jobTitle" style={style.labelStyle}>المسمى الوظيفي</Label>
                                 <Input type="text" name="jobTitle" id="jobTitle" placeholder=""
                                        style={style.textField}/>
                             </FormGroup>
@@ -83,14 +89,14 @@ const RegistrationForm2 = () => {
                     <Row form>
                         <Col md={6}>
                             <FormGroup>
-                                <Label for="organization">اسم الجهة</Label>
+                                <Label for="organization" style={style.labelStyle}>اسم الجهة</Label>
                                 <Input type="text" name="organization" id="organization" placeholder=""
                                        style={style.textField}/>
                             </FormGroup>
                         </Col>
                         <Col md={6}>
                             <FormGroup>
-                                <Label for="membershipNumber">رقم العضوية</Label>
+                                <Label for="membershipNumber" style={style.labelStyle}>رقم العضوية</Label>
                                 <Input type="text" name="membershipNumber" id="membershipNumber" placeholder=""
                                        style={style.textField}/>
                             </FormGroup>
@@ -100,14 +106,14 @@ const RegistrationForm2 = () => {
                     <Row form>
                         <Col md={6}>
                             <FormGroup>
-                                <Label for="familyName">اسم العائلة</Label>
+                                <Label for="familyName" style={style.labelStyle}>اسم العائلة</Label>
                                 <Input type="text" name="familyName" id="familyName" placeholder=""
                                        style={style.textField}/>
                             </FormGroup>
                         </Col>
                         <Col md={6}>
                             <FormGroup>
-                                <Label for="membershipType">نوع العضوية</Label>
+                                <Label for="membershipType" style={style.labelStyle}>نوع العضوية</Label>
                                 <Input type="text" name="membershipNumber" id="membershipNumber" placeholder=""
                                        style={style.textField}/>
                             </FormGroup>
