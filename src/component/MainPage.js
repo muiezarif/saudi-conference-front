@@ -27,7 +27,7 @@ const MainPage = () => {
         }
     }
     return (
-        <div style={{minHeight: "100vh", background: `url(${BackGroundImage})`, color: "white", marginTop: "-1rem"}}>
+        <div style={{minHeight: "100vh", background: `url(${BackGroundImage})`,backgroundSize: 'cover', color: "white", marginTop: "-1rem"}}>
             {/* Main Content Section */}
             <Container className="text-center py-5">
                 <Row style={style.rowStyle}>
