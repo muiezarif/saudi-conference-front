@@ -29,19 +29,23 @@ const homeComponentSecThree = () => {
             textAlign: 'right',
             fontFamily: "DiodrumBold",
             marginBottom: "40px"
+        },
+        name1: {
+            fontSize: '45px',
+            margin: '0',
+            fontFamily: "DiodrumBold"
         }
     }
     return (
         <Container className="my-5">
-            <Row className='mt-3' style={{columnGap: '26px', display: "flex", justifyContent: "center"}}>
+            <Row className='d-flex justify-content-center mt-3' style={{columnGap: '26px'}}>
                 <h2 style={style.topHeading}>ﺃﺭﻗﺎﻡ ﺍﻟﻤﺆﺗﻤﺮ</h2>
                 {cardData.map((data, index) => (
                     <Col
                         xl={2}
                         key={index}
-                        lg="3" md="3" sm="3"
-                    >
-                        <div style={{
+                        lg="3" md="4" sm="4"
+                        style={{
                             background: "#0b1a8a",
                             borderRadius: "0",
                             height: '220px',
@@ -59,7 +63,9 @@ const homeComponentSecThree = () => {
                                         ? style.lastCard
                                         : {}
                             )
-                        }}>
+                        }}
+                    >
+                        <div style={style.card}>
                             <CardBody>
                                 <strong style={{
                                     fontSize: '40px',
@@ -78,15 +84,23 @@ const homeComponentSecThree = () => {
             </Row>
 
             {/*2nd boxes  */}
-            <Row className='mt-3' style={{columnGap: '26px'}}>
-                <h2 style={{color: '#0b1a8a', textAlign: 'right', fontFamily: "DiodrumBold"}}>فئات التذاكر</h2>
+            <Row className='d-flex justify-content-center mt-3' style={{columnGap: '26px'}}>
+                <h2 style={style.topHeading}>فئات التذاكر</h2>
                 {cardData2.map((data, index) => (
                     <Col
                         key={index}
                         md="4"
                         style={{
                             background: "#6002b8",
-                            width: '23%',
+                            borderRadius: "0",
+                            height: '260px',
+                            width: "260px",
+                            border: 'none',
+                            display: 'flex',
+                            alignItems: 'center',
+                            textAlign: 'center',
+                            justifyContent: 'center',
+                            marginBottom: "25px",
                             ...(
                                 index === 0
                                     ? style.firstCard
@@ -104,7 +118,7 @@ const homeComponentSecThree = () => {
                                         margin: '0',
                                         fontFamily: "DiodrumRegular"
                                     }}>{data.name}</p>
-                                    <p style={{fontSize: '45px', margin: '0', fontWeight: 'bold'}}>{data.name1}</p>
+                                    <p style={style.name1}>{data.name1}</p>
                                     <div style={{display: 'flex', paddingLeft: '40px', gap: '2px'}}>
                                         <strong style={{margin: '0', fontFamily: "DiodrumBold"}}>
                                             {data.cur}
@@ -121,19 +135,23 @@ const homeComponentSecThree = () => {
             </Row>
 
             {/*3nd boxes  */}
-            <Row className='mt-5'>
-                <Col className="text-center">
-                    <h2 style={{color: '#0b1a8a', textAlign: 'right', fontFamily: "DiodrumBold"}}>الرعايات</h2>
-                </Col>
-            </Row>
-            <Row className='mt-3' style={{columnGap: '26px'}}>
+            <Row className='d-flex justify-content-center mt-3' style={{columnGap: '26px'}}>
+                <h2 style={style.topHeading}>الرعايات</h2>
                 {cardData3.map((data, index) => (
                     <Col
                         key={index}
                         md="4"
                         style={{
                             background: "#0b1a8a",
-                            width: '23%',
+                            borderRadius: "0",
+                            height: '260px',
+                            width: "260px",
+                            border: 'none',
+                            display: 'flex',
+                            alignItems: 'center',
+                            textAlign: 'center',
+                            justifyContent: 'center',
+                            marginBottom: "25px",
                             ...(
                                 index === 0
                                     ? style.firstCard
@@ -143,14 +161,15 @@ const homeComponentSecThree = () => {
                             )
                         }}
                     >
-                        <Card className="" style={style.card}>
+                        <div className="" style={style.card}>
                             <CardBody>
                                 <div style={{color: 'white'}}>
                                     <p style={{
                                         fontSize: '30px',
                                         margin: '0',
                                         fontFamily: "DiodrumBold"
-                                    }}>{data.name}</p>
+                                    }}>{data.name}
+                                    </p>
                                     <div style={{display: 'flex', paddingLeft: '40px', gap: '2px'}}>
                                         <strong style={{margin: '0', fontFamily: "DiodrumBold"}}>
                                             {data.cur}
@@ -161,7 +180,7 @@ const homeComponentSecThree = () => {
                                     </div>
                                 </div>
                             </CardBody>
-                        </Card>
+                        </div>
                     </Col>
                 ))}
             </Row>

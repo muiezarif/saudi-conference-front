@@ -19,6 +19,12 @@ import image3 from '../asset/SliderImage/3.png';
 import image4 from '../asset/SliderImage/4.png';
 import image5 from '../asset/SliderImage/5.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import leftArrow from "../asset/MainSliderImages/leftArrow.png";
+import img1 from "../asset/MainSliderImages/sliderImg1.png";
+import img2 from "../asset/MainSliderImages/sliderImg2.png";
+import img3 from "../asset/MainSliderImages/sliderImg3.png";
+import img4 from "../asset/MainSliderImages/sliderImg4.png";
+import rightArrow from "../asset/MainSliderImages/rightArrow.png";
 
 const HomeComponentSecTwo = () => {
     const cardData = [
@@ -144,19 +150,31 @@ const HomeComponentSecTwo = () => {
             </Row>
 
             {/* Speakers Section */}
-            <Row className="mb-4" style={{textAlign: 'right', color: "rgb(13,13,157)"}}>
-                <Col>
-                    <h3>المتحدثين</h3>
+            {/*<Row className="mb-4" style={{textAlign: 'right', color: "rgb(13,13,157)"}}>*/}
+            {/*    <Col>*/}
+            {/*        <h3>المتحدثين</h3>*/}
+            {/*    </Col>*/}
+            {/*</Row>*/}
+            <Row className="d-flex justify-content-center" style={{marginTop: "40px", fontFamily: "DiodrumBold"}}>
+                <h3 style={{textAlign: 'right', color: "rgb(13,13,157)"}}>المتحدثين</h3>
+                <Col className="d-flex justify-content-center align-content-center align-items-center gap-5"
+                     xl={2} lg={4} md={6} sm={12}>
+                    <img src={leftArrow} alt="" style={{width: "40px", height: "70px"}}/>
+                    <img src={img1} alt="" style={{width: "200px"}}/>
+                    <img src={img2} alt="" style={{width: "200px"}}/>
+                    <img src={img3} alt="" style={{width: "200px"}}/>
+                    <img src={img4} alt="" style={{width: "200px"}}/>
+                    <img src={rightArrow} alt="" style={{width: "40px", height: "70px"}}/>
                 </Col>
             </Row>
             <Container className="my-5">
-                {/* Title Section */}
-                <Row className="mb-4" style={{textAlign: 'right', color: "rgb(13,13,157)"}}>
-                    <Col>
-                        <h2>ركائز مؤتمر المحاماة السعودي</h2>
-                    </Col>
-                </Row>
-
+                <h2 style={{
+                    fontFamily: "DiodrumBold",
+                    marginTop: "50px",
+                    marginBottom: "150px",
+                    textAlign: 'right',
+                    color: "rgb(13,13,157)"
+                }}>ركائز مؤتمر المحاماة السعودي</h2>
                 {/* Carousel for the cards */}
                 <Carousel activeIndex={activeIndex} next={next} previous={previous} style={{color: 'black'}}>
                     {slides}

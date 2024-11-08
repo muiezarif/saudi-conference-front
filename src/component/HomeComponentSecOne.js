@@ -1,5 +1,5 @@
 import {Col, Container, Row} from "reactstrap";
-import personImage from '../asset/Person.png';
+import personImage from '../asset/bannerBottomImage.png';
 import "../style/fonts.css";
 
 export function HomeComponentSecOne() {
@@ -51,7 +51,7 @@ export function HomeComponentSecOne() {
     return (
         <Container style={styles.customFont}>
             <Row className="d-flex justify-content-between">
-                <Col xl={4} md={4} sm={4}>
+                <Col>
                     <img src={personImage} alt="Person"/>
                 </Col>
                 <Col xl={6} md={6} sm={6} style={{textAlign: "right"}}>
