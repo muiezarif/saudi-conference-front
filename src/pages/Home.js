@@ -4,6 +4,7 @@ import {HomeComponentSecOne} from "../component/HomeComponentSecOne";
 import HomeComponentSecTwo from "../component/HomeComponentSecTwo";
 import HomeComponentSecThree from "../component/HomeComponentSecThree";
 import MainPage from '../component/MainPage'
+import NewImageSlider from '../component/NewImageSlider'
 
 export function Home() {
     return (
@@ -11,6 +12,7 @@ export function Home() {
             <MainPage/>
             <HomeComponentSecOne/>
             <HomeComponentSecTwo/>
+            <NewImageSlider/>
             <HomeComponentSecThree/>
             <LogoPage/>
         </Base>

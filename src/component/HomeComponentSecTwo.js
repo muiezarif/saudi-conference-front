@@ -148,42 +148,6 @@ const HomeComponentSecTwo = () => {
                     </p>
                 </Col>
             </Row>
-
-            {/* Speakers Section */}
-            {/*<Row className="mb-4" style={{textAlign: 'right', color: "rgb(13,13,157)"}}>*/}
-            {/*    <Col>*/}
-            {/*        <h3>المتحدثين</h3>*/}
-            {/*    </Col>*/}
-            {/*</Row>*/}
-            <Row className="d-flex justify-content-center" style={{marginTop: "40px", fontFamily: "DiodrumBold"}}>
-                <h3 style={{textAlign: 'right', color: "rgb(13,13,157)"}}>المتحدثين</h3>
-                <Col className="d-flex justify-content-center align-content-center align-items-center gap-5"
-                     xl={2} lg={4} md={6} sm={12}>
-                    <img src={leftArrow} alt="" style={{width: "40px", height: "70px"}}/>
-                    <img src={img1} alt="" style={{width: "200px"}}/>
-                    <img src={img2} alt="" style={{width: "200px"}}/>
-                    <img src={img3} alt="" style={{width: "200px"}}/>
-                    <img src={img4} alt="" style={{width: "200px"}}/>
-                    <img src={rightArrow} alt="" style={{width: "40px", height: "70px"}}/>
-                </Col>
-            </Row>
-            <Container className="my-5">
-                <h2 style={{
-                    fontFamily: "DiodrumBold",
-                    marginTop: "50px",
-                    marginBottom: "150px",
-                    textAlign: 'right',
-                    color: "rgb(13,13,157)"
-                }}>ركائز مؤتمر المحاماة السعودي</h2>
-                {/* Carousel for the cards */}
-                <Carousel activeIndex={activeIndex} next={next} previous={previous} style={{color: 'black'}}>
-                    {slides}
-                    <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous}
-                                     style={{color: 'black'}}/>
-                    <CarouselControl direction="next" directionText="Next" onClickHandler={next}
-                                     style={{color: 'black'}}/>
-                </Carousel>
-            </Container>
         </Container>
     );
 };
