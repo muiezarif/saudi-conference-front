@@ -10,8 +10,8 @@ import iconWrite from "../asset/icon_write.png";
 
 const Calendar = () => {
     const headingData = {
-        firstHeading: "اليوم الأول",
-        secondHeading: "اليوم الثاني"
+        firstHeading: "ﺍﻷﺟﻨﺪﺓ",
+        secondHeading: "ﻭﺭﺵ ﺍﻟﻌﻤﻞ"
     }
     const data = [
         {
@@ -109,7 +109,8 @@ const Calendar = () => {
                             color: "white"
                         }}>
                             <p style={{fontFamily: "DiodrumBold", fontSize: "55px"}}>1</p>
-                            <p style={{fontFamily: "DiodrumRegular", fontSize: "25px"}}>Hello</p>
+                            <p style={{fontFamily: "DiodrumRegular", fontSize: "25px", marginTop: "-3rem"}}>اليوم
+                                الأول</p>
                         </div>
                     </Col>
                 </Row>
@@ -153,8 +154,9 @@ const Calendar = () => {
                             textAlign: "center",
                             color: "white"
                         }}>
-                            <p style={{fontFamily: "DiodrumBold", fontSize: "55px"}}>1</p>
-                            <p style={{fontFamily: "DiodrumRegular", fontSize: "25px"}}>Hello</p>
+                            <p style={{fontFamily: "DiodrumBold", fontSize: "55px"}}>2</p>
+                            <p style={{fontFamily: "DiodrumRegular", fontSize: "25px", marginTop: "-3rem"}}>اليوم
+                                الثاني</p>
                         </div>
                     </Col>
                 </Row>
