@@ -10,9 +10,9 @@ import Logo from "../asset/HeaderLogo.png";
 import "../style/fonts.css";
 
 const navigation = [
-    {name: 'المتحدثين', href: '/regmethod'},
-    {name: 'التسجيل', href: '/con'},
-    {name: 'الرعايات', href: '/box'},
+    {name: 'المتحدثين', href: ''},
+    {name: 'التسجيل', href: '/reg3'},
+    {name: 'الرعايات', href: '/regmethod'},
     {name: 'الجهات والرعاة', href: '/reg2'},
     {name: 'المركز الإعلامي', href: '/reg1'},
     {name: 'الأجندة وورش العمل', href: '/cal'},
