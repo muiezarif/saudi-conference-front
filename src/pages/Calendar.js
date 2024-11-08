@@ -73,6 +73,7 @@ const Calendar = () => {
                     textAlign: "right",
                     fontFamily: "DiodrumBold",
                     marginBottom: "25px",
+                    marginTop: "13rem",
                     color: "#0c0c9c"
                 }}>{headingData.firstHeading}</h1>
                 <Row style={{display: "flex", justifyContent: "center"}}>

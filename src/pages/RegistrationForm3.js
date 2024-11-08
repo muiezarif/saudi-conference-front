@@ -31,7 +31,7 @@ const RegistrationForm2 = () => {
 
     return (
         <Base>
-            <Container className="mt-5">
+            <Container style={{marginTop: "13rem"}}>
                 <Row>
                     <Col className="text-center">
                         <h2 style={{color: '#0b1a8a', textAlign: 'right', fontFamily: "DiodrumBold"}}>فئات التذاكر</h2>

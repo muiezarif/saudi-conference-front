@@ -20,7 +20,7 @@ export function RegMethodOne() {
     }
     return (
         <Base>
-            <Container>
+            <Container style={{marginTop:"13rem"}}>
                 <div style={{textAlign: "right", padding: "0", margin: "0"}}>
                     <h2 style={style.heading}>الرعايات</h2>
                     <h2 style={style.subHeading}>:مزايا الاستراتيجي</h2>

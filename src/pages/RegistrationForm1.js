@@ -20,11 +20,12 @@ const RegistrationForm1 = () => {
     }
     return (
         <Base>
-            <Container className="mt-5">
+            <Container style={{marginTop: "13rem",}}>
                 <Row>
                     <Col className="text-center">
                         <h2 style={{color: '#0b1a8a', textAlign: 'right', fontFamily: "DiodrumBold"}}>فئات التذاكر</h2>
-                        <h3 style={{color: '#009688', textAlign: 'right', fontFamily: "DiodrumBold"}}>مزايا فئة VIP:</h3>
+                        <h3 style={{color: '#009688', textAlign: 'right', fontFamily: "DiodrumBold"}}>مزايا فئة
+                            VIP:</h3>
                     </Col>
                 </Row>
                 <Row className='mt-2' style={{textAlign: "right", fontFamily: "DiodrumRegular"}}>
@@ -45,7 +46,8 @@ const RegistrationForm1 = () => {
                 </Row>
                 <Row>
                     <Col className="text-center m-2">
-                        <h4 className="" style={{color: '#333', textAlign: 'right',fontFamily: "DiodrumBold"}}>بيانات التسجيل
+                        <h4 className="" style={{color: '#333', textAlign: 'right', fontFamily: "DiodrumBold"}}>بيانات
+                            التسجيل
                             الرئيسية</h4>
                     </Col>
                 </Row>
