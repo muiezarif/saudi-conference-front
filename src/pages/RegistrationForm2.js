@@ -15,7 +15,7 @@ const RegistrationForm2 = () => {
             backgroundColor: 'rgb(237, 237, 237)',
             borderRadius: '20px',
             color: '#ffffff',
-            textAlign:'right'
+            textAlign: 'right'
         }
     }
     return (
@@ -23,13 +23,14 @@ const RegistrationForm2 = () => {
             <Container className="mt-5">
                 <Row>
                     <Col className="text-center">
-                        <h2 style={{color: '#0b1a8a', textAlign: 'right', fontWeight: 'bold'}}>فئات التذاكر</h2>
-                        <h3 style={{color: '#009688', textAlign: 'right', fontWeight: 'bold'}}>مزايا فئة VIP:</h3>
+                        <h2 style={{color: '#0b1a8a', textAlign: 'right', fontFamily: "DiodrumBold"}}>فئات التذاكر</h2>
+                        <h3 style={{color: '#009688', textAlign: 'right', fontFamily: "DiodrumBold"}}>مزايا فئة
+                            VIP:</h3>
                     </Col>
                 </Row>
-                <Row className= 'mt-2' style={{textAlign: "right", }}>
-                    <Col  style={{ gap: '12px' }}>
-                        <div className="d-inline-flex" style={{paddingRight:'100px'}}>
+                <Row className='mt-2' style={{textAlign: "right", fontFamily: "DiodrumRegular"}}>
+                    <Col style={{gap: '12px'}}>
+                        <div className="d-inline-flex" style={{paddingRight: '100px'}}>
                             <p style={style.para}>ضيافة فاخرة</p>
                             <div style={style.dot}/>
                         </div>
@@ -41,16 +42,17 @@ const RegistrationForm2 = () => {
                 </Row>
                 <Row>
                     <Col className="text-center m-2">
-                        <h4 className="" style={{color: '#333', textAlign: 'right', fontWeight: 'bold'}}>بيانات التسجيل
+                        <h4 className="" style={{color: '#333', textAlign: 'right', fontFamily: "DiodrumBold"}}>بيانات التسجيل
                             الرئيسية</h4>
                     </Col>
                 </Row>
-                <Form style={{textAlign: 'right'}}>
+                <Form style={{textAlign: 'right', fontFamily: "DiodrumRegular"}}>
                     <Row form>
                         <Col md={6}>
                             <FormGroup>
                                 <Label for="firstName" style={{textAlign: 'right'}}>الاسم الأول</Label>
-                                <Input type="text" name="firstName" id="firstName" placeholder="" style={style.textField}/>
+                                <Input type="text" name="firstName" id="firstName" placeholder=""
+                                       style={style.textField}/>
                             </FormGroup>
                         </Col>
                         <Col md={6} style={{textAlign: 'right'}}>
@@ -71,7 +73,8 @@ const RegistrationForm2 = () => {
                         <Col md={6}>
                             <FormGroup>
                                 <Label for="jobTitle">المسمى الوظيفي</Label>
-                                <Input type="text" name="jobTitle" id="jobTitle" placeholder="" style={style.textField}/>
+                                <Input type="text" name="jobTitle" id="jobTitle" placeholder=""
+                                       style={style.textField}/>
                             </FormGroup>
                         </Col>
                     </Row>
