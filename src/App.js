@@ -9,6 +9,8 @@ import MainPage from './component/MainPage'
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {Home} from "./pages/Home";
 import {RegMethodOne} from "./pages/RegMethodOne";
+import RegistrationForm3 from "./pages/RegistrationForm3";
+
 function App() {
     return (
         <BrowserRouter>
@@ -17,9 +19,10 @@ function App() {
                 <Route path="/reg" element={<RegistrationForm/>}/>
                 <Route path="/reg1" element={<RegistrationForm1/>}/>
                 <Route path="/reg2" element={<RegistrationForm2/>}/>
+                <Route path="/reg3" element={<RegistrationForm3/>}/>
                 <Route path="/box" element={<BoxesDetails/>}/>
                 <Route path="/cal" element={<Calendar/>}/>
-                <Route path="/con" element={<ConferencePage/>}/>
+                <Route path="/regmethod" element={<RegMethodOne/>}/>
                 <Route path="/regmethod" element={<RegMethodOne/>}/>
                 <Route path="/main" element={<MainPage/>}/>
             </Routes>

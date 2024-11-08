@@ -4,7 +4,7 @@ import "../style/fonts.css";
 
 export function HomeComponentSecOne() {
     const styles = {
-        customFont: {fontFamily: "DiodrumMedium"},
+        customFont: {fontFamily: "DiodrumMedium", marginTop: "3rem"},
         cardBase: {
             backgroundColor: "rgb(78,10,171)",
             color: "white",
@@ -57,7 +57,7 @@ export function HomeComponentSecOne() {
         <Container style={styles.customFont}>
             <Row className="d-flex justify-content-between">
                 <Col xl={4} md={4} sm={12} className="mb-3">
-                    <img src={personImage} alt="Person" style={styles.image} />
+                    <img src={personImage} alt="Person" style={styles.image}/>
                 </Col>
                 <Col xl={6} md={6} sm={12} style={{textAlign: "right"}}>
                     <div className="d-inline-flex flex-wrap justify-content-between gap-4">

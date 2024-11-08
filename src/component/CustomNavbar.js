@@ -10,9 +10,9 @@ import Logo from "../asset/HeaderLogo.png";
 import "../style/fonts.css";
 
 const navigation = [
-    {name: 'المتحدثين', href: '/regmethod'},
-    {name: 'التسجيل', href: '/con'},
-    {name: 'الرعايات', href: '/box'},
+    {name: 'المتحدثين', href: ''},
+    {name: 'التسجيل', href: '/reg3'},
+    {name: 'الرعايات', href: '/regmethod'},
     {name: 'الجهات والرعاة', href: '/reg2'},
     {name: 'المركز الإعلامي', href: '/reg1'},
     {name: 'الأجندة وورش العمل', href: '/cal'},
@@ -29,7 +29,7 @@ export default function CustomNavbar() {
         }
     }
     return (
-        <div style={{marginBottom: '15rem', fontFamily: "DiodrumRegular"}}>
+        <div style={{marginBottom: '8rem', fontFamily: "DiodrumRegular"}}>
             <header className="absolute inset-x-0 top-0 z-50">
                 <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8 custom-navbar-bg">
                     <div className="flex lg:flex-1">
