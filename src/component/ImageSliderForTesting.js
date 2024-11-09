@@ -26,7 +26,7 @@ export const ImageSliderForTesting = () => {
             img: icon2
         },
         {
-            title: "- ﻳﻨﻌﻘﺪ",
+            title: " ﻳﻨﻌﻘﺪ",
             subtitle: " ﻣﺆﺗﻤﺮ ﺍﻟﻤﺤﺎﻣﺎﺓ ﺍﻟﺴﻌﻮﺩﻱ ﻓﻲ ﺩﻳﺴﻤﺒﺮ 2024ﻡ ﺑﺘﻨﻈﻴﻢ ﻣﻦ ﺍﻟﻬﻴﺌﺔ ﺍﻟﺴﻌﻮﺩﻳﺔ ﻟﻠﻤﺤﺎﻣﻴﻦ ﻳﻮﻣﻲ 22 ﻭ 23 ﺩﻳﺴﻤﺒﺮ 2024ﻡ ﺑﻤﺪﻳﻨﺔ ﺍﻟﺮﻳﺎﺽ، ﺗﺤﺖ ﺷﻌﺎﺭ \"ﺗﻄﻮﺭﺍﺕ ﻗﻄﺎﻉ ﺍﻟﻤﺤﺎﻣﺎﺓ ﻭﺍﻻﺳﺘﺸﺎﺭﺍﺕ ﺍﻟﻘﺎﻧﻮﻧﻴﺔ",
             img: icon3
         },
@@ -118,7 +118,7 @@ export const ImageSliderForTesting = () => {
                             borderTop: "5px solid #593996",
                             width: "100%",
                             maxWidth: "100%",
-                            height: '500px',
+                            padding: "120px 0 120px 0",
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
@@ -141,7 +141,8 @@ export const ImageSliderForTesting = () => {
                                 <span style={{
                                     textAlign: "right",
                                     color: "#474748",
-                                    fontFamily: "DiodrumRegular"
+                                    fontFamily: "DiodrumRegular",
+                                    fontSize: "33px"
                                 }}><span
                                     style={{
                                         fontFamily: "DiodrumBold",
