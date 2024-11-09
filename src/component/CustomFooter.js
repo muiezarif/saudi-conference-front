@@ -19,7 +19,7 @@ const CustomFooter = () => {
     };
 
     return (
-        <div style={{ backgroundColor: '#0b1a8a', color: '#ffffff', padding: '20px 0', marginTop: "200px" }}>
+        <div style={{ backgroundColor: '#0b1a8a', color: '#ffffff', padding: '20px 0', marginTop: "40px" }}>
             <Container>
                 <Row className="justify-content-center">
                     <Col xs={12} className="text-center mb-3">
