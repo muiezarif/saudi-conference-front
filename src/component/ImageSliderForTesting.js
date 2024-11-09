@@ -125,9 +125,8 @@ export const ImageSliderForTesting = () => {
                             justifyContent: 'center',
                             backgroundColor: '#ededed',
                             border: "none",
-                            color: 'white',
+                            fontFamily: "DiodrumMedium",
                             fontSize: '18px',
-                            fontWeight: 'bold',
                             position: 'relative',
                             textAlign: 'center',
                         }}

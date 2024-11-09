@@ -6,7 +6,7 @@
 }
 
 @font-face {
-    font-family: 'DiodrumMedium'; /* Give your font a name */
+        font-family: 'DiodrumMedium'; /* Give your font a name */
     src: url('../asset/fonts/DiodrumArabic-Medium.ttf') format('truetype'); /* Adjust path as needed */
     font-weight: normal;
     font-style: normal;
