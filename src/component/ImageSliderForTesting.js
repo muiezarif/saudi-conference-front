@@ -52,7 +52,7 @@ export const ImageSliderForTesting = () => {
                     <>
                         <Row>
                             <Col xs={12} md={12}>
-                                <ConferencePage />
+                                <ConferencePage/>
                             </Col>
                         </Row>
                     </>
@@ -62,7 +62,7 @@ export const ImageSliderForTesting = () => {
                     <>
                         <Row>
                             <Col xs={12} md={12}>
-                                <ConferencePage />
+                                <ConferencePage/>
                             </Col>
                         </Row>
                     </>
@@ -72,22 +72,22 @@ export const ImageSliderForTesting = () => {
                     <>
                         <Row>
                             <Col xs={12} md={12}>
-                                <HomeComponentSecTwo />
+                                <HomeComponentSecTwo/>
                             </Col>
                         </Row>
                         <Row>
                             <Col xs={12} md={12}>
-                                <NewImageSlider />
+                                <NewImageSlider/>
                             </Col>
                         </Row>
                         <Row>
                             <Col xs={12} md={12}>
-                                <HomeComponentSecThree />
+                                <HomeComponentSecThree/>
                             </Col>
                         </Row>
                         <Row>
                             <Col xs={12} md={12}>
-                                <LogoPage />
+                                <LogoPage/>
                             </Col>
                         </Row>
                     </>
