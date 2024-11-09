@@ -9,6 +9,8 @@ import img3 from "../asset/socialMedia/img3.png";
 import img4 from "../asset/socialMedia/img4.png";
 import img5 from "../asset/socialMedia/img5.png";
 import img6 from "../asset/socialMedia/img6.png";
+import img7 from "../asset/socialMedia/location.png"
+import img8 from "../asset/icon_calender.png"
 
 
 const MainPage = () => {
@@ -23,7 +25,7 @@ const MainPage = () => {
             color: 'rgb(12,12,150)',
             width: '250px',
             borderRadius: '30px',
-            fontWeight: 'bold',
+            fontFamily: "DiodrumBold",
         }
     }
     return (
@@ -61,6 +63,9 @@ const MainPage = () => {
                             <p style={{margin: '0', padding: '0 10px'}}>
                                 مدينة الرياض
                             </p>
+                            <p>
+                                <img src={img7} style={{width: '15px'}}/>
+                            </p>
                             <p style={{margin: '0', paddingLeft: "20px"}}>
                                 م
                             </p>
@@ -73,11 +78,14 @@ const MainPage = () => {
                             <p style={{margin: '0'}}>
                                 22 - 23
                             </p>
+                            <p>
+                                <img src={img8} style={{width: '25px',paddingLeft:'5px'}}/>
+                            </p>
                         </div>
                     </Col>
                 </Row>
                 <Row className="mb-4" style={{marginTop: "-150px"}}>
-                    <Col md="auto" className="d-flex flex-column align-items-start">
+                <Col md="auto" className="d-flex flex-column align-items-start">
                         {[
                             {href: "#youtube", img: img6, alt: "YouTube"},
                             {href: "#linkedin", img: img5, alt: "LinkedIn"},
