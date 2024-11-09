@@ -1,7 +1,6 @@
 // Import necessary modules
 import React from 'react';
 import {Card, CardBody, CardText, Col, Container, Row} from 'reactstrap';
-import {FaHammer} from 'react-icons/fa';
 
 import "../style/fonts.css"
 import mailIcon from "../asset/icon_mail.png";
@@ -26,6 +25,7 @@ const ConferencePage = () => {
         },
         cardText: {
             fontFamily: "DiodrumRegular",
+            float: "left"
         },
         bottomCardText: {
             flex: "1",
@@ -62,7 +62,7 @@ const ConferencePage = () => {
                     <h4 style={style.topCardHeading}>الرسالة</h4>
                     <div className="mb-4 shadow-sm" style={style.card}>
                         <CardBody>
-                            <div><img src={mailIcon} width={60} alt=""/></div>
+                            <img style={{float: "right"}} src={mailIcon} width={60} alt=""/>
                             <CardText className="mt-3" style={style.cardText}>
                                 تطوير قطاع المحاماة والاستشارات القانونية والعاملين بها، عبر إقامة مؤتمرات المحاماة؛
                                 لربط التواصل ما بين المحامين والممارسين القانونيين والرفع من المستوى المهني لقطاع
@@ -75,7 +75,7 @@ const ConferencePage = () => {
                     <h4 style={style.topCardHeading}>الرؤية</h4>
                     <div className="mb-4 shadow-sm" style={style.card}>
                         <CardBody>
-                            <div><img src={eyeIcon} width={70} alt=""/></div>
+                            <img style={{float: "right"}} src={eyeIcon} width={70} alt=""/>
                             <CardText className="mt-3" style={style.cardText}>
                                 أن يكون المحامي والممارس القانوني رائدًا في مجاله، متفاعلًا مع مجتمعه،
                                 رافعا للوطن، متمكنا بعلمه، ساميًا بعدله
