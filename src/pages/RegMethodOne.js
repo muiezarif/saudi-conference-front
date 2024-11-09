@@ -16,7 +16,8 @@ export function RegMethodOne() {
         testField: {
             borderRadius: "5rem",
             backgroundColor: "rgb(237, 237, 237)",
-            border: "none"
+            border: "none",
+            textAlign: 'right',
         },
         labelStyle: {
             fontFamily: "DiodrumBold",
@@ -86,7 +87,7 @@ export function RegMethodOne() {
                                  style={{padding: "70px"}}>
                                 <input
                                     type="file"
-                                    className="opacity-0 absolute w-full h-full cursor-pointer"
+                                    className="opacity-0 absolute w-full cursor-pointer"
                                     style={{zIndex: 10}}
                                 />
                                 <div className="flex items-center justify-center absolute pointer-events-none">

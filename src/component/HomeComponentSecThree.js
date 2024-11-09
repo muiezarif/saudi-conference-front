@@ -166,11 +166,15 @@ const homeComponentSecThree = () => {
                                 <div style={{color: 'white'}}>
                                     <p style={{
                                         fontSize: '30px',
-                                        margin: '0',
+                                        margin: '0 0 8px 0',
                                         fontFamily: "DiodrumBold"
                                     }}>{data.name}
                                     </p>
-                                    <div style={{display: 'flex', paddingLeft: '40px', gap: '2px'}}>
+                                    <div style={{
+                                        display: 'flex',
+                                        gap: '2px',
+                                        fontSize: '30px'
+                                    }}>
                                         <strong style={{margin: '0', fontFamily: "DiodrumBold"}}>
                                             {data.cur}
                                         </strong>

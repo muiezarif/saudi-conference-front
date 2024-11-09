@@ -23,7 +23,6 @@ function App() {
                 <Route path="/box" element={<BoxesDetails/>}/>
                 <Route path="/cal" element={<Calendar/>}/>
                 <Route path="/regmethod" element={<RegMethodOne/>}/>
-                <Route path="/regmethod" element={<RegMethodOne/>}/>
                 <Route path="/main" element={<MainPage/>}/>
                 {/*<Route path="/testing" element={<ImageSliderForTesting/>}/>*/}
             </Routes>
