@@ -159,7 +159,7 @@ export const ImageSliderForTesting = () => {
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'center',
-                            gap: '8px',
+                            gap: '45px',
                         }}>
                             {data.map((_, index) => (
                                 <span
@@ -181,8 +181,9 @@ export const ImageSliderForTesting = () => {
                                 bottom: '10px',
                                 width: '100%',
                                 display: 'flex',
-                                justifyContent: 'space-between',
+                                justifyContent: 'center', // Center the buttons horizontally
                                 padding: '0 10px',
+                                gap:'200px'
                             }}
                         >
                             <Button onClick={prevSlide} style={{backgroundColor: 'transparent', border: 'none'}}>
