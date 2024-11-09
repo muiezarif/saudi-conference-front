@@ -1,0 +1,40 @@
+@media only screen and (max-width: 900px) {
+    .custom_slider_img {
+        width: 200px;
+
+    }
+
+    .custom_slider_img_p {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+    }
+}
+
+@media only screen and (max-width: 100px) {
+    .custom_slider_img_p {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    .custom_slider_img {
+        width: 100px;
+
+    }
+
+    .custom_slider_img_p {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+    }
+}

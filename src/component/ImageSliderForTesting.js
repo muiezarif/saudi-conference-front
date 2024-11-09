@@ -2,28 +2,32 @@ import React, {useState} from 'react';
 import {Button, Card, Col, Container, Row} from 'reactstrap';
 import rightArrow from "../asset/socialMedia/rightArrow.png";
 import leftArrow from "../asset/socialMedia/leftArrow.png";
-import icon1 from "../asset/icon_calender.png";
-import icon2 from "../asset/icon_write.png";
-import icon3 from "../asset/calender.png";
+import icon3 from "../asset/icon_calendar.png";
+import icon2 from "../asset/icon_mic.png";
+import icon1 from "../asset/icon_mm.png";
 import HomeComponentSecTwo from "../component/HomeComponentSecTwo";
 import NewImageSlider from "../component/NewImageSlider";
 import HomeComponentSecThree from "../component/HomeComponentSecThree";
 import LogoPage from "../pages/LogoPage"
-import ConferencePage from "../pages/ConferencePage"
+import ConferencePage from "../pages/ConferencePage";
+import "../style/CustomSliderImage.css"
 
 
 export const ImageSliderForTesting = () => {
     const data = [
         {
-            title: "Discover the elegance of fragrance, crafted to elevate your senses. Each scent captures moments of luxury and grace, bringing essence to life. Unveil a world of aromatic charm, designed to leave a lasting impression. Step into a fragrance journey like no other.",
+            title: "ﻳُﺴﻬﻢ",
+            subtitle: " ﻓﻲ ﺇﺑﺮﺍﺯ ﺃﻫﻢ ﻣﺴﺘﺠﺪﺍﺕ ﻭﺗﻄﻮﺭﺍﺕ ﻗﻄﺎﻉ ﺍﻟﻤﺤﺎﻣﺎﺓ ﻭﺍﻻﺳﺘﺸﺎﺭﺍﺕ ﺍﻟﻘﺎﻧﻮﻧﻴﺔ، ﻭﺍﻟﺪﻭﺭ ﺍﻟﻤﻬﻨﻲ ﻭﺍﻟﺘﺤﻮﻻﺕ ﺍﻟﺮﻗﻤﻴﺔ ﻭﺃﺛﺮﻫﺎ ﻋﻠﻰ ﺍﻟﺨﺪﻣﺎﺕ ﺍﻟﻘﺎﻧﻮﻧﻴﺔ، ﻟﻠﻬﻴﺌﺔ ﺍﻟﺴﻌﻮﺩﻳﺔ ﻟﻠﻤﺤﺎﻣﻴﻦ ﻓﻲ ﺗﻄﻮﻳﺮ ﺍﻟﻘﻄﺎﻉ، ﻭﺣﺼﺮ ﺍﻟﺘﺤﺪﻳﺎﺕ ﻭﺍﻟﻔﺮﺹ ﺍﻟﻤﻬﻨﻴﺔ ﻟﻠﻤﻨﺸﺂﺕ ﺍﻟﻘﺎﻧﻮﻧﻴﺔ؛ ﻣﻤﺎ ﻳﺆﺛﺮ ﺇﻳﺠﺎﺑًﺎ ﻓﻲ ﺯﻳﺎﺩﺓ ﻣﻮﺛﻮﻗﻴﺔ ﺍﻟﺘﺄﻫﻴﻞ ﺍﻟﻤﻬﻨﻲ، ﻭﻳﻌﺰﺯ ﺗﻤﻜﻴﻦ ﺍﻟﻤﻬﻦ ﺍﻟﻘﺎﻧﻮﻧﻴﺔ ﻭﻗﻄﺎﻉ ﺍﻷﻋﻤﺎﻝ ﻭﺍﻻﺳﺘﺜﻤﺎﺭ، ﻭﻳﺤﻘﻖ ﻣﺴﺘﻬﺪﻓﺎﺕ ﺭﺅﻳﺔ المملكة (٢٠٣٠)",
             img: icon1
         },
         {
-            title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate lacus nec feugiat congue. Phasellus auctor sapien id enim pharetra, sit amet tristique arcu convallis. Curabitur ut nisl at ex bibendum finibus.",
+            title: "ﻳﻨﺎﻗﺶ",
+            subtitle: " ﺍﻟﻤﺆﺗﻤﺮ ﻋﺪﺩًﺍ ﻣﻦ ﺍﻟﻤﺤﺎﻭﺭ ﺫﺍﺕ ﺍﻟﻌﻼﻗﺔ ﺍﻟﻤﻤﻠﻜﺔ ﻭﺃﺛﺮﻫﺎ ﺍﻹﻳﺠﺎﺑﻲ ﻋﻠﻰ ﺑﻴﺌﺔ ﺍﻷﻋﻤﺎﻝ ﻭﺍﻻﺳﺘﺜﻤﺎﺭ ﺑﺘﻄﻮﺭﺍﺕ ﻗﻄﺎﻉ ﺍﻟﻤﺤﺎﻣﺎﺓ ﻭﺍﻻﺳﺘﺸﺎﺭﺍﺕ ﺍﻟﻘﺎﻧﻮﻧﻴﺔ ﻓﻲ ﺍﻟﻤﻬﻨﻴﺔ، ﻭﺗﻌﺰﻳﺰ ﺍﻟﺘﺄﻫﻴﻞ ﻭﺍﻟﺘﻤﻜﻴﻦ ﻟﻠﻤﻤﺎﺭﺱ ﺍﻟﻘﺎﻧﻮﻧﻲ. ﻓﻲ ﺍﻟﻤﻤﻠﻜﺔ ﻭﺫﻟﻚ ﺑﻬﺪﻑ ﺭﻓﻊ ﻣﺴﺘﻮﻯ ﺍﻟﻤﻤارسة المهنية.",
             img: icon2
         },
         {
-            title: "Discover the essence of elegance with our handcrafted fragrances. Each scent is carefully curated to evoke memories and inspire emotions. Dive into a world where luxury meets art, and every bottle tells a story. Embrace the allure of our exclusive collection today.",
+            title: "- ﻳﻨﻌﻘﺪ",
+            subtitle: " ﻣﺆﺗﻤﺮ ﺍﻟﻤﺤﺎﻣﺎﺓ ﺍﻟﺴﻌﻮﺩﻱ ﻓﻲ ﺩﻳﺴﻤﺒﺮ 2024ﻡ ﺑﺘﻨﻈﻴﻢ ﻣﻦ ﺍﻟﻬﻴﺌﺔ ﺍﻟﺴﻌﻮﺩﻳﺔ ﻟﻠﻤﺤﺎﻣﻴﻦ ﻳﻮﻣﻲ 22 ﻭ 23 ﺩﻳﺴﻤﺒﺮ 2024ﻡ ﺑﻤﺪﻳﻨﺔ ﺍﻟﺮﻳﺎﺽ، ﺗﺤﺖ ﺷﻌﺎﺭ \"ﺗﻄﻮﺭﺍﺕ ﻗﻄﺎﻉ ﺍﻟﻤﺤﺎﻣﺎﺓ ﻭﺍﻻﺳﺘﺸﺎﺭﺍﺕ ﺍﻟﻘﺎﻧﻮﻧﻴﺔ",
             img: icon3
         },
     ];
@@ -104,7 +108,7 @@ export const ImageSliderForTesting = () => {
                 {/*    المتحدثين*/}
                 {/*</h2>*/}
 
-                <Col xs={12} md={10} lg={11} className="d-flex justify-content-center">
+                <Col xs={12} md={10} lg={11} className="d-flex justify-content-between">
                     <Card
                         style={{
                             borderTopLeftRadius: "0",
@@ -130,9 +134,20 @@ export const ImageSliderForTesting = () => {
                     >
 
                         <Row style={{width: "85%"}}>
-                            <Col xs={12} md={12} lg={6} className="mb-2"><img src={data[currentIndex].img}
-                                                                              alt=""/></Col>
-                            <Col xs={12} md={12} lg={6}><p style={{textAlign: "right"}}>{data[currentIndex].title}</p>
+                            <Col xs={12} md={12} lg={4} className="mb-2 custom_slider_img_p">
+                                <img className="custom_slider_img" src={data[currentIndex].img} alt="" width={300}/>
+                            </Col>
+                            <Col xs={12} md={12} lg={8}
+                                 className="d-flex justify-content-center align-items-center align-content-center">
+                                <span style={{
+                                    textAlign: "right",
+                                    color: "#474748",
+                                    fontFamily: "DiodrumRegular"
+                                }}><span
+                                    style={{
+                                        fontFamily: "DiodrumBold",
+                                        color: "#2c318b"
+                                    }}>{data[currentIndex].title}</span> {data[currentIndex].subtitle} </span>
                             </Col>
                         </Row>
                         {/* Title */}
