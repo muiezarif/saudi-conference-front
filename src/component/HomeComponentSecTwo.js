@@ -19,12 +19,7 @@ import image3 from '../asset/SliderImage/3.png';
 import image4 from '../asset/SliderImage/4.png';
 import image5 from '../asset/SliderImage/5.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import leftArrow from "../asset/MainSliderImages/leftArrow.png";
-import img1 from "../asset/MainSliderImages/sliderImg1.png";
-import img2 from "../asset/MainSliderImages/sliderImg2.png";
-import img3 from "../asset/MainSliderImages/sliderImg3.png";
-import img4 from "../asset/MainSliderImages/sliderImg4.png";
-import rightArrow from "../asset/MainSliderImages/rightArrow.png";
+import imageBar from '../asset/SliderImage/bar.png'
 
 const HomeComponentSecTwo = () => {
     const cardData = [
@@ -124,6 +119,13 @@ const HomeComponentSecTwo = () => {
     return (
         <Container className="my-5">
             {/* Title Section */}
+            <Row className="mb-5 justify-content-center align-items-center text-center" style={{marginTop:'-15px'}}>
+                <Col className="d-flex justify-content-center align-items-center">
+                    <img src={imageBar} style={{ width: "50%" }} />
+                </Col>
+            </Row>
+
+
             <Row className="mb-4" style={{textAlign: 'right', color: "rgb(13,13,157)"}}>
                 <Col>
                     <h2 style={style.mainHeading}>ركائز مؤتمر المحاماة السعودي</h2>
@@ -133,18 +135,18 @@ const HomeComponentSecTwo = () => {
                 <Col md={6} className="mt-3">
                     <h3 style={style.cardHeading}>مهني</h3>
                     <p style={style.cardParagraph}>
-                        تمكين المهن القانونية وتعزيز قطاع الأعمال، مع التركيز على دور الهيئة السعودية للمحامين في ضبط
-                        المخالفات وزيادة الموثوقية،
-                        واستعراض التطورات القانونية والتقنية وتوطين المهن، إضافة إلى فرص الشراكات المهنية داخل المملكة.
+                        تطوير المحامين المتدربين من خلال مناقشة ضوابط التسجيل، التزاماتهم المهنية، التحديات التي
+                        تواجههم، وساعات التدريب الإلزامية،
+                        مع التأكيد على أهمية التطوير المهني المستمر ودور الملتقيات والمبادرات القانونية في تأهيل
+                        الكفاءات الشابة.
                     </p>
                 </Col>
                 <Col md={6} className="mt-3">
                     <h3 style={style.cardHeading}>تأهيلي</h3>
                     <p style={style.cardParagraph}>
-                        تطوير المحامين المتدربين من خلال مناقشة ضوابط التسجيل، التزاماتهم المهنية، التحديات التي
-                        تواجههم، وساعات التدريب الإلزامية،
-                        مع التأكيد على أهمية التطوير المهني المستمر ودور الملتقيات والمبادرات القانونية في تأهيل
-                        الكفاءات الشابة.
+                        تمكين المهن القانونية وتعزيز قطاع الأعمال، مع التركيز على دور الهيئة السعودية للمحامين في ضبط
+                        المخالفات وزيادة الموثوقية،
+                        واستعراض التطورات القانونية والتقنية وتوطين المهن، إضافة إلى فرص الشراكات المهنية داخل المملكة.
                     </p>
                 </Col>
             </Row>
