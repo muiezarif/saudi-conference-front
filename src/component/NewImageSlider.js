@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Container, Row, Col, Button, CardImg, Card } from 'reactstrap';
+import React, {useState} from 'react';
+import {Button, Card, CardImg, Col, Container, Row} from 'reactstrap';
 import image1 from "../asset/SliderImage/sliderImg1.png";
 import image2 from "../asset/SliderImage/sliderImg2.png";
 import image3 from "../asset/SliderImage/sliderImg3.png";
@@ -9,10 +9,10 @@ import leftArrow from "../asset/socialMedia/leftArrow.png";
 
 const NewImageSlider = () => {
     const data = [
-        { title: "أ. إبتسام محمد الناصر", title2: 'المسمى الوظيفي', image: image1 },
-        { title: "أ. ناهد فهد ابراهيم", title2: 'المسمى الوظيفي', image: image2 },
-        { title: "أ. صالح خالد الفيصل", title2: 'المسمى الوظيفي', image: image3 },
-        { title: "أ. فهد فلاح العجمي", title2: 'المسمى الوظيفي', image: image4 },
+        {title: "أ. إبتسام محمد الناصر", title2: 'المسمى الوظيفي', image: image1},
+        {title: "أ. ناهد فهد ابراهيم", title2: 'المسمى الوظيفي', image: image2},
+        {title: "أ. صالح خالد الفيصل", title2: 'المسمى الوظيفي', image: image3},
+        {title: "أ. فهد فلاح العجمي", title2: 'المسمى الوظيفي', image: image4},
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -38,7 +38,8 @@ const NewImageSlider = () => {
     return (
         <Container className="mt-2">
             <Row className="justify-content-center align-items-center">
-                <h2 className= 'mb-5' style={{textAlign: 'right', color: "rgb(13,13,157)",fontWeight:'bold'}}>المتحدثين</h2>
+                <h2 className='mb-5'
+                    style={{textAlign: 'right', color: "rgb(13,13,157)", fontFamily: "DiodrumBold"}}>المتحدثين</h2>
                 <Col xl={1} md={1} sm={2} xs={2} style={{textAlign: 'right'}}>
                     <Button onClick={prevSlide} className="mr-2"
                             style={{backgroundColor: 'transparent', border: 'none'}}>
@@ -75,7 +76,7 @@ const NewImageSlider = () => {
                                                 left: '50%',
                                                 transform: 'translateX(-50%)',
                                                 width: '100%',
-                                                height: '70px',
+                                                padding: "10px 0 13px 0",
                                                 backgroundColor: 'rgb(96,2,184)',
                                                 color: 'white',
                                                 textAlign: 'center',
@@ -86,10 +87,12 @@ const NewImageSlider = () => {
                                             <div style={{display: 'flex', flexDirection: 'column', marginTop: '4px'}}>
                                                 <p style={{
                                                     margin: '0',
+                                                    fontFamily: "DiodrumBold",
                                                     fontSize: window.innerWidth < 768 ? '16px' : '20px'
                                                 }}>{d.title}</p>
                                                 <p style={{
                                                     margin: '0',
+                                                    fontFamily: "DiodrumRegular",
                                                     fontSize: window.innerWidth < 768 ? '12px' : '15px'
                                                 }}>{d.title2}</p>
                                             </div>

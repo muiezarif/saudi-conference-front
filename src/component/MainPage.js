@@ -29,7 +29,13 @@ const MainPage = () => {
         }
     }
     return (
-        <div style={{minHeight: "100vh", background: `url(${BackGroundImage})`,backgroundSize: 'cover', color: "white", marginTop: "-1rem"}}>
+        <div style={{
+            minHeight: "100vh",
+            background: `url(${BackGroundImage})`,
+            backgroundSize: 'cover',
+            color: "white",
+            marginTop: "-1rem"
+        }}>
             {/* Main Content Section */}
             <Container className="text-center py-5">
                 <Row style={style.rowStyle}>
@@ -50,8 +56,10 @@ const MainPage = () => {
 
                 <Row className="justify-content-center">
                     <Col md="8">
-                        <h1 className="display-4 mb-3 mt-5" style={{fontWeight: 'bold'}}>تحت عنوان</h1>
-                        <p className="lead mb-4">تطورات قطاع المحاماة والاستشارات القانونية</p>
+                        <h1 className="display-4 mb-3 mt-5" style={{fontFamily: 'DiodrumBold'}}>تحت عنوان</h1>
+                        <p className="lead mb-4" style={{fontFamily: "DiodrumMedium", marginTop: "-15px"}}>تطورات قطاع
+                            المحاماة والاستشارات
+                            القانونية</p>
 
                         <Button className="mb-5" style={style.button} size="lg">ﺳﺠـﻞ ﺍﻵﻥ</Button>
                     </Col>
@@ -79,13 +87,13 @@ const MainPage = () => {
                                 22 - 23
                             </p>
                             <p>
-                                <img src={img8} style={{width: '25px',paddingLeft:'5px'}}/>
+                                <img src={img8} style={{width: '25px', paddingLeft: '5px'}}/>
                             </p>
                         </div>
                     </Col>
                 </Row>
                 <Row className="mb-4" style={{marginTop: "-150px"}}>
-                <Col md="auto" className="d-flex flex-column align-items-start">
+                    <Col md="auto" className="d-flex flex-column align-items-start">
                         {[
                             {href: "#youtube", img: img6, alt: "YouTube"},
                             {href: "#linkedin", img: img5, alt: "LinkedIn"},
@@ -132,7 +140,12 @@ const MainPage = () => {
                             }}>
                                 <ArrowDown color='rgb(12,12,150)' size={35}/>
                             </div>
-                            <span style={{marginTop: '8px', color: 'white', fontSize: '20px'}}>عن المؤتمر</span>
+                            <span style={{
+                                marginTop: '8px',
+                                color: 'white',
+                                fontSize: '20px',
+                                fontFamily: "DiodrumMedium"
+                            }}>عن المؤتمر</span>
                         </Button>
                     </Col>
                 </Row>
