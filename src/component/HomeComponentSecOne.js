@@ -1,5 +1,5 @@
 import {Col, Container, Row} from "reactstrap";
-import personImage from '../asset/Person.png';
+import personImage from '../asset/bannerBottomImage.png';
 import "../style/fonts.css";
 
 export function HomeComponentSecOne() {
@@ -48,7 +48,6 @@ export function HomeComponentSecOne() {
             color: "rgb(12,12,150)",
         },
         image: {
-            maxWidth: "100%",
             height: "auto"
         },
     };
@@ -56,8 +55,8 @@ export function HomeComponentSecOne() {
     return (
         <Container style={styles.customFont}>
             <Row className="d-flex justify-content-between">
-                <Col xl={4} md={4} sm={12} className="mb-3">
-                    <img src={personImage} alt="Person" style={styles.image}/>
+                <Col xl={6} md={6} sm={12} className="mb-3">
+                    <img src={personImage} className="img-fluid" alt="Person" style={styles.image}/>
                 </Col>
                 <Col xl={6} md={6} sm={12} style={{textAlign: "right"}}>
                     <div className="d-inline-flex flex-wrap justify-content-between gap-4">
