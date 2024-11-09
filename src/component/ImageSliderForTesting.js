@@ -104,9 +104,6 @@ export const ImageSliderForTesting = () => {
     return (
         <Container fluid style={{marginTop: "-20px"}}>
             <Row className="justify-content-center align-items-center">
-                {/*<h2 className='mb-4 text-center' style={{color: "rgb(13,13,157)", fontWeight: 'bold'}}>*/}
-                {/*    المتحدثين*/}
-                {/*</h2>*/}
 
                 <Col xs={12} md={10} lg={11} className="d-flex justify-content-between">
                     <Card

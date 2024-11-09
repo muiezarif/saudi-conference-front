@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Row, Col} from 'reactstrap';
+import {Col, Container, Row} from 'reactstrap';
 import image1 from "../asset/companyLogo/Asset 1.png";
 import image2 from "../asset/companyLogo/Asset 2.png";
 import image3 from "../asset/companyLogo/Asset 3.png";
@@ -17,47 +17,48 @@ const LogoPage = () => {
     };
 
     return (
-            <Container className="my-5">
-                {/* first row company logo */}
-                <h2 className="mb-4" style={{ color: '#2a2a94', fontWeight: 'bold', textAlign: 'right' }}>الجهات المشاركة</h2>
-                <Row className="justify-content-center align-items-center mb-5" style={{ gap: '55px' }}>
-                    <Col xs="6" sm="4" md="2" className="text-center mb-4">
-                        <img src={image5} alt="Zakat, Tax and Customs Authority" style={imageStyle} />
-                    </Col>
-                    <Col xs="6" sm="4" md="2" className="text-center mb-4">
-                        <img src={image4} alt="Ministry of Industry and Mineral Resources" style={imageStyle} />
-                    </Col>
-                    <Col xs="6" sm="4" md="2" className="text-center mb-4">
-                        <img src={image3} alt="Ministry of Environment Water & Agriculture" style={imageStyle} />
-                    </Col>
-                    <Col xs="6" sm="4" md="2" className="text-center mb-4">
-                        <img src={image2} alt="Monshaat" style={imageStyle} />
-                    </Col>
-                    <Col xs="6" sm="4" md="2" className="text-center mb-4">
-                        <img src={image1} alt="Ministry of Commerce" style={imageStyle} />
-                    </Col>
-                </Row>
+        <Container className="my-5">
+            {/* first row company logo */}
+            <h2 className="mb-4" style={{color: '#2a2a94', fontFamily: 'DiodrumBold', textAlign: 'right'}}>الجهات
+                المشاركة</h2>
+            <Row className="justify-content-center align-items-center mb-5" style={{gap: '55px'}}>
+                <Col xs="6" sm="4" md="2" className="text-center mb-4">
+                    <img src={image5} alt="Zakat, Tax and Customs Authority" style={imageStyle}/>
+                </Col>
+                <Col xs="6" sm="4" md="2" className="text-center mb-4">
+                    <img src={image4} alt="Ministry of Industry and Mineral Resources" style={imageStyle}/>
+                </Col>
+                <Col xs="6" sm="4" md="2" className="text-center mb-4">
+                    <img src={image3} alt="Ministry of Environment Water & Agriculture" style={imageStyle}/>
+                </Col>
+                <Col xs="6" sm="4" md="2" className="text-center mb-4">
+                    <img src={image2} alt="Monshaat" style={imageStyle}/>
+                </Col>
+                <Col xs="6" sm="4" md="2" className="text-center mb-4">
+                    <img src={image1} alt="Ministry of Commerce" style={imageStyle}/>
+                </Col>
+            </Row>
 
-                {/* second row company logo */}
-                <h2 className="mb-4" style={{ color: '#2a2a94', fontWeight: 'bold', textAlign: 'right' }}>الرعاة</h2>
-                <Row className="justify-content-center align-items-center mb-5" style={{ gap: '55px' }}>
-                    <Col xs="6" sm="4" md="2" className="text-center mb-4">
-                        <img src={image5} alt="Zakat, Tax and Customs Authority" style={imageStyle} />
-                    </Col>
-                    <Col xs="6" sm="4" md="2" className="text-center mb-4">
-                        <img src={image4} alt="Ministry of Industry and Mineral Resources" style={imageStyle} />
-                    </Col>
-                    <Col xs="6" sm="4" md="2" className="text-center mb-4">
-                        <img src={image3} alt="Ministry of Environment Water & Agriculture" style={imageStyle} />
-                    </Col>
-                    <Col xs="6" sm="4" md="2" className="text-center mb-4">
-                        <img src={image2} alt="Monshaat" style={imageStyle} />
-                    </Col>
-                    <Col xs="6" sm="4" md="2" className="text-center mb-4">
-                        <img src={image1} alt="Ministry of Commerce" style={imageStyle} />
-                    </Col>
-                </Row>
-            </Container>
+            {/* second row company logo */}
+            <h2 className="mb-4" style={{color: '#2a2a94', fontFamily: "DiodrumBold", textAlign: 'right'}}>الرعاة</h2>
+            <Row className="justify-content-center align-items-center mb-5" style={{gap: '55px'}}>
+                <Col xs="6" sm="4" md="2" className="text-center mb-4">
+                    <img src={image5} alt="Zakat, Tax and Customs Authority" style={imageStyle}/>
+                </Col>
+                <Col xs="6" sm="4" md="2" className="text-center mb-4">
+                    <img src={image4} alt="Ministry of Industry and Mineral Resources" style={imageStyle}/>
+                </Col>
+                <Col xs="6" sm="4" md="2" className="text-center mb-4">
+                    <img src={image3} alt="Ministry of Environment Water & Agriculture" style={imageStyle}/>
+                </Col>
+                <Col xs="6" sm="4" md="2" className="text-center mb-4">
+                    <img src={image2} alt="Monshaat" style={imageStyle}/>
+                </Col>
+                <Col xs="6" sm="4" md="2" className="text-center mb-4">
+                    <img src={image1} alt="Ministry of Commerce" style={imageStyle}/>
+                </Col>
+            </Row>
+        </Container>
     );
 }
 
