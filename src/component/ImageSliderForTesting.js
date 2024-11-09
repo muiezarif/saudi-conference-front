@@ -5,6 +5,11 @@ import leftArrow from "../asset/socialMedia/leftArrow.png";
 import icon1 from "../asset/icon_calender.png";
 import icon2 from "../asset/icon_write.png";
 import icon3 from "../asset/calender.png";
+import HomeComponentSecTwo from "../component/HomeComponentSecTwo";
+import NewImageSlider from "../component/NewImageSlider";
+import HomeComponentSecThree from "../component/HomeComponentSecThree";
+import LogoPage from "../pages/LogoPage"
+import ConferencePage from "../pages/ConferencePage"
 
 
 export const ImageSliderForTesting = () => {
@@ -18,16 +23,12 @@ export const ImageSliderForTesting = () => {
             img: icon2
         },
         {
-            title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate lacus nec feugiat congue. Phasellus auctor sapien id enim pharetra, sit amet tristique arcu convallis. Curabitur ut nisl at ex bibendum finibus.",
-            img: icon2
-        },
-        {
             title: "Discover the essence of elegance with our handcrafted fragrances. Each scent is carefully curated to evoke memories and inspire emotions. Dive into a world where luxury meets art, and every bottle tells a story. Embrace the allure of our exclusive collection today.",
             img: icon3
         },
     ];
 
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(data.length - 1);
 
     // Next Slide Function
     const nextSlide = () => {
@@ -41,6 +42,59 @@ export const ImageSliderForTesting = () => {
         setCurrentIndex((prevIndex) =>
             prevIndex === 0 ? data.length - 1 : prevIndex - 1
         );
+    };
+
+    // Function to render components based on currentIndex
+    const renderComponents = () => {
+        switch (currentIndex) {
+            case 0: // First Slide
+                return (
+                    <>
+                        <Row>
+                            <Col xs={12} md={12}>
+                                <ConferencePage />
+                            </Col>
+                        </Row>
+                    </>
+                );
+            case 1: // Second Slide
+                return (
+                    <>
+                        <Row>
+                            <Col xs={12} md={12}>
+                                <ConferencePage />
+                            </Col>
+                        </Row>
+                    </>
+                );
+            case 2: // Third Slide
+                return (
+                    <>
+                        <Row>
+                            <Col xs={12} md={12}>
+                                <HomeComponentSecTwo />
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col xs={12} md={12}>
+                                <NewImageSlider />
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col xs={12} md={12}>
+                                <HomeComponentSecThree />
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col xs={12} md={12}>
+                                <LogoPage />
+                            </Col>
+                        </Row>
+                    </>
+                );
+            default:
+                return null;
+        }
     };
 
     return (
@@ -127,6 +181,9 @@ export const ImageSliderForTesting = () => {
                     </Card>
                 </Col>
             </Row>
+
+            {/* Display Components Below Slider */}
+            <div className="mt-4">{renderComponents()}</div>
         </Container>
     );
 };

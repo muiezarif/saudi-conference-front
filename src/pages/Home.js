@@ -13,10 +13,6 @@ export function Home() {
             <MainPage/>
             <HomeComponentSecOne/>
             <ImageSliderForTesting/>
-            <HomeComponentSecTwo/>
-            <NewImageSlider/>
-            <HomeComponentSecThree/>
-            <LogoPage/>
         </Base>
     )
 }

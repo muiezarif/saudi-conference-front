@@ -49,7 +49,6 @@ const ConferencePage = () => {
         }
     }
     return (
-        <Base>
             <Container className="mt-5">
                 <Row style={{textAlign: 'right', marginBottom: '25px'}}>
                     <Col md="6">
@@ -133,7 +132,6 @@ const ConferencePage = () => {
                     </Col>
                 </Row>
             </Container>
-        </Base>
     );
 };
 
