@@ -10,7 +10,7 @@ import {ImageSliderForTesting} from "../component/ImageSliderForTesting";
 export function Home() {
     return (
         <Base>
-            <MainPage/>
+            {/*<MainPage/>*/}
             <HomeComponentSecOne/>
             <ImageSliderForTesting/>
         </Base>

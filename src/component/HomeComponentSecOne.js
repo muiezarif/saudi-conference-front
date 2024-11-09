@@ -59,7 +59,7 @@ export function HomeComponentSecOne() {
                     <img src={personImage} className="img-fluid" alt="Person" style={styles.image}/>
                 </Col>
                 <Col xl={6} md={6} sm={12} style={{textAlign: "right"}}>
-                    <div className="d-inline-flex flex-wrap justify-content-between gap-4">
+                    <div className="d-inline-flex flex-wrap justify-content-center gap-3">
                         {['ﺍﻻﻳﺎﻡ', 'ﺍﻟﺴﺎﻋﺎﺕ', 'ﺍﻟﺪﻗﺎﺋﻖ', 'ﺍﻟﺜﻮﺍﻧﻲ'].map((text, index) => (
                             <div
                                 key={index}
