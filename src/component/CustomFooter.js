@@ -15,6 +15,10 @@ const CustomFooter = () => {
             borderRadius: '20px',
             color: '#ffffff',
             textAlign: 'right',
+        },
+        labelStyle: {
+            fontFamily: "DiodrumRegular",
+            marginBottom: "20px"
         }
     };
 
@@ -33,13 +37,13 @@ const CustomFooter = () => {
                 <Row style={{textAlign: 'right', fontFamily: "DiodrumRegular"}}>
                     <Col xs={12} md={6} className="mb-3">
                         <FormGroup>
-                            <Label for="firstName">البريد الإلكتروني</Label>
+                            <Label for="firstName" style={style.labelStyle}>البريد الإلكتروني</Label>
                             <Input type="text" id="firstName" placeholder="" style={style.textField}/>
                         </FormGroup>
                     </Col>
                     <Col xs={12} md={6} className="mb-3">
                         <FormGroup>
-                            <Label for="email">الاسم</Label>
+                            <Label for="email" style={style.labelStyle}>الاسم</Label>
                             <Input type="email" id="email" placeholder="" style={style.textField}/>
                         </FormGroup>
                     </Col>
@@ -48,13 +52,13 @@ const CustomFooter = () => {
                 <Row style={{textAlign: 'right', fontFamily: "DiodrumRegular"}}>
                     <Col xs={12} md={6} className="mb-3">
                         <FormGroup>
-                            <Label for="message">الرسالة</Label>
+                            <Label for="message" style={style.labelStyle}>الرسالة</Label>
                             <Input type="text" id="message" placeholder="" style={style.textField}/>
                         </FormGroup>
                     </Col>
                     <Col xs={12} md={6} className="mb-3">
                         <FormGroup>
-                            <Label for="phone">الجوال</Label>
+                            <Label for="phone" style={style.labelStyle}>الجوال</Label>
                             <Input type="text" id="phone" placeholder="" style={style.textField}/>
                         </FormGroup>
                     </Col>
