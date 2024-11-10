@@ -102,74 +102,38 @@ export const ImageSliderForTesting = () => {
     };
 
     return (
-        <Container fluid style={{marginTop: "-20px"}}>
+        <div style={{marginTop: "-20px"}} className="mainDiv">
             <Row className="justify-content-center align-items-center">
 
                 <Col xs={12} md={10} lg={11} className="d-flex justify-content-between">
-                    <Card
-                        style={{
-                            borderTopLeftRadius: "0",
-                            borderTopRightRadius: "0",
-                            borderBottomLeftRadius: "20px",
-                            borderBottomRightRadius: "20px",
-                            borderRight: "0",
-                            borderLeft: "0",
-                            borderBottom: "0",
-                            borderTop: "5px solid #593996",
-                            width: "100%",
-                            maxWidth: "100%",
-                            padding: "120px 0 120px 0",
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            backgroundColor: '#ededed',
-                            fontFamily: "DiodrumMedium",
-                            fontSize: '18px',
-                            position: 'relative',
-                            textAlign: 'center',
-                        }}
-                    >
+                    <Card className="customBox">
 
+                        {/* Content */}
                         <Row style={{width: "85%"}}>
-                            <Col xs={12} md={12} lg={4} className="mb-2 custom_slider_img_p">
+                            <Col xs={3} md={4} lg={4} className="mb-2 custom_slider_img_p">
                                 <img className="custom_slider_img" src={data[currentIndex].img} alt="" width={300}/>
                             </Col>
-                            <Col xs={12} md={12} lg={8}
+                            <Col xs={9} md={8} lg={8}
                                  className="d-flex justify-content-center align-items-center align-content-center">
-                                <span style={{
-                                    textAlign: "right",
-                                    color: "#474748",
-                                    fontFamily: "DiodrumRegular",
-                                    fontSize: "33px"
-                                }}><span
-                                    style={{
-                                        fontFamily: "DiodrumBold",
-                                        color: "#2c318b"
-                                    }}>{data[currentIndex].title}</span> {data[currentIndex].subtitle} </span>
+                                <span className="custom_slider_text">
+                                    <span
+                                        style={{
+                                            fontFamily: "DiodrumBold",
+                                            color: "#2c318b"
+                                        }}>
+                                        {data[currentIndex].title}
+                                    </span>
+                                    {data[currentIndex].subtitle}
+                                </span>
                             </Col>
                         </Row>
-                        {/* Title */}
-                        {/*<div style={{marginBottom: '40px', padding: '0 20px'}}>{data[currentIndex].title}</div>*/}
 
                         {/* Pagination Dots */}
-                        <div style={{
-                            position: 'absolute',
-                            bottom: '30px',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            gap: '45px',
-                        }}>
+                        <div className="absolute-center">
                             {data.map((_, index) => (
                                 <span
                                     key={index}
-                                    style={{
-                                        width: '10px',
-                                        height: '10px',
-                                        borderRadius: '50%',
-                                        backgroundColor: currentIndex === index ? '#606060' : '#b0b0b0',
-                                    }}
+                                    className={`navigationDots ${currentIndex === index ? 'active' : ''}`}
                                 />
                             ))}
                         </div>
@@ -183,14 +147,14 @@ export const ImageSliderForTesting = () => {
                                 display: 'flex',
                                 justifyContent: 'center', // Center the buttons horizontally
                                 padding: '0 10px',
-                                gap:'200px'
+                                gap: '200px'
                             }}
                         >
                             <Button onClick={prevSlide} style={{backgroundColor: 'transparent', border: 'none'}}>
-                                <img src={leftArrow} alt="Previous" style={{width: '25px', height: '35px'}}/>
+                                <img src={leftArrow} alt="Previous" className="navigationButtons"/>
                             </Button>
                             <Button onClick={nextSlide} style={{backgroundColor: 'transparent', border: 'none'}}>
-                                <img src={rightArrow} alt="Next" style={{width: '25px', height: '35px'}}/>
+                                <img src={rightArrow} alt="Next" className="navigationButtons"/>
                             </Button>
                         </div>
                     </Card>
@@ -199,6 +163,6 @@ export const ImageSliderForTesting = () => {
 
             {/* Display Components Below Slider */}
             <div className="mt-4">{renderComponents()}</div>
-        </Container>
+        </div>
     );
 };
