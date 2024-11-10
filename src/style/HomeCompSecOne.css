@@ -1,0 +1,197 @@
+.customDiv {
+    font-family: "DiodrumMedium";
+    margin-top: 3rem;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.cardBase {
+    background-color: rgb(78, 10, 171);
+    color: white;
+    width: 125px;
+    padding: 5px 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.cardLeft {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.cardRight {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.cardHeading {
+    padding-top: 13px;
+    font-size: 33px;
+    font-family: "DiodrumBold", serif;
+}
+
+.cardSubHeading {
+    margin-top: -13px;
+    font-size: 26px;
+    font-family: "DiodrumRegular", serif;
+}
+
+.paragraph {
+    color: rgb(96, 96, 96);
+    margin-top: 30px;
+    text-align: right;
+    font-size: 36px;
+}
+
+.heading {
+    color: rgb(80, 177, 177);
+    font-family: "DiodrumBold", serif;
+    font-size: 50px;
+}
+
+.subHeading {
+    font-family: "DiodrumBold", serif;
+    text-align: right;
+    font-size: 70px;
+    color: rgb(12, 12, 150);
+}
+
+.image {
+    height: auto;
+}
+
+.customCard {
+    text-align: right;
+}
+
+.cardAlignment {
+    text-align: right;
+}
+
+.paragraphAlignment {
+    text-align: right;
+}
+
+@media only screen and (max-width: 1300px) {
+    .cardBase {
+        width: 110px;
+    }
+
+    .cardHeading {
+        font-size: 25px;
+    }
+
+    .cardSubHeading {
+        font-size: 25px;
+    }
+
+    .heading {
+        font-size: 42px;
+    }
+
+    .subHeading {
+        font-size: 55px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .cardBase {
+        width: 90px;
+    }
+
+    .customCard {
+        text-align: center;
+    }
+
+    .cardHeading {
+        font-size: 20px;
+    }
+
+    .cardSubHeading {
+        font-size: 20px;
+    }
+
+    .heading {
+        font-size: 36px;
+    }
+
+    .subHeading {
+        font-size: 49px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+
+    .cardBase {
+        width: 80px;
+    }
+
+    .cardHeading {
+        font-size: 16px;
+    }
+
+    .cardSubHeading {
+        font-size: 16px;
+    }
+
+    .paragraph {
+        font-size: 26px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .customDiv {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .cardBase {
+        width: 80px;
+        padding: 8px 15px;
+    }
+
+    .cardHeading {
+        font-size: 14px;
+    }
+
+    .cardSubHeading {
+        font-size: 14px;
+    }
+
+    .customCol {
+        text-align: center;
+    }
+
+    .paragraph {
+        font-size: 20px;
+    }
+
+    .heading {
+        font-size: 28px;
+    }
+
+    .subHeading {
+        font-size: 35px;
+        margin-bottom: 60px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    .cardBase {
+        width: 40px;
+        padding: 0 25px;
+    }
+
+    .cardHeading {
+        font-size: 9px;
+    }
+
+    .cardSubHeading {
+        font-size: 9px;
+    }
+}

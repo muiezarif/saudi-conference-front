@@ -108,16 +108,12 @@ export default function CustomNavbar() {
                     <div className="fixed inset-0 z-50"/>
                     <DialogPanel
                         className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+
                         <div className="flex items-center justify-between">
                             <NavItem className="nav-link">
                                 <NavLink tag={ReactLink} to="/"
                                          className="-m-1.5 p-1.5">
                                     <span className="sr-only">Your Company</span>
-                                    {/*<img*/}
-                                    {/*    alt=""*/}
-                                    {/*    src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"*/}
-                                    {/*    className="h-8 w-auto"*/}
-                                    {/*/>*/}
                                 </NavLink>
                             </NavItem>
                             <button
@@ -129,12 +125,13 @@ export default function CustomNavbar() {
                                 <XMarkIcon aria-hidden="true" className="h-6 w-6"/>
                             </button>
                         </div>
-                        <div className="mt-6 flow-root">
+
+                        {/* Navigation items section */}
+                        <div className="mt-6 flow-root text-right"> {/* Added 'text-right' here */}
                             <div className="-my-6 divide-y divide-gray-500/10">
                                 <div className="space-y-2 py-6">
                                     {navigation.map((item) => (
-                                        <NavItem key={item.name}
-                                                 href={item.href}
+                                        <NavItem key={item.name} href={item.href}
                                                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                         >
                                             <NavLink tag={ReactLink} to={item.href}
@@ -148,6 +145,7 @@ export default function CustomNavbar() {
                         </div>
                     </DialogPanel>
                 </Dialog>
+
             </header>
             {location.pathname === "/" && (
                 <div className="bannerPage">
