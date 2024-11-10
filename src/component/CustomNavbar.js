@@ -69,9 +69,9 @@ export default function CustomNavbar() {
             <header className="absolute inset-x-0 top-0 z-50">
                 <nav aria-label="Global"
                      className={`flex items-center justify-between p-6 lg:px-8 ${location.pathname !== '/' ? 'custom-navbar-bg' : ''}`}>
-                    <div className="flex lg:flex-1">
-                    </div>
-                    <div className="flex lg:hidden">
+
+                    {/* Left section for mobile: Hamburger menu */}
+                    <div className="flex lg:hidden w-full justify-between">
                         <button
                             type="button"
                             onClick={() => setMobileMenuOpen(true)}
@@ -80,8 +80,12 @@ export default function CustomNavbar() {
                             <span className="sr-only">Open main menu</span>
                             <Bars3Icon aria-hidden="true" className="h-6 w-6"/>
                         </button>
+                        {/* Right side logo for mobile */}
+                        <img src={Logo} alt="Logo" style={style.logo}/>
                     </div>
-                    <div className="hidden lg:flex lg:gap-x-6 custom-navbar">
+
+                    {/* Centered navigation links for desktop */}
+                    <div className="hidden lg:flex lg:gap-x-6 custom-navbar lg:flex-grow lg:justify-center">
                         {navigation.map((item) => (
                             <NavItem key={item.name} className="nav-link">
                                 <NavLink tag={ReactLink} to={item.href}
@@ -94,8 +98,10 @@ export default function CustomNavbar() {
                             </NavItem>
                         ))}
                     </div>
-                    <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                        <img src={Logo} alt="" style={style.logo}/>
+
+                    {/* Right side logo for desktop */}
+                    <div className="hidden lg:flex lg:justify-end lg:flex-none">
+                        <img src={Logo} alt="Logo" style={style.logo}/>
                     </div>
                 </nav>
                 <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
