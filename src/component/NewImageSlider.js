@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
-import {Button, Card, CardImg, Col, Container, Row} from 'reactstrap';
+import {Button, Card, CardImg, Col, Row} from 'reactstrap';
 import image1 from "../asset/SliderImage/sliderImg1.png";
 import image2 from "../asset/SliderImage/sliderImg2.png";
 import image3 from "../asset/SliderImage/sliderImg3.png";
 import image4 from "../asset/SliderImage/sliderImg4.png";
 import rightArrow from "../asset/socialMedia/rightArrow.png";
 import leftArrow from "../asset/socialMedia/leftArrow.png";
+import "../style/NewImageSlider.css";
 
 const NewImageSlider = () => {
     const data = [
@@ -36,17 +37,17 @@ const NewImageSlider = () => {
     };
 
     return (
-        <Container className="mt-2">
+        <div className="mt-2">
             <Row className="justify-content-center align-items-center">
                 <h2 className='mb-5'
                     style={{textAlign: 'right', color: "rgb(13,13,157)", fontFamily: "DiodrumBold"}}>المتحدثين</h2>
-                <Col xl={1} md={1} sm={2} xs={2} style={{textAlign: 'right'}}>
+                <Col xl={1} md={1} sm={1} xs={1} style={{textAlign: 'right', margin: "0", padding: "0"}}>
                     <Button onClick={prevSlide} className="mr-2"
-                            style={{backgroundColor: 'transparent', border: 'none'}}>
-                        <img src={leftArrow} alt="Previous" style={{width: '30px', height: '40px'}}/>
+                            style={{backgroundColor: 'transparent', border: 'none', margin: "0", padding: "0"}}>
+                        <img src={leftArrow} alt="Previous" className="navigationArrows"/>
                     </Button>
                 </Col>
-                <Col xl={10} md={10} sm={8} xs={8} className="justify-content-center align-items-center">
+                <Col xl={10} md={10} sm={10} xs={10} className="justify-content-center align-items-center">
                     <div style={{width: '100%', overflow: 'hidden'}}>
                         <div
                             style={{
@@ -57,7 +58,7 @@ const NewImageSlider = () => {
                         >
                             {data.map((d, index) => (
                                 <div key={index} style={{flex: `0 0 ${100 / itemsToShow}%`, padding: '0 10px'}}>
-                                    <Card style={{borderRadius: '10px', height: "300px"}}>
+                                    <Card className="customCard">
                                         <CardImg
                                             top
                                             width="80%"
@@ -73,10 +74,10 @@ const NewImageSlider = () => {
                                             style={{
                                                 position: 'absolute',
                                                 bottom: '0',
-                                                left: '50%',
-                                                transform: 'translateX(-50%)',
+                                                left: "3px",
                                                 width: '100%',
-                                                padding: "10px 0 13px 0",
+                                                justifyContent: "center",
+                                                padding: "6px 0 8px 0",
                                                 backgroundColor: 'rgb(96,2,184)',
                                                 color: 'white',
                                                 textAlign: 'center',
@@ -84,7 +85,7 @@ const NewImageSlider = () => {
                                                 borderRadius: '15px',
                                             }}
                                         >
-                                            <div style={{display: 'flex', flexDirection: 'column', marginTop: '4px'}}>
+                                            <div style={{display: 'flex', flexDirection: 'column'}}>
                                                 <p style={{
                                                     margin: '0',
                                                     fontFamily: "DiodrumBold",
@@ -103,14 +104,14 @@ const NewImageSlider = () => {
                         </div>
                     </div>
                 </Col>
-                <Col xl={1} md={1} sm={2} xs={2} style={{textAlign: 'left'}}>
+                <Col xl={1} md={1} sm={1} xs={1} style={{textAlign: 'left', margin: "0", padding: "0"}}>
                     <Button onClick={nextSlide} className="ml-2"
-                            style={{backgroundColor: 'transparent', border: 'none'}}>
-                        <img src={rightArrow} alt="Next" style={{width: '30px', height: '40px'}}/>
+                            style={{backgroundColor: 'transparent', border: 'none', margin: "0", padding: "0"}}>
+                        <img src={rightArrow} alt="Next" className="navigationArrows"/>
                     </Button>
                 </Col>
             </Row>
-        </Container>
+        </div>
     );
 };
 

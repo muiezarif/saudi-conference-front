@@ -1,4 +1,4 @@
-import {Col, Container, Row} from "reactstrap";
+import {Col, Row} from "reactstrap";
 import personImage from '../asset/bannerBottomImage.png';
 import mobileImage from '../asset/mobileViewPerson@4x.png';
 import "../style/fonts.css";
@@ -30,12 +30,29 @@ export function HomeComponentSecOne() {
 
     return (
         <div className="customDiv">
-            <Row className="d-flex justify-content-between">
+            <Row className="d-flex">
+                {/* Column to hide on desktop and show on mobile */}
+                <Col className="text-center mb-5 d-block d-xl-none">
+                    <div className="d-flex justify-content-center gap-2">
+                        {['ﺍﻻﻳﺎﻡ', 'ﺍﻟﺴﺎﻋﺎﺕ', 'ﺍﻟﺪﻗﺎﺋﻖ', 'ﺍﻟﺜﻮﺍﻧﻲ'].map((text, index) => (
+                            <div
+                                key={index}
+                                className={`mobileViewCard ${index === 0 ? 'mobileViewCardLeft' : ''} ${index === 3 ? 'mobileViewCardRight' : ''}`}
+                            >
+                                <h6 className="mobileViewCardHeading">00</h6>
+                                <p className="mobileViewCardSubHeading">{text}</p>
+                            </div>
+                        ))}
+                    </div>
+                </Col>
+
+                {/* Existing image and other content columns */}
                 <Col xl={6} md={12} sm={12} xs={12} className="mb-3">
                     <img src={imageSrc} className="img-fluid image" alt="Person"/>
                 </Col>
+                {/* Column to show only on desktop */}
                 <Col xl={6} md={12} sm={12} xs={12} className="customCard">
-                    <div className="d-inline-flex flex-wrap justify-content-center gap-3">
+                    <div className="d-inline-flex flex-wrap justify-content-center gap-3 d-none d-xl-flex">
                         {['ﺍﻻﻳﺎﻡ', 'ﺍﻟﺴﺎﻋﺎﺕ', 'ﺍﻟﺪﻗﺎﺋﻖ', 'ﺍﻟﺜﻮﺍﻧﻲ'].map((text, index) => (
                             <div
                                 key={index}
@@ -49,7 +66,7 @@ export function HomeComponentSecOne() {
 
                     <div className="paragraphAlignment">
                         <p className="paragraph">
-                            ﺑﺮﻋﺎﻳﺔ ﻣﻌﺎﻟﻲ ﻭﺯﻳﺮ ﺍﻟﻌﺪﻝ ﺭﺋﻴﺲ ﻣﺠﻠﺲ
+                            ﺑﺮﻋﺎﻳﺔ ﻣﻌﺎﻟﻲ ﻭﺯﻳﺮ ﺍﻟﻌﺩﻝ ﺭﺋﻴﺲ ﻣﺠﻠﺲ
                             ﺇﺩﺍﺭﺓ ﺍﻟﻬﻴﺌــــﺔ ﺍﻟﺴﻌـــﻮﺩﻳﺔ ﻟﻠﻤﺤﺎﻣﻴـــﻦ
                         </p>
                         <p className="heading">ﺩ. ﻭﻟﻴﺪ ﺑﻦ ﻣﺤﻤﺪ ﺍﻟﺼﻤﻌﺎﻧﻲ</p>

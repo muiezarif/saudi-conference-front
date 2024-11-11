@@ -2,7 +2,7 @@ import React from 'react';
 import {Card, CardBody, Col, Container, Row} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {cardData, cardData2, cardData3} from "../data/SecThreeData";
-
+import "../style/SecThree.css";
 
 const homeComponentSecThree = () => {
     const style = {
@@ -15,14 +15,6 @@ const homeComponentSecThree = () => {
             textAlign: 'center',
             justifyContent: 'center',
             marginTop: '25px'
-        },
-        firstCard: {
-            borderTopLeftRadius: '15px',
-            borderBottomLeftRadius: '15px',
-        },
-        lastCard: {
-            borderTopRightRadius: '15px',
-            borderBottomRightRadius: '15px',
         },
         topHeading: {
             color: '#0b1a8a',
@@ -38,32 +30,13 @@ const homeComponentSecThree = () => {
     }
     return (
         <Container className="my-5">
-            <Row className='d-flex justify-content-center mt-3' style={{columnGap: '26px'}}>
+            <Row className='d-flex justify-content-between mt-3'>
                 <h2 style={style.topHeading}>ﺃﺭﻗﺎﻡ ﺍﻟﻤﺆﺗﻤﺮ</h2>
                 {cardData.map((data, index) => (
                     <Col
-                        xl={2}
                         key={index}
-                        lg="3" md="4" sm="4"
-                        style={{
-                            background: "#0b1a8a",
-                            borderRadius: "0",
-                            height: '220px',
-                            width: "180px",
-                            border: 'none',
-                            display: 'flex',
-                            alignItems: 'center',
-                            textAlign: 'center',
-                            justifyContent: 'center',
-                            marginBottom: "25px",
-                            ...(
-                                index === 0
-                                    ? style.firstCard
-                                    : index === cardData.length - 1
-                                        ? style.lastCard
-                                        : {}
-                            )
-                        }}
+                        xl={2} lg={2} md={4} sm={4}
+                        className={`col-style ${index === 0 ? 'firstCard' : index === cardData.length - 1 ? 'lastCard' : ''}`}
                     >
                         <div style={style.card}>
                             <CardBody>
@@ -84,7 +57,7 @@ const homeComponentSecThree = () => {
             </Row>
 
             {/*2nd boxes  */}
-            <Row className='d-flex justify-content-center mt-3' style={{columnGap: '26px'}}>
+            <Row className='d-flex justify-content-between mt-3'>
                 <h2 style={style.topHeading}>فئات التذاكر</h2>
                 {cardData2.map((data, index) => (
                     <Col
@@ -93,8 +66,8 @@ const homeComponentSecThree = () => {
                         style={{
                             background: "#6002b8",
                             borderRadius: "0",
-                            height: '260px',
-                            width: "260px",
+                            height: '290px',
+                            width: "290px",
                             border: 'none',
                             display: 'flex',
                             alignItems: 'center',
@@ -135,7 +108,7 @@ const homeComponentSecThree = () => {
             </Row>
 
             {/*3nd boxes  */}
-            <Row className='d-flex justify-content-center mt-3' style={{columnGap: '26px'}}>
+            <Row className='d-flex justify-content-between mt-3' style={{columnGap: '26px'}}>
                 <h2 style={style.topHeading}>الرعايات</h2>
                 {cardData3.map((data, index) => (
                     <Col
@@ -144,8 +117,8 @@ const homeComponentSecThree = () => {
                         style={{
                             background: "#0b1a8a",
                             borderRadius: "0",
-                            height: '260px',
-                            width: "260px",
+                            height: '290px',
+                            width: "290px",
                             border: 'none',
                             display: 'flex',
                             alignItems: 'center',
