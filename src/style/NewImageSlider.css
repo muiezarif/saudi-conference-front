@@ -13,3 +13,19 @@
         height: 265px;
     }
 }
+
+.custom-style {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 668px) {
+    .custom-style {
+        bottom: 9px;
+    }
+}

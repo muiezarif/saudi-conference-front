@@ -1,6 +1,7 @@
 .col-style {
     background-color: #0b1a8a;
     padding: 30px 0;
+    margin: 5px 2px;
 }
 
 .firstCard {
@@ -11,4 +12,111 @@
 .lastCard {
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
+}
+
+.firstCard_ {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.lastCard_ {
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* Common styles for all Col elements */
+.second-col-style {
+    background: #6002b8;
+    border-radius: 0;
+    height: 290px;
+    width: 290px;
+    border: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.third-col-style {
+    background: #0b1a8a;
+    border-radius: 0;
+    height: 290px;
+    width: 290px;
+    border: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+
+.p1 {
+    color: white;
+    font-size: 25px;
+    margin: 0;
+    font-family: DiodrumRegular, serif;
+}
+
+.p2 {
+    color: white;
+    font-size: 45px;
+    margin: 0;
+    font-family: DiodrumBold, serif;
+}
+
+.p3 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 2px;
+    margin: 0;
+    font-family: DiodrumBold, serif;
+}
+
+@media only screen and (max-width: 768px) {
+    .firstCard {
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0;
+    }
+
+    .lastCard {
+        border-bottom-left-radius: 15px;
+        border-top-right-radius: 0;
+    }
+
+    .second-col-style, .third-col-style {
+        height: 250px;
+        width: 250px;
+        border-radius: 15px;
+    }
+
+    .p1 {
+        font-size: 10px;
+    }
+
+    .p2 {
+        font-size: 26px;
+    }
+
+    .p3 {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 588px) {
+    .col-style {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 468px) {
+
+    .second-col-style, .third-col-style {
+        height: 150px;
+        width: 150px;
+        border-radius: 15px;
+    }
 }

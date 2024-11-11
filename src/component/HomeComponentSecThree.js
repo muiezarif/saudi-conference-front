@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, CardBody, Col, Container, Row} from 'reactstrap';
+import {CardBody, Col, Container, Row} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {cardData, cardData2, cardData3} from "../data/SecThreeData";
 import "../style/SecThree.css";
@@ -12,25 +12,22 @@ const homeComponentSecThree = () => {
             backgroundColor: 'transparent',
             display: 'flex',
             alignItems: 'center',
+            alignContent: "center",
             textAlign: 'center',
             justifyContent: 'center',
-            marginTop: '25px'
+            // marginTop: '25px'
         },
         topHeading: {
+            padding: "0",
             color: '#0b1a8a',
             textAlign: 'right',
             fontFamily: "DiodrumBold",
             marginBottom: "40px"
         },
-        name1: {
-            fontSize: '45px',
-            margin: '0',
-            fontFamily: "DiodrumBold"
-        }
     }
     return (
         <Container className="my-5">
-            <Row className='d-flex justify-content-between mt-3'>
+            <Row className='d-flex justify-content-around mt-3'>
                 <h2 style={style.topHeading}>ﺃﺭﻗﺎﻡ ﺍﻟﻤﺆﺗﻤﺮ</h2>
                 {cardData.map((data, index) => (
                     <Col
@@ -57,111 +54,58 @@ const homeComponentSecThree = () => {
             </Row>
 
             {/*2nd boxes  */}
-            <Row className='d-flex justify-content-between mt-3'>
+            <Row className='d-flex justify-content-between mt-5'>
                 <h2 style={style.topHeading}>فئات التذاكر</h2>
                 {cardData2.map((data, index) => (
                     <Col
                         key={index}
-                        md="4"
-                        style={{
-                            background: "#6002b8",
-                            borderRadius: "0",
-                            height: '290px',
-                            width: "290px",
-                            border: 'none',
-                            display: 'flex',
-                            alignItems: 'center',
-                            textAlign: 'center',
-                            justifyContent: 'center',
-                            marginBottom: "25px",
-                            ...(
-                                index === 0
-                                    ? style.firstCard
-                                    : index === cardData2.length - 1
-                                        ? style.lastCard
-                                        : {}
-                            )
-                        }}
+                        xl={4} lg={4} md={6} sm={6} xs={6}
+                        className={`second-col-style ${index === 0 ? 'firstCard_' : index === cardData2.length - 1 ? 'lastCard_' : ''}`}
                     >
-                        <Card className="" style={style.card}>
-                            <CardBody>
-                                <div style={{color: 'white'}}>
-                                    <p style={{
-                                        fontSize: '25px',
-                                        margin: '0',
-                                        fontFamily: "DiodrumRegular"
-                                    }}>{data.name}</p>
-                                    <p style={style.name1}>{data.name1}</p>
-                                    <div style={{display: 'flex', paddingLeft: '40px', gap: '2px'}}>
-                                        <strong style={{margin: '0', fontFamily: "DiodrumBold"}}>
-                                            {data.cur}
-                                        </strong>
-                                        <strong style={{margin: '0', fontFamily: "DiodrumBold"}}>
-                                            {data.number}
-                                        </strong>
-                                    </div>
+                        <div style={style.card}>
+                            <div>
+                                <p className="p1">{data.name}</p>
+                                <p className="p2">{data.name1}</p>
+                                <div className="p3">
+                                    <strong>
+                                        {data.cur}
+                                    </strong>
+                                    <strong>
+                                        {data.number}
+                                    </strong>
                                 </div>
-                            </CardBody>
-                        </Card>
-                    </Col>
-                ))}
-            </Row>
-
-            {/*3nd boxes  */}
-            <Row className='d-flex justify-content-between mt-3' style={{columnGap: '26px'}}>
-                <h2 style={style.topHeading}>الرعايات</h2>
-                {cardData3.map((data, index) => (
-                    <Col
-                        key={index}
-                        md="4"
-                        style={{
-                            background: "#0b1a8a",
-                            borderRadius: "0",
-                            height: '290px',
-                            width: "290px",
-                            border: 'none',
-                            display: 'flex',
-                            alignItems: 'center',
-                            textAlign: 'center',
-                            justifyContent: 'center',
-                            marginBottom: "25px",
-                            ...(
-                                index === 0
-                                    ? style.firstCard
-                                    : index === cardData3.length - 1
-                                        ? style.lastCard
-                                        : {}
-                            )
-                        }}
-                    >
-                        <div className="" style={style.card}>
-                            <CardBody>
-                                <div style={{color: 'white'}}>
-                                    <p style={{
-                                        fontSize: '30px',
-                                        margin: '0 0 8px 0',
-                                        fontFamily: "DiodrumBold"
-                                    }}>{data.name}
-                                    </p>
-                                    <div style={{
-                                        display: 'flex',
-                                        gap: '2px',
-                                        fontSize: '30px'
-                                    }}>
-                                        <strong style={{margin: '0', fontFamily: "DiodrumBold"}}>
-                                            {data.cur}
-                                        </strong>
-                                        <strong style={{margin: '0', fontFamily: "DiodrumBold"}}>
-                                            {data.number}
-                                        </strong>
-                                    </div>
-                                </div>
-                            </CardBody>
+                            </div>
                         </div>
                     </Col>
                 ))}
             </Row>
 
+            {/*3nd boxes  */}
+            <Row className='d-flex justify-content-between mt-3'>
+                <h2 style={style.topHeading}>الرعايات</h2>
+                {cardData3.map((data, index) => (
+                    <Col
+                        key={index}
+                        xl={4} lg={4} md={6} sm={6} xs={6}
+                        className={`third-col-style ${index === 0 ? 'firstCard_' : index === cardData2.length - 1 ? 'lastCard_' : ''}`}
+                    >
+                        <div style={style.card}>
+                            <div>
+                                <p className="p3 mb-2">{data.name}</p>
+                                <p className="p2">{data.name1}</p>
+                                <div className="p3">
+                                    <strong>
+                                        {data.cur}
+                                    </strong>
+                                    <strong>
+                                        {data.number}
+                                    </strong>
+                                </div>
+                            </div>
+                        </div>
+                    </Col>
+                ))}
+            </Row>
         </Container>
     );
 }

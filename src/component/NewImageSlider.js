@@ -58,43 +58,30 @@ const NewImageSlider = () => {
                         >
                             {data.map((d, index) => (
                                 <div key={index} style={{flex: `0 0 ${100 / itemsToShow}%`, padding: '0 10px'}}>
-                                    <Card className="customCard">
-                                        <CardImg
-                                            top
-                                            width="80%"
-                                            src={d.image}
-                                            alt={d.title}
-                                            style={{
-                                                height: "auto",
-                                                objectFit: "cover",
-                                                borderRadius: "10px"
-                                            }}
-                                        />
-                                        <div
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: '0',
-                                                left: "3px",
-                                                width: '100%',
-                                                justifyContent: "center",
-                                                padding: "6px 0 8px 0",
-                                                backgroundColor: 'rgb(96,2,184)',
-                                                color: 'white',
-                                                textAlign: 'center',
-                                                lineHeight: '22px',
-                                                borderRadius: '15px',
-                                            }}
-                                        >
-                                            <div style={{display: 'flex', flexDirection: 'column'}}>
+                                    <Card
+                                        className="bg-transparent border-0 justify-content-center text-center text-white"
+                                    >
+                                        <div style={{position: "relative", textAlign: "center"}}>
+                                            <CardImg
+                                                width="80%"
+                                                src={d.image}
+                                                alt={d.title}
+                                                style={{
+                                                    height: "auto",
+                                                    objectFit: "cover",
+                                                    borderRadius: "10px"
+                                                }}
+                                            />
+                                            <div className="custom-style">
                                                 <p style={{
                                                     margin: '0',
                                                     fontFamily: "DiodrumBold",
-                                                    fontSize: window.innerWidth < 768 ? '16px' : '20px'
+                                                    fontSize: window.innerWidth < 768 ? '11px' : '16px'
                                                 }}>{d.title}</p>
                                                 <p style={{
                                                     margin: '0',
                                                     fontFamily: "DiodrumRegular",
-                                                    fontSize: window.innerWidth < 768 ? '12px' : '15px'
+                                                    fontSize: window.innerWidth < 768 ? '9px' : '10px'
                                                 }}>{d.title2}</p>
                                             </div>
                                         </div>
