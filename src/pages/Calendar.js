@@ -66,6 +66,7 @@ const Calendar = () => {
             timeIcon: iconClock
         }
     ]
+    const isMobile = window.innerWidth <= 768;
     return (
         <Base>
             <Container>
@@ -77,13 +78,14 @@ const Calendar = () => {
                     color: "#0c0c9c"
                 }}>{headingData.firstHeading}</h1>
                 <Row style={{display: "flex", justifyContent: "center"}}>
-                    <Col xs={12} md={6} lg={10} xl={10} className="d-flex justify-content-center flex-wrap gap-4">
+                    <Col  className="d-flex justify-content-center flex-wrap gap-4" >
                         {data.map(item => (
                             <div style={{
                                 backgroundColor: "#5f00b8",
                                 width: "300px",
                                 height: "250px",
                                 alignContent: "center",
+                                marginRight: isMobile ? '85px' : '0px',
                             }}>
                                 <div className="d-flex justify-content-center gap-2 mb-2">
                                     < p className="text-white">{item.title}</p>
@@ -101,13 +103,17 @@ const Calendar = () => {
                         ))
                         }
                         <div style={{
-                            backgroundColor: "#00b4b2",
-                            width: "80px",
-                            height: "250px",
-                            alignContent: "center",
-                            textAlign: "center",
-                            color: "white"
-                        }}>
+                                backgroundColor: "#00b4b2",
+                                width: "80px",
+                                height: window.innerWidth <= 768 ? "auto" : "250px", // Responsive height
+                                minHeight: window.innerWidth <= 768 ? "798px" : "auto", // Mobile view minHeight
+                                alignContent: "center",
+                                textAlign: "center",
+                                color: "white",
+                                position: window.innerWidth <= 768 ? "absolute" : "static", // Position change on mobile
+                                right: window.innerWidth <= 768 ? 0 : "auto",
+                                marginRight: isMobile ? '15px' : '0px',
+                            }}>
                             <p style={{fontFamily: "DiodrumBold", fontSize: "55px"}}>1</p>
                             <p style={{fontFamily: "DiodrumRegular", fontSize: "25px", marginTop: "-3rem"}}>اليوم
                                 الأول</p>
@@ -123,13 +129,14 @@ const Calendar = () => {
                     color: "#0c0c9c"
                 }}>{headingData.secondHeading}</h1>
                 <Row style={{display: "flex", justifyContent: "center"}}>
-                    <Col xs={12} md={6} lg={10} xl={10} className="d-flex justify-content-center flex-wrap gap-4">
+                    <Col  className="d-flex justify-content-center flex-wrap gap-4">
                         {data2.map(item => (
                             <div style={{
                                 backgroundColor: "#0c0c9c",
                                 width: "300px",
                                 height: "250px",
                                 alignContent: "center",
+                                marginRight: isMobile ? '85px' : '0px',
                             }}>
                                 <div className="d-flex justify-content-center gap-2 mb-2">
                                     < p className="text-white">{item.title}</p>
@@ -149,10 +156,14 @@ const Calendar = () => {
                         <div style={{
                             backgroundColor: "#00b4b2",
                             width: "80px",
-                            height: "250px",
+                            height: window.innerWidth <= 768 ? "auto" : "250px",
+                            minHeight: window.innerWidth <= 768 ? "798px" : "auto",
                             alignContent: "center",
                             textAlign: "center",
-                            color: "white"
+                            color: "white",
+                            position: window.innerWidth <= 768 ? "absolute" : "static",
+                            right: window.innerWidth <= 768 ? 0 : "auto",
+                            marginRight: isMobile ? '15px' : '0px',
                         }}>
                             <p style={{fontFamily: "DiodrumBold", fontSize: "55px"}}>2</p>
                             <p style={{fontFamily: "DiodrumRegular", fontSize: "25px", marginTop: "-3rem"}}>اليوم
