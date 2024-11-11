@@ -40,7 +40,13 @@ const NewImageSlider = () => {
         <div className="mt-2">
             <Row className="justify-content-center align-items-center">
                 <h2 className='mb-5'
-                    style={{textAlign: 'right', color: "rgb(13,13,157)", fontFamily: "DiodrumBold"}}>المتحدثين</h2>
+                    style={{
+                        padding: "0 100px 0 0",
+                        margin: "0",
+                        textAlign: 'right',
+                        color: "rgb(13,13,157)",
+                        fontFamily: "DiodrumBold",
+                    }}>المتحدثين</h2>
                 <Col xl={1} md={1} sm={1} xs={1} style={{textAlign: 'right', margin: "0", padding: "0"}}>
                     <Button onClick={prevSlide} className="mr-2"
                             style={{backgroundColor: 'transparent', border: 'none', margin: "0", padding: "0"}}>
