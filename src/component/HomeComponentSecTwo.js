@@ -110,8 +110,8 @@ const HomeComponentSecTwo = () => {
         description: {
             background: 'rgb(237,237,237)',
             textAlign: 'right',
-            borderRight: '10px solid rgb(2,180,178)',
-            borderLeft: '10px solid rgb(2,180,178)',
+            borderRight: '6px solid rgb(2,180,178)',
+            borderLeft: '6px solid rgb(2,180,178)',
             minHeight: "170px",
         }
     };
@@ -121,7 +121,7 @@ const HomeComponentSecTwo = () => {
             {/* Title Section */}
             <Row className="mb-5 justify-content-center align-items-center text-center" style={{marginTop:'-15px'}}>
                 <Col className="d-flex justify-content-center align-items-center">
-                    <img src={imageBar} style={{ width: "50%" }} />
+                    <img src={imageBar} className="barImage" />
                 </Col>
             </Row>
 

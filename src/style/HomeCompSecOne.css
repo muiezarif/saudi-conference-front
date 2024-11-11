@@ -1,8 +1,41 @@
 .customDiv {
-    font-family: "DiodrumMedium";
+    font-family: "DiodrumMedium", serif;
     margin-top: 3rem;
     margin-left: 50px;
     margin-right: 50px;
+}
+
+.mobileViewCard {
+    background-color: rgb(78, 10, 171);
+    color: white;
+    width: 80px;
+    height: 70px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mobileViewCardHeading {
+    padding-top: 13px;
+    font-size: 20px;
+    font-family: "DiodrumBold", serif;
+}
+
+.mobileViewCardSubHeading {
+    margin-top: -13px;
+    font-size: 16px;
+    font-family: "DiodrumRegular", serif;
+}
+
+.mobileViewCardLeft {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.mobileViewCardRight {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 .cardBase {
@@ -145,8 +178,8 @@
 
 @media only screen and (max-width: 800px) {
     .customDiv {
-        margin-left: 40px;
-        margin-right: 40px;
+        margin-left: 30px;
+        margin-right: 30px;
     }
 
     .cardBase {
@@ -177,6 +210,7 @@
     .subHeading {
         font-size: 35px;
         margin-bottom: 60px;
+        margin-top: 60px;
     }
 }
 

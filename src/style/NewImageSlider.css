@@ -1,0 +1,15 @@
+.customCard {
+    height: 290px;
+    border: none;
+}
+
+.navigationArrows {
+    width: 30px;
+    height: 40px;
+}
+
+@media (max-width: 768px) {
+    .customCard {
+        height: 265px;
+    }
+}
