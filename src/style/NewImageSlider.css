@@ -8,7 +8,18 @@
     height: 40px;
 }
 
-@media (max-width: 768px) {
+.custom-heading {
+    text-align: right;
+    margin-right: 13%;
+    color: rgb(13, 13, 157);
+    font-family: "DiodrumBold", serif;
+}
+
+@media only screen and(max-width: 768px) {
+    .custom-heading {
+        margin-right: 6%;
+    }
+
     .customCard {
         height: 265px;
     }
@@ -29,3 +40,4 @@
         bottom: 9px;
     }
 }
+
