@@ -75,7 +75,7 @@ const Calendar = () => {
     const [rightColMargin, setRightColMargin] = useState("15px");
     const [gap, setGap] = useState("gap-4");
     const [customCardHeight, setCustomCardHeight] = useState("250px");
-    const [padding, setPadding] = useState("0");
+    const [padding, setPadding] = useState("0 180px 0 0 ");
 
 
     useEffect(() => {
@@ -132,6 +132,7 @@ const Calendar = () => {
                 setCustomCardHeight("170px")
                 setRightColMargin("10px");
                 setGap("gap-2");
+                setPadding("0")
             }
         };
 
