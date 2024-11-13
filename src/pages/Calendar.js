@@ -78,7 +78,7 @@ const Calendar = () => {
                     color: "#0c0c9c"
                 }}>{headingData.firstHeading}</h1>
                 <Row style={{display: "flex", justifyContent: "center"}}>
-                    <Col  className="d-flex justify-content-center flex-wrap gap-4" >
+                    <Col className="d-flex justify-content-center flex-wrap gap-4">
                         {data.map(item => (
                             <div style={{
                                 backgroundColor: "#5f00b8",
@@ -103,17 +103,17 @@ const Calendar = () => {
                         ))
                         }
                         <div style={{
-                                backgroundColor: "#00b4b2",
-                                width: "80px",
-                                height: window.innerWidth <= 768 ? "auto" : "250px", // Responsive height
-                                minHeight: window.innerWidth <= 768 ? "798px" : "auto", // Mobile view minHeight
-                                alignContent: "center",
-                                textAlign: "center",
-                                color: "white",
-                                position: window.innerWidth <= 768 ? "absolute" : "static", // Position change on mobile
-                                right: window.innerWidth <= 768 ? 0 : "auto",
-                                marginRight: isMobile ? '15px' : '0px',
-                            }}>
+                            backgroundColor: "#00b4b2",
+                            width: "80px",
+                            height: window.innerWidth <= 768 ? "auto" : "250px", // Responsive height
+                            minHeight: window.innerWidth <= 768 ? "798px" : "auto", // Mobile view minHeight
+                            alignContent: "center",
+                            textAlign: "center",
+                            color: "white",
+                            position: window.innerWidth <= 768 ? "absolute" : "static", // Position change on mobile
+                            right: window.innerWidth <= 768 ? 0 : "auto",
+                            marginRight: isMobile ? '15px' : '0px',
+                        }}>
                             <p style={{fontFamily: "DiodrumBold", fontSize: "55px"}}>1</p>
                             <p style={{fontFamily: "DiodrumRegular", fontSize: "25px", marginTop: "-3rem"}}>اليوم
                                 الأول</p>
@@ -129,7 +129,7 @@ const Calendar = () => {
                     color: "#0c0c9c"
                 }}>{headingData.secondHeading}</h1>
                 <Row style={{display: "flex", justifyContent: "center"}}>
-                    <Col  className="d-flex justify-content-center flex-wrap gap-4">
+                    <Col className="d-flex justify-content-center flex-wrap gap-4">
                         {data2.map(item => (
                             <div style={{
                                 backgroundColor: "#0c0c9c",

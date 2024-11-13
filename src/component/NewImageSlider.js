@@ -21,13 +21,7 @@ const NewImageSlider = () => {
 
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth < 1334) {
-                setItemsToShow(3)
-            } else if (window.innerWidth < 768) {
-                setItemsToShow(1)
-            } else {
-                setItemsToShow(4)
-            }
+            setItemsToShow(window.innerWidth < 768 ? 1 : 4)
             setCurrentIndex(0);  // Reset to the first item to avoid overflow
         };
 
