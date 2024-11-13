@@ -27,8 +27,8 @@ const homeComponentSecThree = () => {
     }
     return (
         <Container className="my-5">
-            <Row className='d-flex justify-content-around mt-3'>
-                <h2 style={style.topHeading}>ﺃﺭﻗﺎﻡ ﺍﻟﻤﺆﺗﻤﺮ</h2>
+            <h2 style={style.topHeading}>ﺃﺭﻗﺎﻡ ﺍﻟﻤﺆﺗﻤﺮ</h2>
+            <Row className='d-flex justify-content-between mt-3'>
                 {cardData.map((data, index) => (
                     <Col
                         key={index}
@@ -54,7 +54,7 @@ const homeComponentSecThree = () => {
             </Row>
 
             {/*2nd boxes  */}
-            <Row className='d-flex justify-content-between mt-5'>
+            <Row className='d-flex justify-content-between mt-5 custom-row'>
                 <h2 style={style.topHeading}>فئات التذاكر</h2>
                 {cardData2.map((data, index) => (
                     <Col

@@ -10,7 +10,7 @@
 
 .custom-heading {
     text-align: right;
-    margin-right: 13%;
+    /*margin-right: 13%;*/
     color: rgb(13, 13, 157);
     font-family: "DiodrumBold", serif;
 }

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Button, Card, Col, Container, Row} from 'reactstrap';
+import {Button, Card, Col, Row} from 'reactstrap';
 import rightArrow from "../asset/socialMedia/rightArrow.png";
 import leftArrow from "../asset/socialMedia/leftArrow.png";
 import icon3 from "../asset/icon_calendar.png";
@@ -11,7 +11,6 @@ import HomeComponentSecThree from "../component/HomeComponentSecThree";
 import LogoPage from "../pages/LogoPage"
 import ConferencePage from "../pages/ConferencePage";
 import "../style/CustomSliderImage.css"
-
 
 export const ImageSliderForTesting = () => {
     const data = [

@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {Button, Card, CardImg, Col, Row} from 'reactstrap';
+import React, {useState, useEffect} from 'react';
+import {Button, Card, CardImg, Col, Container, Row} from 'reactstrap';
 import image1 from "../asset/SliderImage/sliderImg1.png";
 import image2 from "../asset/SliderImage/sliderImg2.png";
 import image3 from "../asset/SliderImage/sliderImg3.png";
@@ -17,8 +17,26 @@ const NewImageSlider = () => {
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [itemsToShow, setItemsToShow] = useState(window.innerWidth < 768 ? 1 : 4);
 
-    const itemsToShow = window.innerWidth < 768 ? 1 : 4;
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 1334) {
+                setItemsToShow(3)
+            } else if (window.innerWidth < 768) {
+                setItemsToShow(1)
+            } else {
+                setItemsToShow(4)
+            }
+            setCurrentIndex(0);  // Reset to the first item to avoid overflow
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     const nextSlide = () => {
         if (currentIndex < data.length - itemsToShow) {
@@ -37,7 +55,7 @@ const NewImageSlider = () => {
     };
 
     return (
-        <div className="mt-2 px-5">
+        <Container className="mt-2">
             <h2 className='mb-5 custom-heading'>المتحدثين</h2>
             <Row className="justify-content-center align-items-center p-0 m-0">
                 <Col xl={1} md={1} sm={1} xs={1} style={{textAlign: 'right', margin: "0", padding: "0"}}>
@@ -71,18 +89,6 @@ const NewImageSlider = () => {
                                                     borderRadius: "10px"
                                                 }}
                                             />
-                                            <div className="custom-style">
-                                                <p style={{
-                                                    margin: '0',
-                                                    fontFamily: "DiodrumBold",
-                                                    fontSize: window.innerWidth < 768 ? '11px' : '16px'
-                                                }}>{d.title}</p>
-                                                <p style={{
-                                                    margin: '0',
-                                                    fontFamily: "DiodrumRegular",
-                                                    fontSize: window.innerWidth < 768 ? '9px' : '10px'
-                                                }}>{d.title2}</p>
-                                            </div>
                                         </div>
                                     </Card>
                                 </div>
@@ -90,14 +96,14 @@ const NewImageSlider = () => {
                         </div>
                     </div>
                 </Col>
-                <Col xl={1} md={1} sm={1} xs={1} style={{textAlign: 'left', margin: "0", padding: "0"}}>
+                <Col xl={1} md={1} sm={1} xs={1} style={{margin: "0", padding: "0"}}>
                     <Button onClick={nextSlide} className="ml-2"
                             style={{backgroundColor: 'transparent', border: 'none', margin: "0", padding: "0"}}>
                         <img src={rightArrow} alt="Next" className="navigationArrows"/>
                     </Button>
                 </Col>
             </Row>
-        </div>
+        </Container>
     );
 };
 
