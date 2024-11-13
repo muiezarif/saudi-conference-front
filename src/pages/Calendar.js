@@ -74,6 +74,9 @@ const Calendar = () => {
     const [margin, setMargin] = useState("85px");
     const [rightColMargin, setRightColMargin] = useState("15px");
     const [gap, setGap] = useState("gap-4");
+    const [customCardHeight, setCustomCardHeight] = useState("250px");
+    const [padding, setPadding] = useState("0");
+
 
     useEffect(() => {
         const handleResize = () => {
@@ -102,28 +105,33 @@ const Calendar = () => {
                 setRightColMargin("20px");
             } else if (width >= 410 && width < 768) {
                 setIsMobile("250px");
-                setHeight("783px");
+                setHeight("526px");
                 setMinHeight("auto");
-                setMargin("95px");
+                setMargin("85px");
+                setPadding("0 20px 0 0");
                 // setBackground("#D7B26D");
-                setRightColMargin("30px");
-                setGap("gap-3");
+                setRightColMargin("35px");
+                setCustomCardHeight("170px")
+                setGap("gap-2");
             } else if (width >= 380 && width < 410) {
                 setIsMobile("250px");
-                setHeight("782px");
+                setHeight("526px");
                 setMinHeight("auto");
-                setMargin("100px");
+                setMargin("85px");
                 // setBackground("red");
+                setPadding("0 10px 0 0");
+                setCustomCardHeight("170px")
                 setRightColMargin("23px");
-                setGap("gap-3")
+                setGap("gap-2")
             } else if (width < 380) {
                 setIsMobile("250px");
-                setHeight("782px");
+                setHeight("526px");
                 setMinHeight("auto");
-                setMargin("94px");
+                setMargin("85px");
                 // setBackground("#AA5486");
+                setCustomCardHeight("170px")
                 setRightColMargin("10px");
-                setGap("gap-3");
+                setGap("gap-2");
             }
         };
 
@@ -144,7 +152,8 @@ const Calendar = () => {
                     fontFamily: "DiodrumBold",
                     marginBottom: "25px",
                     marginTop: "13rem",
-                    color: "#0c0c9c"
+                    color: "#0c0c9c",
+                    padding: padding
                 }}>{headingData.firstHeading}</h1>
                 <Row style={{display: "flex", justifyContent: "center"}}>
                     <Col className={`d-flex justify-content-center flex-wrap ${gap}`}>
@@ -152,7 +161,7 @@ const Calendar = () => {
                             <div style={{
                                 backgroundColor: background,
                                 width: isMobile,
-                                height: "250px",
+                                height: customCardHeight,
                                 alignContent: "center",
                                 marginRight: margin,
                             }}>
@@ -195,15 +204,17 @@ const Calendar = () => {
                     marginTop: "50px",
                     fontFamily: "DiodrumBold",
                     marginBottom: "25px",
-                    color: "#0c0c9c"
+                    color: "#0c0c9c",
+                    padding: padding
                 }}>{headingData.secondHeading}</h1>
                 <Row style={{display: "flex", justifyContent: "center"}}>
                     <Col className={`d-flex justify-content-center flex-wrap ${gap}`}>
                         {data2.map(item => (
                             <div style={{
                                 backgroundColor: "#0c0c9c",
+                                // backgroundColor: background,
                                 width: isMobile,
-                                height: "250px",
+                                height: customCardHeight,
                                 alignContent: "center",
                                 marginRight: margin,
                             }}>
