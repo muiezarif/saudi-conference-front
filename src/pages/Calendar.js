@@ -72,6 +72,8 @@ const Calendar = () => {
     const [minHeight, setMinHeight] = useState("798px");
     const [background, setBackground] = useState("#5f00b8");
     const [margin, setMargin] = useState("85px");
+    const [rightColMargin, setRightColMargin] = useState("15px");
+    const [gap, setGap] = useState("gap-4");
 
     useEffect(() => {
         const handleResize = () => {
@@ -82,19 +84,46 @@ const Calendar = () => {
                 setHeight("250px");
                 setMinHeight("auto");
                 setMargin("0");
-                setBackground("orange");
+                // setBackground("orange");
+                setRightColMargin("0");
             } else if (width >= 768 && width < 1000) {
                 setIsMobile("250px");
                 setHeight("250px");
                 setMinHeight("auto");
                 setMargin("85px");
-                setBackground("pink");
-            } else if (width < 768) {
+                // setBackground("pink");
+                setRightColMargin("0");
+            } else if (width >= 768 && width < 800) {
                 setIsMobile("250px");
-                setHeight("250px");
+                setHeight("798px");
                 setMinHeight("auto");
-                setMargin("85px");
-                setBackground("yellow");
+                setMargin("95px");
+                // setBackground("yellow");
+                setRightColMargin("20px");
+            } else if (width >= 410 && width < 768) {
+                setIsMobile("250px");
+                setHeight("783px");
+                setMinHeight("auto");
+                setMargin("95px");
+                // setBackground("#D7B26D");
+                setRightColMargin("30px");
+                setGap("gap-3");
+            } else if (width >= 380 && width < 410) {
+                setIsMobile("250px");
+                setHeight("782px");
+                setMinHeight("auto");
+                setMargin("100px");
+                // setBackground("red");
+                setRightColMargin("23px");
+                setGap("gap-3")
+            } else if (width < 380) {
+                setIsMobile("250px");
+                setHeight("782px");
+                setMinHeight("auto");
+                setMargin("94px");
+                // setBackground("#AA5486");
+                setRightColMargin("10px");
+                setGap("gap-3");
             }
         };
 
@@ -118,7 +147,7 @@ const Calendar = () => {
                     color: "#0c0c9c"
                 }}>{headingData.firstHeading}</h1>
                 <Row style={{display: "flex", justifyContent: "center"}}>
-                    <Col className="d-flex justify-content-center flex-wrap gap-4">
+                    <Col className={`d-flex justify-content-center flex-wrap ${gap}`}>
                         {data.map(item => (
                             <div style={{
                                 backgroundColor: background,
@@ -152,7 +181,7 @@ const Calendar = () => {
                             color: "white",
                             position: window.innerWidth <= 768 ? "absolute" : "static", // Position change on mobile
                             right: window.innerWidth <= 768 ? 0 : "auto",
-                            marginRight: isMobile ? '15px' : '0px',
+                            marginRight: rightColMargin,
                         }}>
                             <p style={{fontFamily: "DiodrumBold", fontSize: "55px"}}>1</p>
                             <p style={{fontFamily: "DiodrumRegular", fontSize: "25px", marginTop: "-3rem"}}>اليوم
@@ -169,14 +198,14 @@ const Calendar = () => {
                     color: "#0c0c9c"
                 }}>{headingData.secondHeading}</h1>
                 <Row style={{display: "flex", justifyContent: "center"}}>
-                    <Col className="d-flex justify-content-center flex-wrap gap-4">
+                    <Col className={`d-flex justify-content-center flex-wrap ${gap}`}>
                         {data2.map(item => (
                             <div style={{
                                 backgroundColor: "#0c0c9c",
-                                width: "300px",
+                                width: isMobile,
                                 height: "250px",
                                 alignContent: "center",
-                                marginRight: isMobile ? '85px' : '0px',
+                                marginRight: margin,
                             }}>
                                 <div className="d-flex justify-content-center gap-2 mb-2">
                                     < p className="text-white">{item.title}</p>
@@ -196,14 +225,14 @@ const Calendar = () => {
                         <div style={{
                             backgroundColor: "#00b4b2",
                             width: "80px",
-                            height: window.innerWidth <= 768 ? "auto" : "250px",
-                            minHeight: window.innerWidth <= 768 ? "798px" : "auto",
+                            height: height, // Responsive height
+                            minHeight: minHeight, // Mobile view minHeight
                             alignContent: "center",
                             textAlign: "center",
                             color: "white",
-                            position: window.innerWidth <= 768 ? "absolute" : "static",
+                            position: window.innerWidth <= 768 ? "absolute" : "static", // Position change on mobile
                             right: window.innerWidth <= 768 ? 0 : "auto",
-                            marginRight: isMobile ? '15px' : '0px',
+                            marginRight: rightColMargin,
                         }}>
                             <p style={{fontFamily: "DiodrumBold", fontSize: "55px"}}>2</p>
                             <p style={{fontFamily: "DiodrumRegular", fontSize: "25px", marginTop: "-3rem"}}>اليوم
