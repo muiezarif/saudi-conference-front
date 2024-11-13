@@ -60,7 +60,7 @@ const homeComponentSecThree = () => {
                     <Col
                         key={index}
                         xl={4} lg={4} md={6} sm={6} xs={6}
-                        className={`second-col-style ${index === 0 ? 'firstCard_' : index === cardData2.length - 1 ? 'lastCard_' : ''}`}
+                        className={`second-col-style ${index === 0 ? 'firstCard' : index === cardData2.length - 1 ? 'lastCard' : ''}`}
                     >
                         <div style={style.card}>
                             <div>
@@ -87,7 +87,7 @@ const homeComponentSecThree = () => {
                     <Col
                         key={index}
                         xl={4} lg={4} md={6} sm={6} xs={6}
-                        className={`third-col-style ${index === 0 ? 'firstCard_' : index === cardData2.length - 1 ? 'lastCard_' : ''}`}
+                        className={`third-col-style ${index === 0 ? 'firstCard' : index === cardData3.length - 1 ? 'lastCard' : ''}`}
                     >
                         <div style={style.card}>
                             <div>

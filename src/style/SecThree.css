@@ -27,7 +27,7 @@
 /* Common styles for all Col elements */
 .second-col-style {
     background: #6002b8;
-    border-radius: 0;
+    /*border-radius: 0;*/
     height: 290px;
     width: 290px;
     border: none;
@@ -40,7 +40,7 @@
 
 .third-col-style {
     background: #0b1a8a;
-    border-radius: 0;
+    /*border-radius: 0;*/
     height: 290px;
     width: 290px;
     border: none;
