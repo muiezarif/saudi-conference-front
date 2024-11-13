@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Col, Container, Row} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Base} from "../component/Base";
@@ -66,7 +66,47 @@ const Calendar = () => {
             timeIcon: iconClock
         }
     ]
-    const isMobile = window.innerWidth <= 768;
+
+    const [isMobile, setIsMobile] = useState("300px");
+    const [height, setHeight] = useState("auto");
+    const [minHeight, setMinHeight] = useState("798px");
+    const [background, setBackground] = useState("#5f00b8");
+    const [margin, setMargin] = useState("85px");
+
+    useEffect(() => {
+        const handleResize = () => {
+            const width = window.innerWidth;
+
+            if (width >= 1000) {
+                setIsMobile("260px");
+                setHeight("250px");
+                setMinHeight("auto");
+                setMargin("0");
+                setBackground("orange");
+            } else if (width >= 768 && width < 1000) {
+                setIsMobile("250px");
+                setHeight("250px");
+                setMinHeight("auto");
+                setMargin("85px");
+                setBackground("pink");
+            } else if (width < 768) {
+                setIsMobile("250px");
+                setHeight("250px");
+                setMinHeight("auto");
+                setMargin("85px");
+                setBackground("yellow");
+            }
+        };
+
+        // Run initially to set values based on the current window size
+        handleResize();
+
+        window.addEventListener("resize", handleResize);
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
     return (
         <Base>
             <Container>
@@ -81,11 +121,11 @@ const Calendar = () => {
                     <Col className="d-flex justify-content-center flex-wrap gap-4">
                         {data.map(item => (
                             <div style={{
-                                backgroundColor: "#5f00b8",
-                                width: "300px",
+                                backgroundColor: background,
+                                width: isMobile,
                                 height: "250px",
                                 alignContent: "center",
-                                marginRight: isMobile ? '85px' : '0px',
+                                marginRight: margin,
                             }}>
                                 <div className="d-flex justify-content-center gap-2 mb-2">
                                     < p className="text-white">{item.title}</p>
@@ -105,8 +145,8 @@ const Calendar = () => {
                         <div style={{
                             backgroundColor: "#00b4b2",
                             width: "80px",
-                            height: window.innerWidth <= 768 ? "auto" : "250px", // Responsive height
-                            minHeight: window.innerWidth <= 768 ? "798px" : "auto", // Mobile view minHeight
+                            height: height, // Responsive height
+                            minHeight: minHeight, // Mobile view minHeight
                             alignContent: "center",
                             textAlign: "center",
                             color: "white",
