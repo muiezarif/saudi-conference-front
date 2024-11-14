@@ -23,7 +23,7 @@ export function RegMethodOne() {
             fontFamily: "DiodrumBold",
             textAlign: "right",
             marginBottom: "1rem",
-            color: "black"
+            color: "#606060"
         }
     }
     return (

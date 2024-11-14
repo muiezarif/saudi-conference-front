@@ -20,6 +20,7 @@ const RegistrationForm2 = () => {
         labelStyle: {
             fontFamily: "DiodrumBold",
             textAlign: "right",
+            color:"#606060",
             marginBottom: "1rem"
         }
     }
@@ -58,7 +59,7 @@ const RegistrationForm2 = () => {
                 </Row>
                 <Row>
                     <Col className="text-center m-2">
-                        <h4 className="" style={{color: '#333', textAlign: 'right', fontFamily: "DiodrumBold"}}>بيانات
+                        <h4 className="" style={{color: '#606060', textAlign: 'right', fontFamily: "DiodrumBold"}}>بيانات
                             التسجيل
                             الرئيسية</h4>
                     </Col>

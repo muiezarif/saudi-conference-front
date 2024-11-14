@@ -14,14 +14,14 @@ const RegistrationForm1 = () => {
         textField: {
             backgroundColor: 'rgb(237, 237, 237)',
             borderRadius: '20px',
-            color: 'black',
+            color: '#606060',
             textAlign: 'right'
         },
         labelStyle: {
             fontFamily: "DiodrumBold",
             textAlign: "right",
             marginBottom: "1rem",
-            color: "black"
+            color: "#606060"
         }
     }
     return (
@@ -52,7 +52,7 @@ const RegistrationForm1 = () => {
                 </Row>
                 <Row>
                     <Col className="text-center m-2">
-                        <h4 className="" style={{color: '#333', textAlign: 'right', fontFamily: "DiodrumBold"}}>بيانات
+                        <h4 className="" style={{color: '#606060', textAlign: 'right', fontFamily: "DiodrumBold"}}>بيانات
                             التسجيل
                             الرئيسية</h4>
                     </Col>
