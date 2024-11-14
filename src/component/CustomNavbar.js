@@ -30,6 +30,17 @@ const navigation = [
     {name: 'عن المؤتمر', href: '/'},
 ]
 
+const navigation2 = [
+    {name: 'عن المؤتمر', href: '/'},
+    {name: 'الأجندة وورش العمل', href: '/cal'},
+    {name: 'المركز الإعلامي', href: '/reg1'},
+    {name: 'الجهات والرعاة', href: '/reg2'},
+    {name: 'الرعايات', href: '/regmethod'},
+    {name: 'التسجيل', href: '/reg3'},
+    {name: 'المتحدثين', href: ''},
+]
+
+
 export default function CustomNavbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const location = useLocation();
@@ -133,7 +144,7 @@ export default function CustomNavbar() {
                         <div className="mt-6 flow-root text-right"> {/* Added 'text-right' here */}
                             <div className="-my-6 divide-y divide-gray-500/10">
                                 <div className="space-y-2 py-6">
-                                    {navigation.map((item) => (
+                                    {navigation2.map((item) => (
                                         <NavItem key={item.name} href={item.href}
                                                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                         >
