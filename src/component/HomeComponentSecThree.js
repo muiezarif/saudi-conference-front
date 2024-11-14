@@ -38,12 +38,12 @@ const homeComponentSecThree = () => {
                         <div style={style.card}>
                             <CardBody>
                                 <strong style={{
-                                    fontSize: '40px',
+                                    fontSize: '60px',
                                     color: '#02b4b2',
                                     fontFamily: "DiodrumBold"
                                 }}>{data.number}</strong>
                                 <p style={{
-                                    fontSize: '25px',
+                                    fontSize: '30px',
                                     color: 'white',
                                     fontFamily: "DiodrumRegular"
                                 }}>{data.name}</p>

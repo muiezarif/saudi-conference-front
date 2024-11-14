@@ -54,14 +54,14 @@
 
 .p1 {
     color: white;
-    font-size: 25px;
+    font-size: 30px;
     margin: 0;
     font-family: DiodrumRegular, serif;
 }
 
 .p2 {
     color: white;
-    font-size: 45px;
+    font-size: 50px;
     margin: 0;
     font-family: DiodrumBold, serif;
 }
@@ -73,6 +73,7 @@
     text-align: center;
     gap: 2px;
     margin: 0;
+    font-size:35px;
     font-family: DiodrumBold, serif;
 }
 
