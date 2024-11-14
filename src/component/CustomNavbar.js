@@ -17,7 +17,7 @@ import img3 from "../asset/socialMedia/img3.png";
 import img2 from "../asset/socialMedia/img2.png";
 import img1 from "../asset/socialMedia/img1.png";
 import {ArrowDown} from "react-bootstrap-icons";
-import BackGroundImage from "../asset/Asset_3.png";
+import BackGroundImage from "../asset/bannerImage.png";
 import bannerLogo from "../asset/Logo.png";
 
 const navigation = [
@@ -68,8 +68,7 @@ export default function CustomNavbar() {
         >
             <header className="absolute inset-x-0 top-0 z-50">
                 <nav aria-label="Global"
-                     className={`flex items-center justify-between p-6 lg:px-8 ${(location.pathname !== '/' && location.pathname !== '/home') ? 'custom-navbar-bg' : ''}`}>
-
+                     className={`flex items-center justify-center p-6 lg:px-8 ${location.pathname !== '/' && location.pathname !== '/home' ? 'custom-navbar-bg' : ''}`}>
                     {/* Left section for mobile: Hamburger menu */}
                     <div className="flex lg:hidden w-full justify-between">
                         <button
@@ -87,7 +86,7 @@ export default function CustomNavbar() {
                     </div>
 
                     {/* Centered navigation links for desktop */}
-                    <div className="hidden lg:flex lg:gap-x-6 custom-navbar lg:flex-grow lg:justify-center">
+                    <div className="hidden lg:flex lg:gap-x-6 lg:flex-grow lg:justify-center">
                         {navigation.map((item) => (
                             <NavItem key={item.name} className="nav-link">
                                 <NavLink tag={ReactLink} to={item.href}

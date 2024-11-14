@@ -47,59 +47,6 @@ export const ImageSliderForTesting = () => {
         );
     };
 
-    // Function to render components based on currentIndex
-    // const renderComponents = () => {
-    //     switch (currentIndex) {
-    //         case 0: // First Slide
-    //             return (
-    //                 <>
-    //                     <Row>
-    //                         <Col xs={12} md={12}>
-    //                             <ConferencePage/>
-    //                         </Col>
-    //                     </Row>
-    //                 </>
-    //             );
-    //         case 1: // Second Slide
-    //             return (
-    //                 <>
-    //                     <Row>
-    //                         <Col xs={12} md={12}>
-    //                             <ConferencePage/>
-    //                         </Col>
-    //                     </Row>
-    //                 </>
-    //             );
-    //         case 2: // Third Slide
-    //             return (
-    //                 <>
-    //                     <Row>
-    //                         <Col xs={12} md={12}>
-    //                             <HomeComponentSecTwo/>
-    //                         </Col>
-    //                     </Row>
-    //                     <Row>
-    //                         <Col xs={12} md={12}>
-    //                             <NewImageSlider/>
-    //                         </Col>
-    //                     </Row>
-    //                     <Row>
-    //                         <Col xs={12} md={12}>
-    //                             <HomeComponentSecThree/>
-    //                         </Col>
-    //                     </Row>
-    //                     <Row>
-    //                         <Col xs={12} md={12}>
-    //                             <LogoPage/>
-    //                         </Col>
-    //                     </Row>
-    //                 </>
-    //             );
-    //         default:
-    //             return null;
-    //     }
-    // };
-
     return (
         <div style={{marginTop: "-20px"}} className="mainDiv">
             <Row className="justify-content-center align-items-center">
@@ -162,9 +109,6 @@ export const ImageSliderForTesting = () => {
             <HomeComponentSecTwo/>
             <NewImageSlider/>
             <HomeComponentSecThree/>
-            {/*<LogoPage/>*/}
-            {/* Display Components Below Slider */}
-            {/*<div className="mt-4">{renderComponents()}</div>*/}
         </div>
     );
 };

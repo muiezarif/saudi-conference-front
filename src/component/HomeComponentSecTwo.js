@@ -132,13 +132,13 @@ const HomeComponentSecTwo = () => {
                 <div>
                     <Row className="mb-5 justify-content-center align-items-center text-center" style={{marginTop:'-15px'}}>
                         <Col className="d-flex justify-content-center align-items-center">
-                            <img onClick={handleImageClick} src={imageBar} className="barImage" />
+                            <img onClick={handleImageClick} src={imageBar} width="40%" />
                         </Col>
                     </Row>
 
 
                     <Row className="mb-4" style={{textAlign: 'right', color: "rgb(13,13,157)"}}>
-                        <Col>
+                        <Col className="m-0 p-0">
                             <h2 style={style.mainHeading}>ركائز مؤتمر المحاماة السعودي</h2>
                         </Col>
                     </Row>
