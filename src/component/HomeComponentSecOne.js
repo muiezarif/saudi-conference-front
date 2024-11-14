@@ -52,7 +52,7 @@ export function HomeComponentSecOne() {
                 </Col>
                 {/* Column to show only on desktop */}
                 <Col xl={6} md={12} sm={12} xs={12} className="customCard">
-                    <div className="d-inline-flex flex-wrap justify-content-center gap-3 d-none d-xl-flex">
+                    <div className="d-inline-flex flex-wrap text-end gap-3 d-none d-xl-flex justify-content-end">
                         {['ﺍﻻﻳﺎﻡ', 'ﺍﻟﺴﺎﻋﺎﺕ', 'ﺍﻟﺪﻗﺎﺋﻖ', 'ﺍﻟﺜﻮﺍﻧﻲ'].map((text, index) => (
                             <div
                                 key={index}
