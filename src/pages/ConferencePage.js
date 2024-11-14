@@ -15,10 +15,10 @@ const ConferencePage = () => {
     const style = {
         topCardHeading: {
             fontFamily: "DiodrumBold",
-            color: "rgb(78,10,171)"
+            color: "#0C0C9C"
         },
         bottomCardHeading: {
-            color: 'rgb(78,10,171)',
+            color: '#0C0C9C',
             textAlign: 'right',
             marginBottom: '-16px',
             fontFamily: "DiodrumBold"
@@ -38,7 +38,7 @@ const ConferencePage = () => {
             backgroundColor: 'rgb(237, 237, 237)',
             padding: "25px",
             marginTop: '25px',
-            borderBottom: '10px solid rgb(78,10,171)',
+            borderBottom: '10px solid #0C0C9C',
             borderRadius: '0px'
         },
         card2: {
@@ -51,7 +51,7 @@ const ConferencePage = () => {
             textAlign: 'right',
             justifyContent: 'center',
             marginTop: '35px',
-            borderRight: '10px solid rgb(78,10,171)',
+            borderRight: '10px solid #5F00B8',
             borderRadius: '0px'
         }
     }

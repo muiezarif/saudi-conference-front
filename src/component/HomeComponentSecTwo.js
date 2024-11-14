@@ -20,6 +20,7 @@ import image4 from '../asset/SliderImage/4.png';
 import image5 from '../asset/SliderImage/5.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import imageBar from '../asset/SliderImage/bar.png'
+import ConferencePage from "../pages/ConferencePage";
 
 const HomeComponentSecTwo = () => {
     const cardData = [
@@ -95,6 +96,12 @@ const HomeComponentSecTwo = () => {
         );
     });
 
+    const [showOtherComponent, setShowOtherComponent] = useState(false);
+
+    const handleImageClick = () => {
+        setShowOtherComponent(true); // Set to false if you want to toggle
+    };
+
     const style = {
         mainHeading: {
             fontFamily: "DiodrumBold",
@@ -119,37 +126,45 @@ const HomeComponentSecTwo = () => {
     return (
         <Container className="my-5">
             {/* Title Section */}
-            <Row className="mb-5 justify-content-center align-items-center text-center" style={{marginTop:'-15px'}}>
-                <Col className="d-flex justify-content-center align-items-center">
-                    <img src={imageBar} className="barImage" />
-                </Col>
-            </Row>
+            {!showOtherComponent && (
+                <div>
+                    <Row className="mb-5 justify-content-center align-items-center text-center" style={{marginTop:'-15px'}}>
+                        <Col className="d-flex justify-content-center align-items-center">
+                            <img onClick={handleImageClick} src={imageBar} className="barImage" />
+                        </Col>
+                    </Row>
 
 
-            <Row className="mb-4" style={{textAlign: 'right', color: "rgb(13,13,157)"}}>
-                <Col>
-                    <h2 style={style.mainHeading}>ركائز مؤتمر المحاماة السعودي</h2>
-                </Col>
-            </Row>
-            <Row style={style.description}>
-                <Col md={6} className="mt-3">
-                    <h3 style={style.cardHeading}>مهني</h3>
-                    <p style={style.cardParagraph}>
-                        تطوير المحامين المتدربين من خلال مناقشة ضوابط التسجيل، التزاماتهم المهنية، التحديات التي
-                        تواجههم، وساعات التدريب الإلزامية،
-                        مع التأكيد على أهمية التطوير المهني المستمر ودور الملتقيات والمبادرات القانونية في تأهيل
-                        الكفاءات الشابة.
-                    </p>
-                </Col>
-                <Col md={6} className="mt-3">
-                    <h3 style={style.cardHeading}>تأهيلي</h3>
-                    <p style={style.cardParagraph}>
-                        تمكين المهن القانونية وتعزيز قطاع الأعمال، مع التركيز على دور الهيئة السعودية للمحامين في ضبط
-                        المخالفات وزيادة الموثوقية،
-                        واستعراض التطورات القانونية والتقنية وتوطين المهن، إضافة إلى فرص الشراكات المهنية داخل المملكة.
-                    </p>
-                </Col>
-            </Row>
+                    <Row className="mb-4" style={{textAlign: 'right', color: "rgb(13,13,157)"}}>
+                        <Col>
+                            <h2 style={style.mainHeading}>ركائز مؤتمر المحاماة السعودي</h2>
+                        </Col>
+                    </Row>
+                    <Row style={style.description}>
+                        <Col md={6} className="mt-3">
+                            <h3 style={style.cardHeading}>مهني</h3>
+                            <p style={style.cardParagraph}>
+                                تطوير المحامين المتدربين من خلال مناقشة ضوابط التسجيل، التزاماتهم المهنية، التحديات التي
+                                تواجههم، وساعات التدريب الإلزامية،
+                                مع التأكيد على أهمية التطوير المهني المستمر ودور الملتقيات والمبادرات القانونية في تأهيل
+                                الكفاءات الشابة.
+                            </p>
+                        </Col>
+                        <Col md={6} className="mt-3">
+                            <h3 style={style.cardHeading}>تأهيلي</h3>
+                            <p style={style.cardParagraph}>
+                                تمكين المهن القانونية وتعزيز قطاع الأعمال، مع التركيز على دور الهيئة السعودية للمحامين في ضبط
+                                المخالفات وزيادة الموثوقية،
+                                واستعراض التطورات القانونية والتقنية وتوطين المهن، إضافة إلى فرص الشراكات المهنية داخل المملكة.
+                            </p>
+                        </Col>
+                    </Row>
+                </div>
+            )}
+
+            {showOtherComponent && (
+                <ConferencePage/>
+            )}
         </Container>
     );
 };

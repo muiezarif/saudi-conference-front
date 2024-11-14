@@ -81,7 +81,9 @@ export default function CustomNavbar() {
                             <Bars3Icon aria-hidden="true" className="h-6 w-6"/>
                         </button>
                         {/* Right side logo for mobile */}
-                        <img src={Logo} alt="Logo" style={style.logo}/>
+                        <NavLink tag={ReactLink} to="/" className="-m-1.5 p-1.5">
+                            <img src={Logo} alt="Logo" style={style.logo}/>
+                        </NavLink>
                     </div>
 
                     {/* Centered navigation links for desktop */}
@@ -101,7 +103,9 @@ export default function CustomNavbar() {
 
                     {/* Right side logo for desktop */}
                     <div className="hidden lg:flex lg:justify-end lg:flex-none">
-                        <img src={Logo} alt="Logo" style={style.logo}/>
+                        <NavLink tag={ReactLink} to="/">
+                            <img src={Logo} alt="Logo" style={style.logo}/>
+                        </NavLink>
                     </div>
                 </nav>
                 <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
