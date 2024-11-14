@@ -11,8 +11,11 @@ import HomeComponentSecThree from "../component/HomeComponentSecThree";
 import LogoPage from "../pages/LogoPage"
 import ConferencePage from "../pages/ConferencePage";
 import "../style/CustomSliderImage.css"
+import MainPage from "../component/MainPage";
+import {HomeComponentSecOne} from "../component/HomeComponentSecOne";
+import {Base} from "../component/Base";
 
-export const ImageSliderForTesting = () => {
+export const DuplicateHomePage = () => {
     const data = [
         {
             title: "ﻳُﺴﻬﻢ",
@@ -101,19 +104,21 @@ export const ImageSliderForTesting = () => {
     // };
 
     return (
-        <div style={{marginTop: "-20px"}} className="mainDiv">
-            <Row className="justify-content-center align-items-center">
+        <div>
+            <HomeComponentSecOne/>
+            <div style={{marginTop: "-20px"}} className="mainDiv">
+                <Row className="justify-content-center align-items-center">
 
-                <Col xs={12} md={10} lg={11} className="d-flex justify-content-between">
-                    <Card className="customBox">
+                    <Col xs={12} md={10} lg={11} className="d-flex justify-content-between">
+                        <Card className="customBox">
 
-                        {/* Content */}
-                        <Row style={{width: "85%"}}>
-                            <Col xs={3} md={4} lg={4} className="mb-2 custom_slider_img_p">
-                                <img className="custom_slider_img" src={data[currentIndex].img} alt="" width={300}/>
-                            </Col>
-                            <Col xs={9} md={8} lg={8}
-                                 className="d-flex justify-content-center align-items-center align-content-center">
+                            {/* Content */}
+                            <Row style={{width: "85%"}}>
+                                <Col xs={3} md={4} lg={4} className="mb-2 custom_slider_img_p">
+                                    <img className="custom_slider_img" src={data[currentIndex].img} alt="" width={300}/>
+                                </Col>
+                                <Col xs={9} md={8} lg={8}
+                                     className="d-flex justify-content-center align-items-center align-content-center">
                                 <span className="custom_slider_text">
                                     <span
                                         style={{
@@ -124,47 +129,48 @@ export const ImageSliderForTesting = () => {
                                     </span>
                                     {data[currentIndex].subtitle}
                                 </span>
-                            </Col>
-                        </Row>
+                                </Col>
+                            </Row>
 
-                        {/* Pagination Dots */}
-                        <div className="absolute-center">
-                            {data.map((_, index) => (
-                                <span
-                                    key={index}
-                                    className={`navigationDots ${currentIndex === index ? 'active' : ''}`}
-                                />
-                            ))}
-                        </div>
+                            {/* Pagination Dots */}
+                            <div className="absolute-center">
+                                {data.map((_, index) => (
+                                    <span
+                                        key={index}
+                                        className={`navigationDots ${currentIndex === index ? 'active' : ''}`}
+                                    />
+                                ))}
+                            </div>
 
-                        {/* Navigation Buttons */}
-                        <div
-                            style={{
-                                position: 'absolute',
-                                bottom: '10px',
-                                width: '100%',
-                                display: 'flex',
-                                justifyContent: 'center', // Center the buttons horizontally
-                                padding: '0 10px',
-                                gap: '200px'
-                            }}
-                        >
-                            <Button onClick={prevSlide} style={{backgroundColor: 'transparent', border: 'none'}}>
-                                <img src={leftArrow} alt="Previous" className="navigationButtons"/>
-                            </Button>
-                            <Button onClick={nextSlide} style={{backgroundColor: 'transparent', border: 'none'}}>
-                                <img src={rightArrow} alt="Next" className="navigationButtons"/>
-                            </Button>
-                        </div>
-                    </Card>
-                </Col>
-            </Row>
-            <HomeComponentSecTwo/>
-            <NewImageSlider/>
-            <HomeComponentSecThree/>
-            {/*<LogoPage/>*/}
-            {/* Display Components Below Slider */}
-            {/*<div className="mt-4">{renderComponents()}</div>*/}
+                            {/* Navigation Buttons */}
+                            <div
+                                style={{
+                                    position: 'absolute',
+                                    bottom: '10px',
+                                    width: '100%',
+                                    display: 'flex',
+                                    justifyContent: 'center', // Center the buttons horizontally
+                                    padding: '0 10px',
+                                    gap: '200px'
+                                }}
+                            >
+                                <Button onClick={prevSlide} style={{backgroundColor: 'transparent', border: 'none'}}>
+                                    <img src={leftArrow} alt="Previous" className="navigationButtons"/>
+                                </Button>
+                                <Button onClick={nextSlide} style={{backgroundColor: 'transparent', border: 'none'}}>
+                                    <img src={rightArrow} alt="Next" className="navigationButtons"/>
+                                </Button>
+                            </div>
+                        </Card>
+                    </Col>
+                </Row>
+                <ConferencePage/>
+                {/*<NewImageSlider/>*/}
+                {/*<HomeComponentSecThree/>*/}
+                {/*<LogoPage/>*/}
+                {/* Display Components Below Slider */}
+                {/*<div className="mt-4">{renderComponents()}</div>*/}
+            </div>
         </div>
     );
 };

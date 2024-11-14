@@ -10,6 +10,8 @@ import {Home} from "./pages/Home";
 import {RegMethodOne} from "./pages/RegMethodOne";
 import RegistrationForm3 from "./pages/RegistrationForm3";
 import {ImageSliderForTesting} from "./component/ImageSliderForTesting";
+import {DuplicateHomePage} from "./testing/DuplicateHomePage";
+import {DuplicateHome} from "./pages/DuplicateHome";
 
 function App() {
     return (
@@ -24,6 +26,7 @@ function App() {
                 <Route path="/cal" element={<Calendar/>}/>
                 <Route path="/regmethod" element={<RegMethodOne/>}/>
                 <Route path="/main" element={<MainPage/>}/>
+                <Route path="/home" element={<DuplicateHome/>}/>
                 {/*<Route path="/testing" element={<ImageSliderForTesting/>}/>*/}
             </Routes>
         </BrowserRouter>

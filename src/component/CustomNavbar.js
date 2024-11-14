@@ -68,7 +68,7 @@ export default function CustomNavbar() {
         >
             <header className="absolute inset-x-0 top-0 z-50">
                 <nav aria-label="Global"
-                     className={`flex items-center justify-between p-6 lg:px-8 ${location.pathname !== '/' ? 'custom-navbar-bg' : ''}`}>
+                     className={`flex items-center justify-between p-6 lg:px-8 ${(location.pathname !== '/' && location.pathname !== '/home') ? 'custom-navbar-bg' : ''}`}>
 
                     {/* Left section for mobile: Hamburger menu */}
                     <div className="flex lg:hidden w-full justify-between">
@@ -151,7 +151,7 @@ export default function CustomNavbar() {
                 </Dialog>
 
             </header>
-            {location.pathname === "/" && (
+            {(location.pathname === "/" || location.pathname === "/home") && (
                 <div className="bannerPage">
                     {/* Main Content Section */}
                     <Container className="text-center" style={{paddingTop: "10rem"}}>

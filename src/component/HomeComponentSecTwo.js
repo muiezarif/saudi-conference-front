@@ -21,6 +21,7 @@ import image5 from '../asset/SliderImage/5.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import imageBar from '../asset/SliderImage/bar.png'
 import ConferencePage from "../pages/ConferencePage";
+import {useNavigate} from "react-router-dom";
 
 const HomeComponentSecTwo = () => {
     const cardData = [
@@ -97,9 +98,10 @@ const HomeComponentSecTwo = () => {
     });
 
     const [showOtherComponent, setShowOtherComponent] = useState(false);
-
+    const navigate = useNavigate(); // Initialize navigate
     const handleImageClick = () => {
-        setShowOtherComponent(true); // Set to false if you want to toggle
+        // setShowOtherComponent(true); // Set to false if you want to toggle
+        navigate('/home');
     };
 
     const style = {
