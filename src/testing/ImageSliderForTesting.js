@@ -109,6 +109,7 @@ export const ImageSliderForTesting = () => {
             <HomeComponentSecTwo/>
             <NewImageSlider/>
             <HomeComponentSecThree/>
+            <LogoPage/>
         </div>
     );
 };
