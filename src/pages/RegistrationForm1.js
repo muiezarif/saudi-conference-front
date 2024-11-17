@@ -51,7 +51,7 @@ const RegistrationForm1 = () => {
         e.preventDefault();
         try {
             const response = await axios.post(
-                'https://script.google.com/macros/s/AKfycbydJuQSXWxv3Op-fVN0glvvyOxH0Je5OfpfQtiTgFG5SlODaZilSiQy9ABDd5CjF2RsVw/exec',
+                'https://script.google.com/macros/s/AKfycbw4r7UmG-2uokxI74DfbYe5jAxkkziZY1fKAmoT0Asr78SoE73HTtTAA8FvuDq_ZV0lHg/exec',
                 formData
             );
             alert('Form submitted successfully!');
