@@ -46,15 +46,25 @@ const RegistrationForm1 = () => {
         });
     };
 
-    // Handle form submission
     const handleSubmit = async (e) => {
         e.preventDefault();
+    
         try {
             const response = await axios.post(
-                'https://script.google.com/macros/s/AKfycbzTqb6_-TMH6Wph8rjlja5nSCiSDTewjD57Xst5F7hY9TGZPtdVxctDz8JMg9JakFkxYA/exec',
-                formData
+                'https://script.google.com/macros/s/AKfycbydJuQSXWxv3Op-fVN0glvvyOxH0Je5OfpfQtiTgFG5SlODaZilSiQy9ABDd5CjF2RsVw/exec',
+                formData, // Ensure `formData` is a plain JavaScript object
+                {
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded', // Use a simple content type
+                    },
+                }
             );
-            alert('Form submitted successfully!');
+    
+            if (response.data.success) {
+                alert('Form submitted successfully!');
+            } else {
+                alert('Failed to submit the form. Error from server.');
+            }
         } catch (error) {
             console.error('Error submitting form:', error);
             alert('Failed to submit the form.');
