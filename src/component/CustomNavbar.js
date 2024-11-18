@@ -25,7 +25,7 @@ const navigation = [
     {name: 'التسجيل', href: '/reg3'},
     {name: 'الرعايات', href: '/regmethod'},
     {name: 'الجهات والرعاة', href: '/reg2'},
-    {name: 'المركز الإعلامي', href: '/reg1'},
+    {name: 'المركز الإعلامي', href: '/media'},
     {name: 'الأجندة وورش العمل', href: '/cal'},
     {name: 'عن المؤتمر', href: '/'},
 ]

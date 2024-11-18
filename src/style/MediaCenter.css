@@ -1,3 +1,32 @@
-.image {
-    width: 80px;
+.media-center-container {
+    width: 100%;
+}
+
+.custom-text {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #0b1a8a;
+    font-family: "DiodrumBold", serif;
+}
+
+.custom-card {
+    background-color: #5f00b8;
+    width: 100%;
+    height: 320px;
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.media-image {
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .custom-card {
+        height: 220px;
+    }
 }
