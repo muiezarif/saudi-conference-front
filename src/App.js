@@ -28,7 +28,7 @@ function App() {
                 <Route path="/main" element={<MainPage/>}/>
                 <Route path="/home" element={<DuplicateHome/>}/>
                 <Route path="/testing" element={<MediaCenter/>}/>
-                <Route path="/testing2" element={<News/>}/>
+                <Route path="/news" element={<News/>}/>
             </Routes>
         </BrowserRouter>
     );

@@ -4,14 +4,22 @@ import micImage from "../asset/NewPageImages/ic_mic.png";
 import galleryImage from "../asset/NewPageImages/ic_gallery.png";
 import videoImage from "../asset/NewPageImages/ic_video.png";
 import "../style/MediaCenter.css";
+import {useNavigate} from "react-router-dom";
 
 const data = [
-    {image: videoImage, text: "Video Content", width: '80px'},
+    {image: videoImage, text: "Video Content", width: '80px', pagee},
     {image: galleryImage, text: "Gallery Content", width: '80px'},
     {image: micImage, text: "Mic Content", width: '45px'},
 ];
 
 export function MediaCenter() {
+
+    const navigate = useNavigate();
+    const handleNavigation = () => {
+        // setShowOtherComponent(true); // Set to false if you want to toggle
+        navigate('/news');
+    };
+
     return (
         <Base>
             <div className="media-center-container mt-5 px-5">
