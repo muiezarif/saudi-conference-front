@@ -3,8 +3,19 @@ import {CardBody, Col, Container, Row} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {cardData, cardData2, cardData3} from "../data/SecThreeData";
 import "../style/SecThree.css";
+import {useNavigate} from "react-router-dom";
 
-const homeComponentSecThree = () => {
+export function HomeComponentSecThree() {
+    const navigate = useNavigate();
+
+    const goToForm = () => {
+        navigate('/regmethod');
+    };
+
+    const goToForm2 = () => {
+        navigate('/reg3');
+    };
+
     const style = {
         card: {
             height: '180px',
@@ -62,7 +73,7 @@ const homeComponentSecThree = () => {
                         xl={4} lg={4} md={6} sm={6} xs={6}
                         className={`second-col-style ${index === 0 ? 'firstCard' : index === cardData2.length - 1 ? 'lastCard' : ''}`}
                     >
-                        <div style={style.card}>
+                        <div onClick={goToForm2} style={style.card}>
                             <div>
                                 <p className="p1">{data.name}</p>
                                 <p className="p2">{data.name1}</p>
@@ -89,7 +100,7 @@ const homeComponentSecThree = () => {
                         xl={4} lg={4} md={6} sm={6} xs={6}
                         className={`third-col-style ${index === 0 ? 'firstCard' : index === cardData3.length - 1 ? 'lastCard' : ''}`}
                     >
-                        <div style={style.card}>
+                        <div onClick={goToForm} style={style.card}>
                             <div>
                                 <p className="p3 mb-2">{data.name}</p>
                                 <p className="p2">{data.name1}</p>
@@ -109,4 +120,3 @@ const homeComponentSecThree = () => {
         </Container>
     );
 }
-export default homeComponentSecThree;

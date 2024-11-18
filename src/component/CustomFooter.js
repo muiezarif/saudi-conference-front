@@ -22,6 +22,7 @@ const CustomFooter = () => {
             borderRadius: '20px',
             color: '#ffffff',
             textAlign: 'right',
+            border:"none"
         },
         labelStyle: {
             fontFamily: "DiodrumRegular",

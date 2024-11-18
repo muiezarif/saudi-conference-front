@@ -3,15 +3,14 @@ import personImage from '../asset/bannerBottomImage.png';
 import mobileImage from '../asset/mobileViewPerson@4x.png';
 import "../style/fonts.css";
 import "../style/HomeCompSecOne.css";
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 
-export function HomeComponentSecOne() {
-
+export function HomeComponentSecOne({secondSectionRef}) {
     const [imageSrc, setImageSrc] = useState(personImage);
 
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth <= 1190) {
+            if (window.innerWidth <= 985) {
                 setImageSrc(mobileImage); // Mobile image
             } else {
                 setImageSrc(personImage); // Default image
@@ -29,10 +28,10 @@ export function HomeComponentSecOne() {
     }, []);
 
     return (
-        <div className="customDiv">
+        <div className="customDiv"  ref={secondSectionRef}>
             <Row className="d-flex">
-                {/* Column to hide on desktop and show on mobile */}
-                <Col className="text-center mb-5 d-block d-xl-none">
+                {/* Mobile-only Column */}
+                <Col xs={12} className="text-center mb-5 d-block d-lg-none">
                     <div className="d-flex justify-content-center gap-2">
                         {['ﺍﻻﻳﺎﻡ', 'ﺍﻟﺴﺎﻋﺎﺕ', 'ﺍﻟﺪﻗﺎﺋﻖ', 'ﺍﻟﺜﻮﺍﻧﻲ'].map((text, index) => (
                             <div
@@ -46,13 +45,14 @@ export function HomeComponentSecOne() {
                     </div>
                 </Col>
 
-                {/* Existing image and other content columns */}
-                <Col xl={6} md={12} sm={12} xs={12} className="mb-3">
+                {/* Image Column */}
+                <Col xl={5} md={6} sm={10} xs={12} className="mb-3">
                     <img src={imageSrc} className="img-fluid image" alt="Person"/>
                 </Col>
-                {/* Column to show only on desktop */}
-                <Col xl={6} md={12} sm={12} xs={12} className="customCard">
-                    <div className="d-inline-flex flex-wrap text-end gap-3 d-none d-xl-flex justify-content-end">
+
+                {/* Content Column - Displayed on larger screens only */}
+                <Col xl={7} md={6} sm={10} xs={12} className="customCard">
+                    <div className="d-inline-flex flex-wrap text-end gap-3 d-none d-lg-flex justify-content-end">
                         {['ﺍﻻﻳﺎﻡ', 'ﺍﻟﺴﺎﻋﺎﺕ', 'ﺍﻟﺪﻗﺎﺋﻖ', 'ﺍﻟﺜﻮﺍﻧﻲ'].map((text, index) => (
                             <div
                                 key={index}
@@ -66,7 +66,7 @@ export function HomeComponentSecOne() {
 
                     <div className="paragraphAlignment">
                         <p className="paragraph">
-                            ﺑﺮﻋﺎﻳﺔ ﻣﻌﺎﻟﻲ ﻭﺯﻳﺮ ﺍﻟﻌﺩﻝ ﺭﺋﻴﺲ ﻣﺠﻠﺲ
+                            ﺑﺮﻋﺎﻳﺔ ﻣﻌﺎﻟﻲ ﻭﺯﻳﺮ ﺍﻟﻌﺩﻝ ﺭﺋﻴﺲ ﻣﺠﻠﺲ<br/>
                             ﺇﺩﺍﺭﺓ ﺍﻟﻬﻴﺌــــﺔ ﺍﻟﺴﻌـــﻮﺩﻳﺔ ﻟﻠﻤﺤﺎﻣﻴـــﻦ
                         </p>
                         <p className="heading">ﺩ. ﻭﻟﻴﺪ ﺑﻦ ﻣﺤﻤﺪ ﺍﻟﺼﻤﻌﺎﻧﻲ</p>

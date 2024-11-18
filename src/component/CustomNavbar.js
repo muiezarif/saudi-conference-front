@@ -1,6 +1,6 @@
 'use client'
 
-import React, {useState} from 'react'
+import React, {useRef, useState} from 'react'
 import {Dialog, DialogPanel} from '@headlessui/react'
 import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline'
 import {Button, Card, Col, Container, NavItem, NavLink, Row} from "reactstrap";
@@ -44,6 +44,14 @@ const navigation2 = [
 export default function CustomNavbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const location = useLocation();
+    // Reference for the second section
+    const secondSectionRef = useRef(null);
+
+    const handleScrollToSection = () => {
+        if (secondSectionRef.current) {
+            secondSectionRef.current.scrollIntoView({behavior: "smooth"});
+        }
+    };
 
     const style = {
         logo: {
@@ -61,6 +69,7 @@ export default function CustomNavbar() {
             width: '250px',
             borderRadius: '30px',
             fontFamily: "DiodrumBold",
+            border: "none"
         }
     }
     return (
@@ -104,6 +113,7 @@ export default function CustomNavbar() {
                                          className={`text-sm font-semibold text-white leading-6 rounded-md px-1 py-3 transition-colors duration-300 custom-item ${
                                              location.pathname === item.href ? 'custom-active-bg' : ''
                                          }`}
+                                         onClick={item.name === "عن المؤتمر" ? handleScrollToSection : undefined}
                                 >
                                     {item.name}
                                 </NavLink>
@@ -161,6 +171,7 @@ export default function CustomNavbar() {
                 </Dialog>
 
             </header>
+
             {(location.pathname === "/" || location.pathname === "/home") && (
                 <div className="bannerPage">
                     {/* Main Content Section */}
@@ -183,7 +194,7 @@ export default function CustomNavbar() {
 
                         <Row className="justify-content-center">
                             <Col md="8">
-                                <h1 className="display-4 mb-3 mt-5" style={{fontFamily: 'DiodrumBold'}}>تحت عنوان</h1>
+                                <h1 className="display-4 mb-3 mt-4" style={{fontFamily: 'DiodrumBold'}}>تحت عنوان</h1>
                                 <p className="lead mb-4"
                                    style={{fontFamily: "DiodrumMedium", marginTop: "-15px"}}>تطورات قطاع
                                     المحاماة والاستشارات
@@ -193,34 +204,58 @@ export default function CustomNavbar() {
                             </Col>
                         </Row>
 
-                        <Row className="mb-4 justify-content-center">
-                            <Col>
-                                <div style={{display: 'flex', justifyContent: 'center', textAlign: 'center'}}>
-                                    <p style={{margin: '0', padding: '0 10px'}}>
-                                        مدينة الرياض
-                                    </p>
-                                    <p>
-                                        <img src={img7} style={{width: '15px'}}/>
-                                    </p>
-                                    <p style={{margin: '0', paddingLeft: "20px"}}>
-                                        م
-                                    </p>
-                                    <p style={{margin: '0',}}>
-                                        2024
-                                    </p>
-                                    <p style={{margin: '0', paddingLeft: "10px"}}>
-                                        ديسمبر
-                                    </p>
-                                    <p style={{margin: '0'}}>
-                                        22 - 23
-                                    </p>
-                                    <p>
-                                        <img src={img8} style={{width: '25px', paddingLeft: '5px'}}/>
-                                    </p>
-                                </div>
+                        <Row className="mb-4">
+                            <Col style={{
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                            }}>
+                                <p style={{margin: '0', padding: '0 10px', textAlign: "center"}}>
+                                    مدينة الرياض
+                                </p>
+                                <img src={img7} style={{width: '15px', paddingTop: "10px"}} alt=""/>
+                                <p style={{margin: '0', paddingLeft: "20px"}}>
+                                    م
+                                </p>
+                                <p style={{margin: '0'}}>
+                                    2024
+                                </p>
+                                <p style={{margin: '0', paddingLeft: "10px"}}>
+                                    ديسمبر
+                                </p>
+                                <p style={{margin: '0'}}>
+                                    22 - 23
+                                </p>
+                                <img src={img8} style={{width: '25px', paddingLeft: '5px', paddingTop: "8px"}} alt=""/>
                             </Col>
                         </Row>
-                        <Row className="mb-4 bottom_icons" style={{marginTop: "-150px", position: "absolute"}}>
+
+                        {/* Horizontal icons */}
+                        <Row className="d-flex justify-content-center d-lg-none d-md-none mt-5 mb-4">
+                            <Col md="auto"
+                                 className="d-flex flex-row align-items-start justify-content-center"> {/* Updated to 'flex-row' */}
+                                {[
+                                    {href: "#youtube", img: img6, alt: "YouTube"},
+                                    {href: "#linkedin", img: img5, alt: "LinkedIn"},
+                                    {href: "#snapchat", img: img4, alt: "Snapchat"},
+                                    {href: "#instagram", img: img3, alt: "Instagram"},
+                                    {href: "#facebook", img: img2, alt: "Facebook"},
+                                    {href: "#twitter", img: img1, alt: "Twitter"},
+                                ].map((item, index) => (
+                                    <a key={index} href={item.href}
+                                       className="text-white mb-3 mx-1"> {/* Added 'mx-1' for spacing */}
+                                        <img
+                                            src={item.img}
+                                            alt={item.alt}
+                                            style={{width: '30px', height: '30px'}}
+                                        />
+                                    </a>
+                                ))}
+                            </Col>
+                        </Row>
+
+                        {/* Vertical icons*/}
+                        <Row className="mb-4 bottom_icons" style={{marginTop: "-170px", position: "absolute"}}>
                             <Col md="auto" className="d-flex flex-column align-items-start">
                                 {[
                                     {href: "#youtube", img: img6, alt: "YouTube"},
