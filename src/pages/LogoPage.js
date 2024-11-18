@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Col, Container, Row} from 'reactstrap';
 import image1 from "../asset/companyLogo/Asset 1.png";
 import image2 from "../asset/companyLogo/Asset 2.png";
@@ -16,8 +16,16 @@ const LogoPage = () => {
         margin: '0 auto'
     };
 
+    // Automatically scroll to the section when the component is rendered
+    useEffect(() => {
+        const logoSection = document.getElementById('logoPage');
+        if (logoSection) {
+            logoSection.scrollIntoView({behavior: 'smooth'});
+        }
+    }, []);
+
     return (
-        <Container className="my-5">
+        <Container className="my-5" id="logoPage">
             {/* first row company logo */}
             <h2 className="mb-4" style={{color: '#2a2a94', fontFamily: 'DiodrumBold', textAlign: 'right'}}>الجهات
                 المشاركة</h2>

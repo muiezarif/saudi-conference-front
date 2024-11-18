@@ -3,7 +3,7 @@ import personImage from '../asset/bannerBottomImage.png';
 import mobileImage from '../asset/mobileViewPerson@4x.png';
 import "../style/fonts.css";
 import "../style/HomeCompSecOne.css";
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useState} from "react";
 
 export function HomeComponentSecOne({secondSectionRef}) {
     const [imageSrc, setImageSrc] = useState(personImage);
@@ -28,7 +28,7 @@ export function HomeComponentSecOne({secondSectionRef}) {
     }, []);
 
     return (
-        <div className="customDiv"  ref={secondSectionRef}>
+        <div className="customDiv">
             <Row className="d-flex">
                 {/* Mobile-only Column */}
                 <Col xs={12} className="text-center mb-5 d-block d-lg-none">
@@ -46,12 +46,12 @@ export function HomeComponentSecOne({secondSectionRef}) {
                 </Col>
 
                 {/* Image Column */}
-                <Col xl={5} md={6} sm={10} xs={12} className="mb-3">
+                <Col xl={5} lg={5} md={8} sm={6} xs={12} className="mb-3">
                     <img src={imageSrc} className="img-fluid image" alt="Person"/>
                 </Col>
 
                 {/* Content Column - Displayed on larger screens only */}
-                <Col xl={7} md={6} sm={10} xs={12} className="customCard">
+                <Col xl={7} lg={7} md={4} sm={6} xs={12} className="customCard">
                     <div className="d-inline-flex flex-wrap text-end gap-3 d-none d-lg-flex justify-content-end">
                         {['ﺍﻻﻳﺎﻡ', 'ﺍﻟﺴﺎﻋﺎﺕ', 'ﺍﻟﺪﻗﺎﺋﻖ', 'ﺍﻟﺜﻮﺍﻧﻲ'].map((text, index) => (
                             <div

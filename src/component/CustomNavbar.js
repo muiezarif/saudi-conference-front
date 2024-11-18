@@ -19,15 +19,16 @@ import img1 from "../asset/socialMedia/img1.png";
 import {ArrowDown} from "react-bootstrap-icons";
 import BackGroundImage from "../asset/bannerImage.png";
 import bannerLogo from "../asset/Logo.png";
+import {scroller} from "react-scroll";
 
 const navigation = [
-    {name: 'المتحدثين', href: ''},
-    {name: 'التسجيل', href: '/reg3'},
-    {name: 'الرعايات', href: '/regmethod'},
-    {name: 'الجهات والرعاة', href: '/reg2'},
-    {name: 'المركز الإعلامي', href: '/media'},
-    {name: 'الأجندة وورش العمل', href: '/workshops'},
-    {name: 'عن المؤتمر', href: '/'},
+    {name: 'المتحدثين', href: '', sectionId: ""},
+    {name: 'التسجيل', href: '/reg3', sectionId: ""},
+    {name: 'الرعايات', href: '/regmethod', sectionId: ""},
+    {name: 'الجهات والرعاة', href: '/reg2', sectionId: "logoPage"},
+    {name: 'المركز الإعلامي', href: '/media', sectionId: ""},
+    {name: 'الأجندة وورش العمل', href: '/workshops', sectionId: ""},
+    {name: 'عن المؤتمر', href: '/', sectionId: "homepage"},
 ]
 
 const navigation2 = [
@@ -47,9 +48,15 @@ export default function CustomNavbar() {
     // Reference for the second section
     const secondSectionRef = useRef(null);
 
-    const handleScrollToSection = () => {
-        if (secondSectionRef.current) {
-            secondSectionRef.current.scrollIntoView({behavior: "smooth"});
+    const handleScroll = (sectionId) => {
+        console.log("sectionId: ", sectionId);
+        if (sectionId)
+        if (sectionId) {
+            scroller.scrollTo(sectionId, {
+                smooth: true,
+                duration: 500,
+                offset: -70, // Adjust for navbar height
+            });
         }
     };
 
@@ -113,7 +120,7 @@ export default function CustomNavbar() {
                                          className={`text-sm font-semibold text-white leading-6 rounded-md px-1 py-3 transition-colors duration-300 custom-item ${
                                              location.pathname === item.href ? 'custom-active-bg' : ''
                                          }`}
-                                         onClick={item.name === "عن المؤتمر" ? handleScrollToSection : undefined}
+                                         onClick={() => handleScroll(item.sectionId)}
                                 >
                                     {item.name}
                                 </NavLink>
