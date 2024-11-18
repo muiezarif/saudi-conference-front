@@ -11,6 +11,7 @@ import RegistrationForm3 from "./pages/RegistrationForm3";
 import {DuplicateHome} from "./pages/DuplicateHome";
 import {HomeComponentSecThree} from "./component/HomeComponentSecThree";
 import {MediaCenter} from "./pages/MediaCenter";
+import {News} from "./pages/News";
 
 function App() {
     return (
@@ -18,7 +19,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/reg" element={<RegistrationForm/>}/>
-                <Route path="/reg1" element={<RegistrationForm1/>}/>
+                <Route path="/media" element={<MediaCenter/>}/>
                 <Route path="/reg2" element={<RegistrationForm2/>}/>
                 <Route path="/reg3" element={<RegistrationForm3/>}/>
                 <Route path="/box" element={<HomeComponentSecThree/>}/>
@@ -27,6 +28,7 @@ function App() {
                 <Route path="/main" element={<MainPage/>}/>
                 <Route path="/home" element={<DuplicateHome/>}/>
                 <Route path="/testing" element={<MediaCenter/>}/>
+                <Route path="/testing2" element={<News/>}/>
             </Routes>
         </BrowserRouter>
     );
