@@ -7,6 +7,7 @@ import image4 from "../asset/SliderImage/sliderImg4.png";
 import rightArrow from "../asset/socialMedia/rightArrow.png";
 import leftArrow from "../asset/socialMedia/leftArrow.png";
 import "../style/NewImageSlider.css";
+import { Element } from 'react-scroll';
 
 const NewImageSlider = () => {
     const data = [
@@ -49,6 +50,7 @@ const NewImageSlider = () => {
     };
 
     return (
+        <Element name='speakersection'>
         <Container className="mt-2">
             <h2 className='mb-5 custom-heading'>المتحدثين</h2>
             <Row className="justify-content-center align-items-center p-0 m-0">
@@ -98,6 +100,7 @@ const NewImageSlider = () => {
                 </Col>
             </Row>
         </Container>
+        </Element>
     );
 };
 

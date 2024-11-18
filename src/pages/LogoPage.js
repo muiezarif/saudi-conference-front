@@ -5,6 +5,7 @@ import image2 from "../asset/companyLogo/Asset 2.png";
 import image3 from "../asset/companyLogo/Asset 3.png";
 import image4 from "../asset/companyLogo/Asset 4.png";
 import image5 from "../asset/companyLogo/Asset 5.png";
+import { Element } from 'react-scroll';
 
 const LogoPage = () => {
 
@@ -17,6 +18,8 @@ const LogoPage = () => {
     };
 
     return (
+        <Element name='logosection'>
+            <section id='logosection'>
         <Container className="my-5">
             {/* first row company logo */}
             <h2 className="mb-4" style={{color: '#2a2a94', fontFamily: 'DiodrumBold', textAlign: 'right'}}>الجهات
@@ -59,6 +62,8 @@ const LogoPage = () => {
                 </Col>
             </Row>
         </Container>
+        </section>
+        </Element>
     );
 }
 
