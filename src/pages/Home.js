@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {Base} from "../component/Base";
 import {ImageSliderForTesting} from "../testing/ImageSliderForTesting";
 import {Button, Card, Col, Row} from "reactstrap";
@@ -20,9 +21,23 @@ import image2 from "../asset/SliderImage/2.png";
 import image3 from "../asset/SliderImage/3.png";
 import image4 from "../asset/SliderImage/4.png";
 import image5 from "../asset/SliderImage/5.png";
+import { useLocation } from "react-router-dom";
+import { scroller } from "react-scroll";
 
 
 export function Home() {
+    const location = useLocation()
+    useEffect(() => {
+        // Check if there's a hash in the URL and scroll to that section
+        const hash = location.hash.replace("#", ""); // Remove '#' from hash
+        if (hash) {
+          scroller.scrollTo(hash, {
+            duration: 800,
+            delay: 0,
+            smooth: "easeInOutQuart",
+          });
+        }
+      }, [location.hash]);
 
     const [imageSrc, setImageSrc] = useState(personImage);
 
