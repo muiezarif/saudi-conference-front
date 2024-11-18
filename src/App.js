@@ -11,7 +11,9 @@ import RegistrationForm3 from "./pages/RegistrationForm3";
 import {DuplicateHome} from "./pages/DuplicateHome";
 import {HomeComponentSecThree} from "./component/HomeComponentSecThree";
 import {MediaCenter} from "./pages/MediaCenter";
+import ImageLibrary from "./pages/ImageLibrary";
 import {News} from "./pages/News";
+import Vedio from "./pages/VideoPage"
 
 function App() {
     return (
@@ -27,6 +29,10 @@ function App() {
                 <Route path="/regmethod" element={<RegMethodOne/>}/>
                 <Route path="/main" element={<MainPage/>}/>
                 <Route path="/home" element={<DuplicateHome/>}/>
+                <Route path="/testing" element={<MediaCenter/>}/>
+                <Route path="/library" element={<ImageLibrary/>}/>
+                <Route path="/testing2" element={<News/>}/>
+                <Route path="/vedio" element={<Vedio/>}/>
                 <Route path="/news" element={<News/>}/>
             </Routes>
         </BrowserRouter>
