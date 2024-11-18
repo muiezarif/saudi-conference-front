@@ -10,6 +10,7 @@ import {RegMethodOne} from "./pages/RegMethodOne";
 import RegistrationForm3 from "./pages/RegistrationForm3";
 import {DuplicateHome} from "./pages/DuplicateHome";
 import {HomeComponentSecThree} from "./component/HomeComponentSecThree";
+import {MediaCenter} from "./pages/MediaCenter";
 
 function App() {
     return (
@@ -25,7 +26,7 @@ function App() {
                 <Route path="/regmethod" element={<RegMethodOne/>}/>
                 <Route path="/main" element={<MainPage/>}/>
                 <Route path="/home" element={<DuplicateHome/>}/>
-                {/*<Route path="/testing" element={<ImageSliderForTesting/>}/>*/}
+                <Route path="/testing" element={<MediaCenter/>}/>
             </Routes>
         </BrowserRouter>
     );
