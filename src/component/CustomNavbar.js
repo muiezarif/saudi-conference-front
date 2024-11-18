@@ -19,12 +19,14 @@ import img1 from "../asset/socialMedia/img1.png";
 import {ArrowDown} from "react-bootstrap-icons";
 import BackGroundImage from "../asset/bannerImage.png";
 import bannerLogo from "../asset/Logo.png";
+import { scroller } from 'react-scroll';
+
 
 const navigation = [
-    {name: 'المتحدثين', href: ''},
+    {name: 'المتحدثين', href: '/#speakersection'},
     {name: 'التسجيل', href: '/reg3'},
     {name: 'الرعايات', href: '/regmethod'},
-    {name: 'الجهات والرعاة', href: '/reg2'},
+    {name: 'الجهات والرعاة', href: '/#logosection'},
     {name: 'المركز الإعلامي', href: '/media'},
     {name: 'الأجندة وورش العمل', href: '/workshops'},
     {name: 'عن المؤتمر', href: '/'},
@@ -34,10 +36,10 @@ const navigation2 = [
     {name: 'عن المؤتمر', href: '/'},
     {name: 'الأجندة وورش العمل', href: '/workshops'},
     {name: 'المركز الإعلامي', href: '/media'},
-    {name: 'الجهات والرعاة', href: '/reg2'},
+    {name: 'الجهات والرعاة', href: '/#logosection'},
     {name: 'الرعايات', href: '/regmethod'},
     {name: 'التسجيل', href: '/reg3'},
-    {name: 'المتحدثين', href: ''},
+    {name: 'المتحدثين', href: '/#speakersection'},
 ]
 
 
@@ -47,11 +49,21 @@ export default function CustomNavbar() {
     // Reference for the second section
     const secondSectionRef = useRef(null);
 
-    const handleScrollToSection = () => {
-        if (secondSectionRef.current) {
-            secondSectionRef.current.scrollIntoView({behavior: "smooth"});
-        }
-    };
+        const handleScrollToSection = (section) => {
+            const sectionMap = {
+                'الجهات والرعاة': 'logosection',
+                'المتحدثين': 'speakersection',
+            };
+        
+            const targetSection = sectionMap[section];
+            if (targetSection) {
+                scroller.scrollTo(targetSection, {
+                    duration: 800,
+                    delay: 0,
+                    smooth: 'easeInOutQuart',
+                });
+            }
+        };
 
     const style = {
         logo: {
@@ -107,18 +119,24 @@ export default function CustomNavbar() {
 
                     {/* Centered navigation links for desktop */}
                     <div className="hidden lg:flex lg:gap-x-6 lg:flex-grow lg:justify-center">
-                        {navigation.map((item) => (
-                            <NavItem key={item.name} className="nav-link">
-                                <NavLink tag={ReactLink} to={item.href}
-                                         className={`text-sm font-semibold text-white leading-6 rounded-md px-1 py-3 transition-colors duration-300 custom-item ${
-                                             location.pathname === item.href ? 'custom-active-bg' : ''
-                                         }`}
-                                         onClick={item.name === "عن المؤتمر" ? handleScrollToSection : undefined}
-                                >
-                                    {item.name}
-                                </NavLink>
-                            </NavItem>
-                        ))}
+                    {navigation.map((item) => (
+    <NavItem key={item.name} className="nav-link">
+        <NavLink
+            tag={ReactLink}
+            to={item.href}
+            className={`text-sm font-semibold text-white leading-6 rounded-md px-1 py-3 transition-colors duration-300 custom-item ${
+                location.pathname === item.href ? 'custom-active-bg' : ''
+            }`}
+            onClick={
+                item.name === 'الجهات والرعاة' || item.name === 'المتحدثين'
+                    ? () => handleScrollToSection(item.name)
+                    : undefined
+            }
+        >
+            {item.name}
+        </NavLink>
+    </NavItem>
+))}
                     </div>
 
                     {/* Right side logo for desktop */}
@@ -159,7 +177,9 @@ export default function CustomNavbar() {
                                                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                         >
                                             <NavLink tag={ReactLink} to={item.href}
-                                                     className="text-sm font-semibold leading-6 text-gray-900">
+                                                     className="text-sm font-semibold leading-6 text-gray-900"
+                                                     
+                                         onClick={item.name === "الجهات والرعاة" ? handleScrollToSection : undefined}>
                                                 {item.name}
                                             </NavLink>
                                         </NavItem>
