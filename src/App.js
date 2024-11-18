@@ -25,7 +25,7 @@ function App() {
                 <Route path="/reg2" element={<RegistrationForm2/>}/>
                 <Route path="/reg3" element={<RegistrationForm3/>}/>
                 <Route path="/box" element={<HomeComponentSecThree/>}/>
-                <Route path="/cal" element={<Calendar/>}/>
+                <Route path="/workshops" element={<Calendar/>}/>
                 <Route path="/regmethod" element={<RegMethodOne/>}/>
                 <Route path="/main" element={<MainPage/>}/>
                 <Route path="/home" element={<DuplicateHome/>}/>

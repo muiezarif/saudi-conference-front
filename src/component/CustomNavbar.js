@@ -26,14 +26,14 @@ const navigation = [
     {name: 'الرعايات', href: '/regmethod'},
     {name: 'الجهات والرعاة', href: '/reg2'},
     {name: 'المركز الإعلامي', href: '/media'},
-    {name: 'الأجندة وورش العمل', href: '/cal'},
+    {name: 'الأجندة وورش العمل', href: '/workshops'},
     {name: 'عن المؤتمر', href: '/'},
 ]
 
 const navigation2 = [
     {name: 'عن المؤتمر', href: '/'},
     {name: 'الأجندة وورش العمل', href: '/cal'},
-    {name: 'المركز الإعلامي', href: '/reg1'},
+    {name: 'المركز الإعلامي', href: '/media'},
     {name: 'الجهات والرعاة', href: '/reg2'},
     {name: 'الرعايات', href: '/regmethod'},
     {name: 'التسجيل', href: '/reg3'},
