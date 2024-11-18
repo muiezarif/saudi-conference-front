@@ -6,9 +6,9 @@ import "../style/News.css";
 import React from "react";
 
 const data = [
-    {date: "22 ديسمبر 2024", text: "يكتب نص الخبر المختصر هنا", calendarImage: calendar, micImage: micImage},
-    {date: "22 ديسمبر 2024", text: "يكتب نص الخبر المختصر هنا", calendarImage: calendar, micImage: micImage},
-    {date: "22 ديسمبر 2024", text: "يكتب نص الخبر المختصر هنا", calendarImage: calendar, micImage: micImage}
+    {date: "22 ديسمبر 2024 م", text: "يكتب نص الخبر المختصر هنا", calendarImage: calendar, micImage: micImage},
+    {date: "22 ديسمبر 2024 م", text: "يكتب نص الخبر المختصر هنا", calendarImage: calendar, micImage: micImage},
+    {date: "sjhdbjha", text: "يكتب نص الخبر المختصر هنا", calendarImage: calendar, micImage: micImage}
 ]
 
 export function News() {
