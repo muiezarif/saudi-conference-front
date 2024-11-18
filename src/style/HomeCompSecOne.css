@@ -101,19 +101,22 @@
 
 .customCard {
     text-align: right;
+    /*background-color: pink;*/
+    height: 100%;
 }
 
 /*.cardAlignment {*/
 /*    text-align: right;*/
 /*}*/
 
-/*.paragraphAlignment {*/
-/*    text-align: right;*/
-/*}*/
-
 .paragraphAlignment {
+    position: relative;
+    text-align: right;
+}
+
+.subHeading {
     position: absolute;
-    top: 200px;
+    top: 450px;
     right: 20px;
 }
 
@@ -126,10 +129,10 @@
     }
 
 
-    .paragraphAlignment {
+    .subHeading {
 
         /*background-color: pink;*/
-        top: 280px;
+        top: 440px;
     }
 
     .cardBase {
@@ -158,10 +161,17 @@
     }
 }
 
+@media only screen and (max-width: 1900px) {
+    .subHeading {
+        /*background-color: pink;*/
+        top: 400px;
+    }
+}
+
 @media only screen and (max-width: 1800px) {
-    .paragraphAlignment {
-        /*background-color: #6002b8;*/
-        top: 220px;
+    .subHeading {
+        /*background-color: pink;*/
+        top: 370px;
     }
 
     .cardBase {
@@ -175,9 +185,31 @@
     }
 }
 
+
+@media only screen and (max-width: 1751px) {
+    .subHeading {
+        top: 300px;
+        /*background-color: #61dafb;*/
+    }
+}
+
+@media only screen and (max-width: 1701px) {
+    .subHeading {
+        top: 300px;
+        /*background-color: #61dafb;*/
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    .subHeading {
+        top: 250px;
+        /*background-color: #61dafb;*/
+    }
+}
+
 @media only screen and (max-width: 1500px) {
-    .paragraphAlignment {
-        top: 140px;
+    .subHeading {
+        top: 230px;
         /*background-color: #61dafb;*/
     }
 
