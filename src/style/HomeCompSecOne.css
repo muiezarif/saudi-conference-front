@@ -111,7 +111,26 @@
 /*    text-align: right;*/
 /*}*/
 
+.paragraphAlignment {
+    position: absolute;
+    top: 200px;
+    right: 20px;
+}
+
 @media only screen and (max-width: 2200px) {
+
+    .cardBase {
+        /*background-color: pink;*/
+        width: 180px;
+        height: 155px;
+    }
+
+
+    .paragraphAlignment {
+
+        /*background-color: pink;*/
+        top: 280px;
+    }
 
     .cardBase {
         width: 150px;
@@ -127,7 +146,7 @@
     }
 
     .paragraph {
-        font-size: 40px;
+        font-size: 50px;
     }
 
     .heading {
@@ -139,7 +158,29 @@
     }
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1800px) {
+    .paragraphAlignment {
+        /*background-color: #6002b8;*/
+        top: 220px;
+    }
+
+    .cardBase {
+        /*background-color: pink;*/
+        width: 130px;
+        height: 115px;
+    }
+
+    .paragraph {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .paragraphAlignment {
+        top: 140px;
+        /*background-color: #61dafb;*/
+    }
+
     .cardBase {
         /*background-color: pink;*/
         width: 150px;
@@ -155,7 +196,7 @@
     }
 
     .paragraph {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .heading {
@@ -167,7 +208,7 @@
     }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1260px) {
     .customDiv {
         margin-bottom: 5rem;
     }

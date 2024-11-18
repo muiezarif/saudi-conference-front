@@ -151,7 +151,8 @@ export function Home() {
                     </Col>
 
                     {/* Content Column - Displayed on larger screens only */}
-                    <Col xl={7} lg={7} md={4} sm={12} xs={12} className="customCard">
+                    <Col xl={7} lg={7} md={4} sm={12} xs={12} className="customCard"
+                         style={{position: "absolute", right: "30px",}}>
                         <div className="d-inline-flex flex-wrap text-end gap-3 d-none d-lg-flex justify-content-end">
                             {['ﺍﻻﻳﺎﻡ', 'ﺍﻟﺴﺎﻋﺎﺕ', 'ﺍﻟﺪﻗﺎﺋﻖ', 'ﺍﻟﺜﻮﺍﻧﻲ'].map((text, index) => (
                                 <div
