@@ -7,17 +7,17 @@ import "../style/MediaCenter.css";
 import {useNavigate} from "react-router-dom";
 
 const data = [
-    {image: videoImage, text: "Video Content", width: '80px', pagee},
-    {image: galleryImage, text: "Gallery Content", width: '80px'},
-    {image: micImage, text: "Mic Content", width: '45px'},
+    {image: videoImage, text: "الفيديو", width: '80px', navigateTo: "/"},
+    {image: galleryImage, text: "مكتبة الصور", width: '80px', navigateTo: "/"},
+    {image: micImage, text: "الأخبار", width: '45px', navigateTo: "/news"},
 ];
 
 export function MediaCenter() {
 
     const navigate = useNavigate();
-    const handleNavigation = () => {
+    const handleNavigation = (page) => {
         // setShowOtherComponent(true); // Set to false if you want to toggle
-        navigate('/news');
+        navigate(page);
     };
 
     return (
@@ -27,10 +27,10 @@ export function MediaCenter() {
                 <Row className="gy-4">
                     {data.map((item, index) => (
                         <Col key={index} xxl={4} xl={4} lg={6} md={12} sm={12}>
-                            <Card className="text-center custom-card">
+                            <Card className="text-center custom-card" onClick={e => handleNavigation(item.navigateTo)}>
                                 <CardBody className="d-flex flex-column justify-content-center align-items-center">
                                     <img src={item.image} alt="Media" className="media-image" width={item.width}/>
-                                    <CardText>{item.text}</CardText>
+                                    <CardText className="custom-card-text">{item.text}</CardText>
                                 </CardBody>
                             </Card>
                         </Col>

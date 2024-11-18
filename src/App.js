@@ -27,7 +27,6 @@ function App() {
                 <Route path="/regmethod" element={<RegMethodOne/>}/>
                 <Route path="/main" element={<MainPage/>}/>
                 <Route path="/home" element={<DuplicateHome/>}/>
-                <Route path="/testing" element={<MediaCenter/>}/>
                 <Route path="/news" element={<News/>}/>
             </Routes>
         </BrowserRouter>
