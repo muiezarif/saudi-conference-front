@@ -228,6 +228,8 @@ const Calendar = () => {
                                 height: customCardHeight,
                                 alignContent: "center",
                                 marginRight: margin,
+                                fontFamily: 'DiodrumMedium',
+                                fontSize: customFont
                             }}>
                                 <div className="d-flex justify-content-center gap-2 mb-2">
                                     < p className="text-white">{item.title}</p>
