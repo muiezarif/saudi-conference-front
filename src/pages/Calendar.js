@@ -175,15 +175,15 @@ const Calendar = () => {
                                 fontSize: customFont
                             }}
                                  className="custom-card-text">
-                                <div className="d-flex justify-content-center gap-2 mb-2">
+                                <div className="d-flex justify-content-center align-items-center gap-2 mb-2">
                                     <p className="text-white">{item.title}</p>
                                     <img src={item.titleIcon} alt="" style={{width: "30px", height: "30px"}}/>
                                 </div>
-                                <div className="d-flex justify-content-center gap-2 mb-2">
+                                <div className="d-flex justify-content-center align-items-center gap-2 mb-2">
                                     <p className="text-white">{item.date}</p>
                                     <img src={item.dateIcon} alt="" style={{width: "30px", height: "30px"}}/>
                                 </div>
-                                <div className="d-flex justify-content-center gap-2">
+                                <div className="d-flex justify-content-center align-items-center gap-2">
                                     <p className="text-white">{item.time}</p>
                                     <img src={item.timeIcon} alt="" style={{width: "30px", height: "30px"}}/>
                                 </div>
@@ -231,15 +231,15 @@ const Calendar = () => {
                                 fontFamily: 'DiodrumMedium',
                                 fontSize: customFont
                             }}>
-                                <div className="d-flex justify-content-center gap-2 mb-2">
+                                <div className="d-flex justify-content-center  align-items-center gap-2 mb-2">
                                     < p className="text-white">{item.title}</p>
                                     <img src={item.titleIcon} alt="" style={{width: "30px", height: "30px"}}/>
                                 </div>
-                                <div className="d-flex justify-content-center gap-2 mb-2">
+                                <div className="d-flex justify-content-center  align-items-center gap-2 mb-2">
                                     <p className="text-white">{item.date}</p>
                                     <img src={item.dateIcon} alt="" style={{width: "30px", height: "30px"}}/>
                                 </div>
-                                <div className="d-flex justify-content-center gap-2">
+                                <div className="d-flex justify-content-center  align-items-center gap-2">
                                     <p className="text-white">{item.time}</p>
                                     <img src={item.timeIcon} alt="" style={{width: "30px", height: "30px"}}/>
                                 </div>
