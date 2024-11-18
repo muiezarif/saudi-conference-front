@@ -101,17 +101,39 @@
 
 .customCard {
     text-align: right;
+    /*background-color: pink;*/
+    height: 100%;
 }
 
 /*.cardAlignment {*/
 /*    text-align: right;*/
 /*}*/
 
-/*.paragraphAlignment {*/
-/*    text-align: right;*/
-/*}*/
+.paragraphAlignment {
+    position: relative;
+    text-align: right;
+}
+
+.subHeading {
+    position: absolute;
+    top: 450px;
+    right: 20px;
+}
 
 @media only screen and (max-width: 2200px) {
+
+    .cardBase {
+        /*background-color: pink;*/
+        width: 180px;
+        height: 155px;
+    }
+
+
+    .subHeading {
+
+        /*background-color: pink;*/
+        top: 440px;
+    }
 
     .cardBase {
         width: 150px;
@@ -127,7 +149,7 @@
     }
 
     .paragraph {
-        font-size: 40px;
+        font-size: 50px;
     }
 
     .heading {
@@ -139,7 +161,58 @@
     }
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1900px) {
+    .subHeading {
+        /*background-color: pink;*/
+        top: 400px;
+    }
+}
+
+@media only screen and (max-width: 1800px) {
+    .subHeading {
+        /*background-color: pink;*/
+        top: 370px;
+    }
+
+    .cardBase {
+        /*background-color: pink;*/
+        width: 130px;
+        height: 115px;
+    }
+
+    .paragraph {
+        font-size: 30px;
+    }
+}
+
+
+@media only screen and (max-width: 1751px) {
+    .subHeading {
+        top: 300px;
+        /*background-color: #61dafb;*/
+    }
+}
+
+@media only screen and (max-width: 1701px) {
+    .subHeading {
+        top: 300px;
+        /*background-color: #61dafb;*/
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    .subHeading {
+        top: 250px;
+        /*background-color: #61dafb;*/
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .subHeading {
+        top: 230px;
+        /*background-color: #61dafb;*/
+    }
+
     .cardBase {
         /*background-color: pink;*/
         width: 150px;
@@ -155,7 +228,7 @@
     }
 
     .paragraph {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .heading {
@@ -167,7 +240,7 @@
     }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1260px) {
     .customDiv {
         margin-bottom: 5rem;
     }
