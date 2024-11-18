@@ -13,6 +13,7 @@ import {HomeComponentSecThree} from "./component/HomeComponentSecThree";
 import {MediaCenter} from "./pages/MediaCenter";
 import ImageLibrary from "./pages/ImageLibrary";
 import {News} from "./pages/News";
+import Vedio from "./pages/VideoPage"
 
 function App() {
     return (
@@ -31,6 +32,7 @@ function App() {
                 <Route path="/testing" element={<MediaCenter/>}/>
                 <Route path="/library" element={<ImageLibrary/>}/>
                 <Route path="/testing2" element={<News/>}/>
+                <Route path="/vedio" element={<Vedio/>}/>
             </Routes>
         </BrowserRouter>
     );
