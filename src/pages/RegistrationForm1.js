@@ -46,27 +46,35 @@ const RegistrationForm1 = () => {
         });
     };
 
+    const encodeFormData = (data) => {
+        return Object.keys(data)
+            .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+            .join('&');
+    };
+    
+    // Use this encoded data in your axios call
     const handleSubmit = async (e) => {
         e.preventDefault();
     
         try {
             const response = await axios.post(
-                'https://script.google.com/macros/s/AKfycbydJuQSXWxv3Op-fVN0glvvyOxH0Je5OfpfQtiTgFG5SlODaZilSiQy9ABDd5CjF2RsVw/exec',
-                formData, // Ensure `formData` is a plain JavaScript object
+                'https://script.google.com/macros/s/AKfycbw2m-17E9ilyTB8vYwQDAm4RuImvtBefe6LOYSJBV4hVV7IiDqLyU0eYEXDwDwjT6hsyA/exec',
+                formData,
                 {
                     headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded', // Use a simple content type
+                        'Content-Type': 'application/x-www-form-urlencoded',
                     },
                 }
             );
     
-            if (response.data.success) {
+            if (response.data.result === "success") {
                 alert('Form submitted successfully!');
             } else {
-                alert('Failed to submit the form. Error from server.');
+                console.error('Server Error:', response);
+                alert('Failed to submit the form. Server Error.');
             }
         } catch (error) {
-            console.error('Error submitting form:', error);
+            console.error('Submission Error:', error);
             alert('Failed to submit the form.');
         }
     };
