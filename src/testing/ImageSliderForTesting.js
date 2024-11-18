@@ -8,7 +8,6 @@ import icon1 from "../asset/icon_mm.png";
 import HomeComponentSecTwo from "../component/HomeComponentSecTwo";
 import NewImageSlider from "../component/NewImageSlider";
 import LogoPage from "../pages/LogoPage"
-import ConferencePage from "../pages/ConferencePage";
 import "../style/CustomSliderImage.css"
 import {HomeComponentSecThree} from "../component/HomeComponentSecThree";
 
