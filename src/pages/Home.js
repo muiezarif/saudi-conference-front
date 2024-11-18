@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import {Base} from "../component/Base";
 import {ImageSliderForTesting} from "../testing/ImageSliderForTesting";
 import {Button, Card, Col, Row} from "reactstrap";
-import React, {useEffect, useState} from "react";
+import React, { useState} from "react";
 import personImage from "../asset/bannerBottomImage.png";
 import mobileImage from "../asset/mobileViewPerson@4x.png";
 import "../style/fonts.css";
