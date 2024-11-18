@@ -11,6 +11,7 @@ import RegistrationForm3 from "./pages/RegistrationForm3";
 import {DuplicateHome} from "./pages/DuplicateHome";
 import {HomeComponentSecThree} from "./component/HomeComponentSecThree";
 import {MediaCenter} from "./pages/MediaCenter";
+import ImageLibrary from "./pages/ImageLibrary";
 
 function App() {
     return (
@@ -27,6 +28,8 @@ function App() {
                 <Route path="/main" element={<MainPage/>}/>
                 <Route path="/home" element={<DuplicateHome/>}/>
                 <Route path="/testing" element={<MediaCenter/>}/>
+                <Route path="/library" element={<ImageLibrary/>}/>
+
             </Routes>
         </BrowserRouter>
     );
