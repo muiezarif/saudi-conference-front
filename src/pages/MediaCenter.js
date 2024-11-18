@@ -7,8 +7,8 @@ import "../style/MediaCenter.css";
 import {useNavigate} from "react-router-dom";
 
 const data = [
-    {image: videoImage, text: "الفيديو", width: '80px', navigateTo: "/"},
-    {image: galleryImage, text: "مكتبة الصور", width: '80px', navigateTo: "/"},
+    {image: videoImage, text: "الفيديو", width: '80px', navigateTo: "/video"},
+    {image: galleryImage, text: "مكتبة الصور", width: '80px', navigateTo: "/library"},
     {image: micImage, text: "الأخبار", width: '45px', navigateTo: "/news"},
 ];
 
