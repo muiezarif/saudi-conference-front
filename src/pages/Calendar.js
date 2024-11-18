@@ -6,6 +6,7 @@ import iconSit from "../asset/icon_sit.png";
 import iconCal from "../asset/icon_calender.png";
 import iconClock from "../asset/icon_clock.png";
 import iconWrite from "../asset/icon_write.png";
+import '../style/Calendar.css';
 
 
 const Calendar = () => {
@@ -76,6 +77,7 @@ const Calendar = () => {
     const [gap, setGap] = useState("gap-4");
     const [customCardHeight, setCustomCardHeight] = useState("250px");
     const [padding, setPadding] = useState("0 180px 0 0 ");
+    const [customFont, setCustomFont] = useState("25px")
 
 
     useEffect(() => {
@@ -113,6 +115,7 @@ const Calendar = () => {
                 setRightColMargin("35px");
                 setCustomCardHeight("170px")
                 setGap("gap-2");
+                setCustomFont("18px")
             } else if (width >= 380 && width < 410) {
                 setIsMobile("250px");
                 setHeight("526px");
@@ -122,7 +125,8 @@ const Calendar = () => {
                 setPadding("0 10px 0 0");
                 setCustomCardHeight("170px")
                 setRightColMargin("23px");
-                setGap("gap-2")
+                setGap("gap-2");
+                setCustomFont("18px")
             } else if (width < 380) {
                 setIsMobile("250px");
                 setHeight("526px");
@@ -132,7 +136,8 @@ const Calendar = () => {
                 setCustomCardHeight("170px")
                 setRightColMargin("10px");
                 setGap("gap-2");
-                setPadding("0")
+                setPadding("0");
+                setCustomFont("18px")
             }
         };
 
@@ -156,6 +161,7 @@ const Calendar = () => {
                     color: "#0c0c9c",
                     padding: padding
                 }}>{headingData.firstHeading}</h1>
+
                 <Row style={{display: "flex", justifyContent: "center"}}>
                     <Col className={`d-flex justify-content-center flex-wrap ${gap}`}>
                         {data.map(item => (
@@ -165,9 +171,12 @@ const Calendar = () => {
                                 height: customCardHeight,
                                 alignContent: "center",
                                 marginRight: margin,
-                            }}>
+                                fontFamily: 'DiodrumMedium',
+                                fontSize: customFont
+                            }}
+                                 className="custom-card-text">
                                 <div className="d-flex justify-content-center gap-2 mb-2">
-                                    < p className="text-white">{item.title}</p>
+                                    <p className="text-white">{item.title}</p>
                                     <img src={item.titleIcon} alt="" style={{width: "30px", height: "30px"}}/>
                                 </div>
                                 <div className="d-flex justify-content-center gap-2 mb-2">
@@ -194,12 +203,13 @@ const Calendar = () => {
                             marginRight: rightColMargin,
                         }}>
                             <p style={{fontFamily: "DiodrumBold", fontSize: "55px"}}>1</p>
-                            <p style={{fontFamily: "DiodrumRegular", fontSize: "25px", marginTop: "-3rem"}}>اليوم
+                            <p style={{fontFamily: "DiodrumMedium", fontSize: "25px", marginTop: "-3rem"}}>اليوم
                                 الأول</p>
                         </div>
                     </Col>
                 </Row>
 
+                {/* Second Row */}
                 <h1 style={{
                     textAlign: "right",
                     marginTop: "50px",
@@ -247,7 +257,7 @@ const Calendar = () => {
                             marginRight: rightColMargin,
                         }}>
                             <p style={{fontFamily: "DiodrumBold", fontSize: "55px"}}>2</p>
-                            <p style={{fontFamily: "DiodrumRegular", fontSize: "25px", marginTop: "-3rem"}}>اليوم
+                            <p style={{fontFamily: "DiodrumMedium", fontSize: "25px", marginTop: "-3rem"}}>اليوم
                                 الثاني</p>
                         </div>
                     </Col>

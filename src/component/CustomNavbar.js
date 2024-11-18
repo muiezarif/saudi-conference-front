@@ -32,7 +32,7 @@ const navigation = [
 
 const navigation2 = [
     {name: 'عن المؤتمر', href: '/'},
-    {name: 'الأجندة وورش العمل', href: '/cal'},
+    {name: 'الأجندة وورش العمل', href: '/workshops'},
     {name: 'المركز الإعلامي', href: '/media'},
     {name: 'الجهات والرعاة', href: '/reg2'},
     {name: 'الرعايات', href: '/regmethod'},
