@@ -255,7 +255,12 @@ export default function CustomNavbar() {
                         </Row>
 
                         {/* Vertical icons*/}
-                        <Row className="mb-4 bottom_icons" style={{marginTop: "-170px", position: "absolute"}}>
+                        <Row className="mb-4 bottom_icons"
+                             style={{
+                                 bottom: "0",
+                                 left: "4%",
+                                 position: "absolute",
+                             }}>
                             <Col md="auto" className="d-flex flex-column align-items-start">
                                 {[
                                     {href: "#youtube", img: img6, alt: "YouTube"},
