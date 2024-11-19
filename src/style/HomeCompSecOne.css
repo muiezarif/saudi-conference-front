@@ -286,37 +286,44 @@
 Media Query for Samsung Galaxy S23 Ultra
 @media only screen and (max-width: 412px) and (max-width: 412px) {
     .paragraphAlignment { 
-        right:0px
+        right:0px;
+        text-align:center
     }
     .subHeading {
         font-size: 40px; /* Adjust font size to be smaller */
         right:0px;
         margin:0;
-        top:120px
+        top:120px;
+        text-align:center
     }
     .heading{
         font-size:27px;
+        text-align:center
     }
     .paragraph{
         font-size:19px;
+        text-align:center
     }
 }
 
 @media only screen and (min-width: 280px) and (max-width: 450px) {
     .paragraphAlignment { 
-        right:0px
+        right:0px;
+        text-align:center
     }
     .subHeading {
         font-size: 25px; /* Adjust font size to be smaller */
         right:0px;
         margin:0;
-        top:120px
+        top:120px;
     }
     .heading{
         font-size:24px;
+        text-align:center
     }
     .paragraph{
         font-size:17px;
+        text-align:center
     }
     .imgBar{
         width:80%
@@ -325,19 +332,23 @@ Media Query for Samsung Galaxy S23 Ultra
 
 @media only screen and (min-width: 280px) and (max-width: 450px) {
     .paragraphAlignment { 
-        right:0px
+        right:0px;
+        text-align:center
     }
     .subHeading {
         font-size: 25px; /* Adjust font size to be smaller */
         right:0px;
         margin:0;
-        top:120px
+        top:120px;
+        text-align:center
     }
     .heading{
         font-size:20px;
+        text-align:center
     }
     .paragraph{
         font-size:14px;
+        text-align:center
     }
     .imgBar{
         width:80%
