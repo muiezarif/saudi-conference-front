@@ -132,7 +132,7 @@ const HomeComponentSecTwo = () => {
                 <div>
                     <Row className="mb-5 justify-content-center align-items-center text-center" style={{marginTop:'-15px'}}>
                         <Col className="d-flex justify-content-center align-items-center">
-                            <img onClick={handleImageClick} src={imageBar} width="40%" />
+                            <img onClick={handleImageClick} src={imageBar} width="40%" className='imgBar' />
                         </Col>
                     </Row>
 
