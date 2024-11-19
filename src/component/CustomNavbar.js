@@ -112,7 +112,7 @@ export default function CustomNavbar() {
                             <Bars3Icon aria-hidden="true" className="h-6 w-6"/>
                         </button>
                         {/* Right side logo for mobile */}
-                        <NavLink tag={ReactLink} to="/" className="-m-1.5 p-1.5">
+                        <NavLink tag={ReactLink} to="/"  className="-m-1.5 p-1.5">
                             <img src={Logo} alt="Logo" style={style.logo}/>
                         </NavLink>
                     </div>
@@ -153,7 +153,7 @@ export default function CustomNavbar() {
 
                         <div className="flex items-center justify-between">
                             <NavItem className="nav-link">
-                                <NavLink tag={ReactLink} to="/"
+                                <NavLink tag={ReactLink} to="/" 
                                          className="-m-1.5 p-1.5">
                                     <span className="sr-only">Your Company</span>
                                 </NavLink>
@@ -176,7 +176,7 @@ export default function CustomNavbar() {
                                         <NavItem key={item.name} href={item.href}
                                                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                         >
-                                            <NavLink tag={ReactLink} to={item.href}
+                                            <NavLink tag={ReactLink} to={item.href} onClick={() => setMobileMenuOpen(false)}
                                                      className="text-sm font-semibold leading-6 text-gray-900">
                                                 {item.name}
                                             </NavLink>
