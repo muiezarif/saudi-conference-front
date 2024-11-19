@@ -121,3 +121,22 @@
         border-radius: 15px;
     }
 }
+
+@media only screen and (min-width: 280px) and (max-width: 380px) {
+    .second-col-style, .third-col-style {
+        height: 250px;
+        width: 250px;
+        border-radius: 15px;
+    }
+    .second-col-style .p1,
+    .second-col-style .p2,
+    .second-col-style .p3 {
+        font-size:25px; /* Center text for all child paragraphs */
+    }
+
+    .third-col-style .p1,
+    .third-col-style .p2,
+    .third-col-style .p3 {
+        font-size:25px; /* Center text for all child paragraphs */
+    }
+}
