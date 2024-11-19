@@ -166,8 +166,8 @@ export function RegMethodOne() {
                         </div>
                     </Row>
                     <Row>
-                        <button onClick={handleSubmit} style={{ marginTop: "20px", padding: "10px 20px", borderRadius: "5px", backgroundColor: "#00B4B2", color: "#fff", border: "none" }}>
-                            Submit
+                        <button onClick={handleSubmit} style={{ marginTop: "20px", padding: "10px 20px", borderRadius: "5px", backgroundColor: "#6002b8", color: "#fff", border: "none" }}>
+                        إرسال
                         </button>
                     </Row>
                 </div>

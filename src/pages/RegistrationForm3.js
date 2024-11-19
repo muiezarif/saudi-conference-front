@@ -158,9 +158,13 @@ const RegistrationForm2 = () => {
                             </FormGroup>
                         </Col>
                     </Row>
-                    <Button type="submit" color="primary" className="mt-4">
-                        Submit
+                    <Row>
+                    <Col xs={12} className="text-center">
+
+                    <Button type="submit" style={{ borderRadius: '20px', backgroundColor: '#6002b8', border: 'none',paddingBottom:10 }} className="">
+                    إرسال
                     </Button>
+                    </Col></Row>
                 </Form>
             </Container>
         </Base>

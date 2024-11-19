@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Button, Col, Container, FormGroup, Input, Label, Row} from 'reactstrap';
+import { Button, Col, Container, FormGroup, Input, Label, Row } from 'reactstrap';
 import logo from '../asset/HeaderLogo.png';
 import img1 from "../asset/socialMedia/img1.png";
 import img2 from "../asset/socialMedia/img2.png";
@@ -22,7 +22,7 @@ const CustomFooter = () => {
             borderRadius: '20px',
             color: '#ffffff',
             textAlign: 'right',
-            border:"none"
+            border: "none"
         },
         labelStyle: {
             fontFamily: "DiodrumRegular",
@@ -36,10 +36,10 @@ const CustomFooter = () => {
         setFormData({ ...formData, [id]: value });
     };
 
-     // Use this encoded data in your axios call
-     const handleSubmit = async (e) => {
+    // Use this encoded data in your axios call
+    const handleSubmit = async (e) => {
         e.preventDefault();
-    
+
         try {
             const response = await axios.post(
                 'https://script.google.com/macros/s/AKfycbxNLc4yYvRNJWlCGfunKgdx5Jm1x1oMXdm9Pwq1tZy_XDjIxeDXgMTjcu_at1K5ESJO/exec',
@@ -50,7 +50,7 @@ const CustomFooter = () => {
                     },
                 }
             );
-    
+
             if (response.data.result === "success") {
                 alert('Form submitted successfully!');
             } else {
@@ -64,11 +64,11 @@ const CustomFooter = () => {
     };
 
     return (
-        <div style={{backgroundColor: '#0b1a8a', color: '#ffffff', padding: '20px 0', marginTop: "40px"}}>
+        <div style={{ backgroundColor: '#0b1a8a', color: '#ffffff', padding: '20px 0', marginTop: "40px" }}>
             <Container>
                 <Row className="justify-content-center">
                     <Col xs={12} className="text-center mb-3">
-                        <h5 style={{color: 'white', textAlign: 'right', fontFamily: "DiodrumBold"}}>
+                        <h5 style={{ color: 'white', textAlign: 'right', fontFamily: "DiodrumBold" }}>
                             تواصل معنا
                         </h5>
                     </Col>
@@ -76,7 +76,7 @@ const CustomFooter = () => {
 
                 {/* Form Section */}
                 <form onSubmit={handleSubmit}>
-                <Row style={{ textAlign: 'right', fontFamily: 'DiodrumRegular' }}>
+                    <Row style={{ textAlign: 'right', fontFamily: 'DiodrumRegular' }}>
                         <Col xs={12} md={6} className="mb-3">
                             <FormGroup>
                                 <Label for="email" style={style.labelStyle}>البريد الإلكتروني</Label>
@@ -140,30 +140,33 @@ const CustomFooter = () => {
 
                     <Row>
                         <Col xs={12} className="text-center mt-3">
-                            <Button  type="submit" color="primary">
+                            <Button
+                                type="submit"
+                                style={{ borderRadius: '20px', backgroundColor: '#6002b8', border: 'none' }}
+                            >
                                 إرسال
                             </Button>
                         </Col>
                     </Row>
-                    </form>
+                </form>
 
                 {/* Social Media and Footer Info */}
                 <Row className="justify-content-between align-items-center mt-4">
                     <Col xs={12} md={4} className="d-flex justify-content-center mb-3">
-                        <img src={img1} alt="Twitter" style={{width: 28, height: 28, margin: '0 5px'}}/>
-                        <img src={img2} alt="Facebook" style={{width: 28, height: 28, margin: '0 5px'}}/>
-                        <img src={img3} alt="Instagram" style={{width: 28, height: 28, margin: '0 5px'}}/>
-                        <img src={img4} alt="Snapchat" style={{width: 28, height: 28, margin: '0 5px'}}/>
-                        <img src={img5} alt="LinkedIn" style={{width: 28, height: 28, margin: '0 5px'}}/>
-                        <img src={img6} alt="YouTube" style={{width: 28, height: 28, margin: '0 5px'}}/>
+                        <img src={img1} alt="Twitter" style={{ width: 28, height: 28, margin: '0 5px' }} />
+                        <img src={img2} alt="Facebook" style={{ width: 28, height: 28, margin: '0 5px' }} />
+                        <img src={img3} alt="Instagram" style={{ width: 28, height: 28, margin: '0 5px' }} />
+                        <img src={img4} alt="Snapchat" style={{ width: 28, height: 28, margin: '0 5px' }} />
+                        <img src={img5} alt="LinkedIn" style={{ width: 28, height: 28, margin: '0 5px' }} />
+                        <img src={img6} alt="YouTube" style={{ width: 28, height: 28, margin: '0 5px' }} />
                     </Col>
 
-                    <Col xs={12} md={4} className="text-center mb-3" style={{fontFamily: "DiodrumBold"}}>
+                    <Col xs={12} md={4} className="text-center mb-3" style={{ fontFamily: "DiodrumBold" }}>
                         <p>جميع الحقوق محفوظة 2024</p>
                     </Col>
 
                     <Col xs={12} md={4} className="d-flex justify-content-center justify-content-md-end">
-                        <img src={logo} alt="Logo" style={{width: '50%', maxWidth: '150px'}}/>
+                        <img src={logo} alt="Logo" style={{ width: '50%', maxWidth: '150px' }} />
                     </Col>
                 </Row>
             </Container>
