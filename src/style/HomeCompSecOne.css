@@ -329,8 +329,124 @@ Media Query for Samsung Galaxy S23 Ultra
     .imgBar{
         width:80%
     }
-    .custom-row{
-    
+}
+
+@media only screen and (min-width: 450px) and (max-width: 575px) {
+    .paragraphAlignment { 
+        right:0px;
+        text-align:center
+    }
+    .subHeading {
+        font-size: 35px; /* Adjust font size to be smaller */
+        right:0px;
+        margin:0;
+        top:140px;
+    }
+    .heading{
+        font-size:30px;
+        text-align:center
+    }
+    .paragraph{
+        font-size:20px;
+        text-align:center
+    }
+    .imgBar{
+        width:80%
+    }
+}
+
+@media only screen and (min-width: 575px) and (max-width: 768px) {
+    .paragraphAlignment { 
+        right:0px;
+        text-align:center
+    }
+    .subHeading {
+        font-size: 35px; /* Adjust font size to be smaller */
+        right:0px;
+        margin:0;
+        top:150px;
+    }
+    .heading{
+        font-size:30px;
+        text-align:center
+    }
+    .paragraph{
+        font-size:25px;
+        text-align:center
+    }
+    .imgBar{
+        width:80%
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 939px) {
+    .paragraphAlignment { 
+        right:25%;
+        text-align:right
+    }
+    .subHeading {
+        font-size: 27px; /* Adjust font size to be smaller */
+        right:0px;
+        margin:0;
+        top:280px;
+    }
+    .heading{
+        font-size:23px;
+        text-align:right
+    }
+    .paragraph{
+        font-size:18px;
+        text-align:right
+    }
+    .imgBar{
+        width:80%
+    }
+}
+@media only screen and (min-width: 939px) and (max-width: 992px) {
+    .paragraphAlignment { 
+        right:20%;
+        text-align:right
+    }
+    .subHeading {
+        font-size: 40px; /* Adjust font size to be smaller */
+        right:0px;
+        margin:0;
+        top:140%;
+    }
+    .heading{
+        font-size:35px;
+        text-align:right
+    }
+    .paragraph{
+        font-size:30px;
+        text-align:right
+    }
+    .imgBar{
+        width:80%
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 992px) {
+    .paragraphAlignment { 
+        right:10px;
+        text-align:right
+    }
+    .subHeading {
+        font-size: 40px; /* Adjust font size to be smaller */
+        right:0px;
+        margin:0;
+        top:170px;
+    }
+    .heading{
+        font-size:35px;
+        text-align:right
+    }
+    .paragraph{
+        font-size:25px;
+        text-align:right
+    }
+    .imgBar{
+        width:80%
     }
 }
 @media only screen and (min-width: 280px) and (max-width: 380px) {
@@ -345,11 +461,11 @@ Media Query for Samsung Galaxy S23 Ultra
         top:120px;
     }
     .heading{
-        font-size:24px;
+        font-size:20px;
         text-align:center
     }
     .paragraph{
-        font-size:17px;
+        font-size:14px;
         text-align:center
     }
     .imgBar{
@@ -394,30 +510,7 @@ Media Query for Samsung Galaxy S23 Ultra
     }
 }
 
-@media only screen and (min-width: 280px) and (max-width: 450px) {
-    .paragraphAlignment { 
-        right:0px;
-        text-align:center
-    }
-    .subHeading {
-        font-size: 25px; /* Adjust font size to be smaller */
-        right:0px;
-        margin:0;
-        top:120px;
-        text-align:center
-    }
-    .heading{
-        font-size:20px;
-        text-align:center
-    }
-    .paragraph{
-        font-size:14px;
-        text-align:center
-    }
-    .imgBar{
-        width:80%
-    }
-}
+
 
 @media only screen and (min-width: 360px) and (max-width: 360px) and (min-height: 740px) and (max-height: 740px) {
     .paragraphAlignment { 
