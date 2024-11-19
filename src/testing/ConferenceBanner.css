@@ -1,7 +1,7 @@
 .conference-row {
     margin-left: 2%;
     margin-right: 2%;
-    background-color: pink;
+    /*background-color: pink;*/
 }
 
 .conference-card {
@@ -85,7 +85,7 @@
     }
 
     .aboutConference {
-        background-color: #921d1d; /* Subtle adjustment for higher-res screens */
+        /*background-color: #921d1d; !* Subtle adjustment for higher-res screens *!*/
         font-size: 48px;
         position: unset;
     }
@@ -109,7 +109,7 @@
     }
 
     .aboutConference {
-        background-color: #717171;
+        /*background-color: #717171;*/
         font-size: 54px;
         position: unset;
     }
@@ -135,7 +135,7 @@
     }
 
     .aboutConference {
-        background-color: #5f00b8;
+        /*background-color: #5f00b8;*/
         font-size: 48px;
     }
 
@@ -159,7 +159,7 @@
     }
 
     .aboutConference {
-        background-color: #61dafb;
+        /*background-color: #61dafb;*/
         font-size: 42px;
     }
 
