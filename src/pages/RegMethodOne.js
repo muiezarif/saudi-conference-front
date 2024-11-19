@@ -1,7 +1,7 @@
 import {Base} from "../component/Base";
-import {Col, Container, FormGroup, Input, Label, Row,Button} from "reactstrap";
+import {Col, Container, FormGroup, Input, Label, Row, Button} from "reactstrap";
 import uploadingIcon from "../asset/uploadingIcon.png";
-import { useState } from "react";
+import {useState} from "react";
 import axios from "axios";
 
 export function RegMethodOne() {
@@ -38,18 +38,18 @@ export function RegMethodOne() {
     }
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
+        const {name, value} = e.target;
+        setFormData({...formData, [name]: value});
     };
 
     const handleFileChange = (e) => {
-        setFormData({ ...formData, file: e.target.files[0] });
+        setFormData({...formData, file: e.target.files[0]});
     };
 
     // Use this encoded data in your axios call
     const handleSubmit = async (e) => {
         e.preventDefault();
-    
+
         try {
             const response = await axios.post(
                 'https://script.google.com/macros/s/AKfycbw0w2UYx_bwSu5WC4CjeYn3-Ue9-Z-UXJWeeYMlDUvtnwdBAEtexjFwWvJi_L-Nzxx6/exec',
@@ -60,7 +60,7 @@ export function RegMethodOne() {
                     },
                 }
             );
-    
+
             if (response.data.result === "success") {
                 alert('Form submitted successfully!');
             } else {
@@ -74,13 +74,13 @@ export function RegMethodOne() {
     };
     return (
         <Base>
-            <Container style={{ marginTop: "13rem" }}>
-                <div style={{ textAlign: "right", padding: "0", margin: "0" }}>
+            <Container style={{marginTop: "13rem"}}>
+                <div style={{textAlign: "right", padding: "0", margin: "0"}}>
                     <h2 style={style.heading}>الرعايات</h2>
                     <h2 style={style.subHeading}>:مزايا الاستراتيجي</h2>
                     <Row className="p-0 m-0">
                         <Col>
-                            <ul style={{ fontFamily: "DiodrumRegular" }}>
+                            <ul style={{fontFamily: "DiodrumRegular"}}>
                                 <li>تكتب الميزة هنا.</li>
                                 <li>تكتب الميزة هنا.</li>
                                 <li>تكتب الميزة هنا.</li>
@@ -88,7 +88,7 @@ export function RegMethodOne() {
                             </ul>
                         </Col>
                         <Col>
-                            <ul style={{ fontFamily: "DiodrumRegular" }}>
+                            <ul style={{fontFamily: "DiodrumRegular"}}>
                                 <li>تكتب الميزة هنا.</li>
                                 <li>تكتب الميزة هنا.</li>
                                 <li>تكتب الميزة هنا.</li>
@@ -151,23 +151,30 @@ export function RegMethodOne() {
                             </label>
                             <div
                                 className="w-full h-20 bg-gray-200 rounded-lg flex justify-center items-center"
-                                style={{ padding: "70px" }}
+                                style={{padding: "70px"}}
                             >
                                 <input
                                     type="file"
                                     className="opacity-0 absolute w-full cursor-pointer"
-                                    style={{ zIndex: 10 }}
+                                    style={{zIndex: 10}}
                                     onChange={handleFileChange}
                                 />
                                 <div className="flex items-center justify-center absolute pointer-events-none">
-                                    <img src={uploadingIcon} alt="" style={{ width: "60px" }} />
+                                    <img src={uploadingIcon} alt="" style={{width: "60px"}}/>
                                 </div>
                             </div>
                         </div>
                     </Row>
-                    <Row>
-                        <button onClick={handleSubmit} style={{ marginTop: "20px", padding: "10px 20px", borderRadius: "10px", background: "linear-gradient(135deg, #0c0c9c, #4132A1, #5f00b8)", color: "#fff", border: "none" }}>
-                        إرسال
+                    <Row className="px-2 mt-2">
+                        <button onClick={handleSubmit} style={{
+                            marginTop: "20px",
+                            padding: "10px 20px",
+                            borderRadius: "10px",
+                            background: "linear-gradient(135deg, #0c0c9c, #4132A1, #5f00b8)",
+                            color: "#fff",
+                            border: "none"
+                        }}>
+                            إرسال
                         </button>
                     </Row>
                 </div>
