@@ -138,7 +138,7 @@
     .subHeading {
 
         /*background-color: pink;*/
-        top: 440px;
+        top: 400px;
     }
 
     .cardBase {
@@ -170,7 +170,7 @@
 @media only screen and (max-width: 1900px) {
     .subHeading {
         /*background-color: pink;*/
-        top: 400px;
+        top: 350px;
     }
 }
 
@@ -449,6 +449,8 @@ Media Query for Samsung Galaxy S23 Ultra
         width:80%
     }
 }
+
+
 @media only screen and (min-width: 280px) and (max-width: 380px) {
     .paragraphAlignment { 
         right:0px;
