@@ -14,6 +14,7 @@ import {MediaCenter} from "./pages/MediaCenter";
 import ImageLibrary from "./pages/ImageLibrary";
 import {News} from "./pages/News";
 import Vedio from "./pages/VideoPage"
+import ConferenceBanner from "./testing/ConferenceBanner";
 
 function App() {
     return (
@@ -32,6 +33,7 @@ function App() {
                 <Route path="/library" element={<ImageLibrary/>}/>
                 <Route path="/video" element={<Vedio/>}/>
                 <Route path="/news" element={<News/>}/>
+                <Route path="/test" element={<ConferenceBanner/>}/>
             </Routes>
         </BrowserRouter>
     );

@@ -21,6 +21,7 @@ import image4 from "../asset/SliderImage/4.png";
 import image5 from "../asset/SliderImage/5.png";
 import {useLocation} from "react-router-dom";
 import {scroller} from "react-scroll";
+import ConferenceBanner from "../testing/ConferenceBanner";
 
 
 export function Home() {
@@ -128,112 +129,8 @@ export function Home() {
     return (
         <Base>
             {/* Person Container */}
-            <div className="customDiv">
-                <Row className="d-flex">
-                    {/* Mobile-only Column */}
-                    <Col xs={12} className="text-center mb-5 d-block d-lg-none">
-                        <div className="d-flex justify-content-center gap-2">
-                            {['ﺍﻻﻳﺎﻡ', 'ﺍﻟﺴﺎﻋﺎﺕ', 'ﺍﻟﺪﻗﺎﺋﻖ', 'ﺍﻟﺜﻮﺍﻧﻲ'].map((text, index) => (
-                                <div
-                                    key={index}
-                                    className={`mobileViewCard ${index === 0 ? 'mobileViewCardLeft' : ''} ${index === 3 ? 'mobileViewCardRight' : ''}`}
-                                >
-                                    <h6 className="mobileViewCardHeading">00</h6>
-                                    <p className="mobileViewCardSubHeading">{text}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </Col>
-
-                    {/* Image Column */}
-                    <Col xl={5} lg={5} md={8} sm={12} xs={12} className="mb-3">
-                        <img src={imageSrc} className="img-fluid image" alt="Person"/>
-                    </Col>
-
-                    {/* Content Column - Displayed on larger screens only */}
-                    <Col xl={7} lg={7} md={4} sm={12} xs={12} className="customCard">
-                        <div className="d-inline-flex flex-wrap text-end gap-3 d-none d-lg-flex justify-content-end">
-                            {['ﺍﻻﻳﺎﻡ', 'ﺍﻟﺴﺎﻋﺎﺕ', 'ﺍﻟﺪﻗﺎﺋﻖ', 'ﺍﻟﺜﻮﺍﻧﻲ'].map((text, index) => (
-                                <div
-                                    key={index}
-                                    className={`cardBase ${index === 0 ? 'cardLeft' : ''} ${index === 3 ? 'cardRight' : ''}`}
-                                >
-                                    <h6 className="cardHeading">00</h6>
-                                    <p className="cardSubHeading">{text}</p>
-                                </div>
-                            ))}
-                        </div>
-
-                        <div className="paragraphAlignment">
-                            <p className="paragraph">
-                                ﺑﺮﻋﺎﻳﺔ ﻣﻌﺎﻟﻲ ﻭﺯﻳﺮ ﺍﻟﻌﺩﻝ ﺭﺋﻴﺲ ﻣﺠﻠﺲ<br/>
-                                ﺇﺩﺍﺭﺓ ﺍﻟﻬﻴﺌــــﺔ ﺍﻟﺴﻌـــﻮﺩﻳﺔ ﻟﻠﻤﺤﺎﻣﻴـــﻦ
-                            </p>
-                            <p className="heading">ﺩ. ﻭﻟﻴﺪ ﺑﻦ ﻣﺤﻤﺪ ﺍﻟﺼﻤﻌﺎﻧﻲ</p>
-                            <p className="subHeading">ﻋـﻦ ﺍﻟﻤﺆﺗﻤـﺮ</p>
-                        </div>
-                    </Col>
-                </Row>
-            </div>
-
+            <ConferenceBanner/>
             <div style={{marginTop: "-20px"}} className="mainDiv">
-                <Row className="justify-content-center align-items-center">
-
-                    <Col xs={12} md={10} lg={11} className="d-flex justify-content-between">
-                        <Card className="customBox">
-
-                            {/* Content */}
-                            <Row style={{width: "85%"}}>
-                                <Col xs={3} md={4} lg={4} className="mb-2 custom_slider_img_p">
-                                    <img className="custom_slider_img" src={data[currentIndex].img} alt="" width={300}/>
-                                </Col>
-                                <Col xs={9} md={8} lg={8}
-                                     className="d-flex justify-content-center align-items-center align-content-center">
-                                <span className="custom_slider_text">
-                                    <span
-                                        style={{
-                                            fontFamily: "DiodrumBold",
-                                            color: "#2c318b"
-                                        }}>
-                                        {data[currentIndex].title}
-                                    </span>
-                                    {data[currentIndex].subtitle}
-                                </span>
-                                </Col>
-                            </Row>
-
-                            {/* Pagination Dots */}
-                            <div className="absolute-center">
-                                {data.map((_, index) => (
-                                    <span
-                                        key={index}
-                                        className={`navigationDots ${currentIndex === index ? 'active' : ''}`}
-                                    />
-                                ))}
-                            </div>
-
-                            {/* Navigation Buttons */}
-                            <div
-                                style={{
-                                    position: 'absolute',
-                                    bottom: '10px',
-                                    width: '100%',
-                                    display: 'flex',
-                                    justifyContent: 'center', // Center the buttons horizontally
-                                    padding: '0 10px',
-                                    gap: '200px'
-                                }}
-                            >
-                                <Button onClick={prevSlide} style={{backgroundColor: 'transparent', border: 'none'}}>
-                                    <img src={leftArrow} alt="Previous" className="navigationButtons"/>
-                                </Button>
-                                <Button onClick={nextSlide} style={{backgroundColor: 'transparent', border: 'none'}}>
-                                    <img src={rightArrow} alt="Next" className="navigationButtons"/>
-                                </Button>
-                            </div>
-                        </Card>
-                    </Col>
-                </Row>
                 <HomeComponentSecTwo/>
                 <NewImageSlider/>
                 <HomeComponentSecThree/>
