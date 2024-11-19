@@ -176,15 +176,15 @@ const Calendar = () => {
                             }}
                                  className="custom-card-text">
                                 <div className="d-flex justify-content-center align-items-center gap-2 mb-2">
-                                    <p className="text-white">{item.title}</p>
+                                    <p className="text-white" style={{width:150,textAlign:"right",paddingRight:2}}>{item.title}</p>
                                     <img src={item.titleIcon} alt="" style={{width: "30px", height: "30px"}}/>
                                 </div>
                                 <div className="d-flex justify-content-center align-items-center gap-2 mb-2">
-                                    <p className="text-white">{item.date}</p>
+                                    <p className="text-white" style={{width:150,textAlign:"right",paddingRight:2}}>{item.date}</p>
                                     <img src={item.dateIcon} alt="" style={{width: "30px", height: "30px"}}/>
                                 </div>
                                 <div className="d-flex justify-content-center align-items-center gap-2">
-                                    <p className="text-white">{item.time}</p>
+                                    <p className="text-white" style={{width:150,textAlign:"right",paddingRight:2}}>{item.time}</p>
                                     <img src={item.timeIcon} alt="" style={{width: "30px", height: "30px"}}/>
                                 </div>
                             </div>
@@ -232,15 +232,15 @@ const Calendar = () => {
                                 fontSize: customFont
                             }}>
                                 <div className="d-flex justify-content-center  align-items-center gap-2 mb-2">
-                                    < p className="text-white">{item.title}</p>
+                                    < p className="text-white" style={{width:150,textAlign:"right",paddingRight:2}}>{item.title}</p>
                                     <img src={item.titleIcon} alt="" style={{width: "30px", height: "30px"}}/>
                                 </div>
                                 <div className="d-flex justify-content-center  align-items-center gap-2 mb-2">
-                                    <p className="text-white">{item.date}</p>
+                                    <p className="text-white" style={{width:150,textAlign:"right",paddingRight:2}}>{item.date}</p>
                                     <img src={item.dateIcon} alt="" style={{width: "30px", height: "30px"}}/>
                                 </div>
                                 <div className="d-flex justify-content-center  align-items-center gap-2">
-                                    <p className="text-white">{item.time}</p>
+                                    <p className="text-white" style={{width:150,textAlign:"right",paddingRight:2}}>{item.time}</p>
                                     <img src={item.timeIcon} alt="" style={{width: "30px", height: "30px"}}/>
                                 </div>
                             </div>
