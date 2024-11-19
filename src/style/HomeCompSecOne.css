@@ -124,6 +124,8 @@
 
 
 
+
+
 @media only screen and (max-width: 2200px) {
 
     .cardBase {
@@ -305,8 +307,7 @@ Media Query for Samsung Galaxy S23 Ultra
         text-align:center
     }
 }
-
-@media only screen and (min-width: 280px) and (max-width: 450px) {
+@media only screen and (min-width: 380px) and (max-width: 450px) {
     .paragraphAlignment { 
         right:0px;
         text-align:center
@@ -327,6 +328,69 @@ Media Query for Samsung Galaxy S23 Ultra
     }
     .imgBar{
         width:80%
+    }
+    .custom-row{
+    
+    }
+}
+@media only screen and (min-width: 280px) and (max-width: 380px) {
+    .paragraphAlignment { 
+        right:0px;
+        text-align:center
+    }
+    .subHeading {
+        font-size: 25px; /* Adjust font size to be smaller */
+        right:0px;
+        margin:0;
+        top:120px;
+    }
+    .heading{
+        font-size:24px;
+        text-align:center
+    }
+    .paragraph{
+        font-size:17px;
+        text-align:center
+    }
+    .imgBar{
+        width:80%
+    }
+    .custom-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center align horizontally */
+        align-items: center; /* Center align vertically */
+    }
+    .second-col-style {
+        margin: 0 auto; /* Add space between columns */
+        text-align: center; /* Center text inside columns */
+    }
+    .second-col-style .p1,
+    .second-col-style .p2,
+    .second-col-style .p3 {
+        text-align: center; /* Center text for all child paragraphs */
+    }
+    .second-col-style .p3 strong {
+        display: inline-block; /* Ensure strong elements stay inline */
+        margin: 0 5px; /* Add spacing between them */
+    }
+    
+    .firstCard, .lastCard {
+        margin: 0 auto; /* Center the first and last cards explicitly */
+    }
+
+    .third-col-style {
+        margin: 0 auto; /* Add space between columns */
+        text-align: center; /* Center text inside columns */
+    }
+    .third-col-style .p1,
+    .third-col-style .p2,
+    .third-col-style .p3 {
+        text-align: center; /* Center text for all child paragraphs */
+    }
+    .third-col-style .p3 strong {
+        display: inline-block; /* Ensure strong elements stay inline */
+        margin: 0 5px; /* Add spacing between them */
     }
 }
 
