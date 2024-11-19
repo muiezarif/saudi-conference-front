@@ -161,7 +161,7 @@ const RegistrationForm2 = () => {
                     <Row>
                     <Col xs={12} className="text-center">
 
-                    <Button type="submit" style={{ borderRadius: '20px', backgroundColor: '#6002b8', border: 'none',paddingBottom:10 }} className="">
+                    <Button type="submit" style={{ borderRadius: '10px', backgroundColor: '#6002b8', border: 'none',paddingBottom:10,width:"100%" }} className="">
                     إرسال
                     </Button>
                     </Col></Row>

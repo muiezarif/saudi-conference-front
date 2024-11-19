@@ -142,7 +142,7 @@ const CustomFooter = () => {
                         <Col xs={12} className="text-center mt-3">
                             <Button
                                 type="submit"
-                                style={{ borderRadius: '20px', backgroundColor: '#6002b8', border: 'none' }}
+                                style={{ borderRadius: '10px', backgroundColor: '#6002b8', border: 'none',width:"100%" }}
                             >
                                 إرسال
                             </Button>
