@@ -46,22 +46,39 @@ const RegistrationForm2 = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post(
-                'https://script.google.com/macros/s/AKfycbzx3JQMj8kOewBDSQcKo-9QhToiXKs6RCJRbH6z-olpTKpkC_heIqqG6atIdxsC7w-I/exec',
-                formData,
-                {
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded',
-                    },
-                }
-            );
+            const options = {
+                method: 'POST',
+                url: 'https://www.cognitoforms.com/api/forms/257/entries',
+                headers: {
+                    Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6Ijg4YmYzNWNmLWM3ODEtNDQ3ZC1hYzc5LWMyODczMjNkNzg3ZCIsInR5cCI6IkpXVCJ9.eyJvcmdhbml6YXRpb25JZCI6IjI5ODJjNjlmLWYzNzctNDQ5Ny05YmRkLWNhYWMwOWIzYmUzYyIsImludGVncmF0aW9uSWQiOiIxN2NlNzczZS03NDY2LTRmMDQtODZmNy00NmM0ZTgxNWFiM2MiLCJjbGllbnRJZCI6IjNkZTNmODMwLWNiYzctNDZlNi1iOTZlLTVmMDE2NzcyMTgzMCIsImp0aSI6Ijg4YjljNWU3LTU2YjctNDM5OC1iMzE0LWFjYzBkMGNiM2Q0MCIsImlhdCI6MTczMjE5MTkyNSwiaXNzIjoiaHR0cHM6Ly93d3cuY29nbml0b2Zvcm1zLmNvbS8iLCJhdWQiOiJhcGkifQ.EcvsXafkPVJjps0Wg_7Q17B5_-SyEksje3AhopIRO40', // Replace 'your-api-key' with the actual token
+                },
+                data: { Entry: { Action: 'Submit', Role: 'Public' }, Name: formData.firstName,Email:formData.email,Phone:formData.phone,JobTitle:formData.jobTitle,Organization:formData.organization,MembershipNumber:formData.membershipNumber,FamilyName:formData.familyName,MembershipType:formData.membershipType },
+            };
 
-            if (response.data.result === "success") {
+            try {
+                const { data } = await axios.request(options);
+                console.log(data);
                 alert('Form submitted successfully!');
-            } else {
-                console.error('Server Error:', response);
+            } catch (error) {
+                console.error(error);
                 alert('Failed to submit the form. Server Error.');
             }
+            // const response = await axios.post(
+            //     'https://script.google.com/macros/s/AKfycbzx3JQMj8kOewBDSQcKo-9QhToiXKs6RCJRbH6z-olpTKpkC_heIqqG6atIdxsC7w-I/exec',
+            //     formData,
+            //     {
+            //         headers: {
+            //             'Content-Type': 'application/x-www-form-urlencoded',
+            //         },
+            //     }
+            // );
+
+            // if (response.data.result === "success") {
+            //     alert('Form submitted successfully!');
+            // } else {
+            //     console.error('Server Error:', response);
+            //     alert('Failed to submit the form. Server Error.');
+            // }
         } catch (error) {
             console.error('Submission Error:', error);
             alert('Failed to submit the form.');

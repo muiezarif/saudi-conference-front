@@ -41,22 +41,39 @@ const CustomFooter = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post(
-                'https://script.google.com/macros/s/AKfycbxNLc4yYvRNJWlCGfunKgdx5Jm1x1oMXdm9Pwq1tZy_XDjIxeDXgMTjcu_at1K5ESJO/exec',
-                formData,
-                {
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded',
-                    },
-                }
-            );
+            const options = {
+                method: 'POST',
+                url: 'https://www.cognitoforms.com/api/forms/256/entries',
+                headers: {
+                    Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6Ijg4YmYzNWNmLWM3ODEtNDQ3ZC1hYzc5LWMyODczMjNkNzg3ZCIsInR5cCI6IkpXVCJ9.eyJvcmdhbml6YXRpb25JZCI6IjI5ODJjNjlmLWYzNzctNDQ5Ny05YmRkLWNhYWMwOWIzYmUzYyIsImludGVncmF0aW9uSWQiOiIxN2NlNzczZS03NDY2LTRmMDQtODZmNy00NmM0ZTgxNWFiM2MiLCJjbGllbnRJZCI6IjNkZTNmODMwLWNiYzctNDZlNi1iOTZlLTVmMDE2NzcyMTgzMCIsImp0aSI6Ijg4YjljNWU3LTU2YjctNDM5OC1iMzE0LWFjYzBkMGNiM2Q0MCIsImlhdCI6MTczMjE5MTkyNSwiaXNzIjoiaHR0cHM6Ly93d3cuY29nbml0b2Zvcm1zLmNvbS8iLCJhdWQiOiJhcGkifQ.EcvsXafkPVJjps0Wg_7Q17B5_-SyEksje3AhopIRO40', // Replace 'your-api-key' with the actual token
+                },
+                data: { Entry: { Action: 'Submit', Role: 'Public' }, Name: formData.name,Email:formData.email,Phone:formData.phone,Message:formData.message },
+            };
 
-            if (response.data.result === "success") {
+            try {
+                const { data } = await axios.request(options);
+                console.log(data);
                 alert('Form submitted successfully!');
-            } else {
-                console.error('Server Error:', response);
+            } catch (error) {
+                console.error(error);
                 alert('Failed to submit the form. Server Error.');
             }
+            // const response = await axios.post(
+            //     'https://script.google.com/macros/s/AKfycbxNLc4yYvRNJWlCGfunKgdx5Jm1x1oMXdm9Pwq1tZy_XDjIxeDXgMTjcu_at1K5ESJO/exec',
+            //     formData,
+            //     {
+            //         headers: {
+            //             'Content-Type': 'application/x-www-form-urlencoded',
+            //         },
+            //     }
+            // );
+
+            // if (response.data.result === "success") {
+            //     alert('Form submitted successfully!');
+            // } else {
+            //     console.error('Server Error:', response);
+            //     alert('Failed to submit the form. Server Error.');
+            // }
         } catch (error) {
             console.error('Submission Error:', error);
             alert('Failed to submit the form.');
@@ -142,7 +159,7 @@ const CustomFooter = () => {
                         <Col xs={12} className="text-center mt-3">
                             <Button
                                 type="submit"
-                                style={{ borderRadius: '10px', backgroundColor: '#6002b8', border: 'none',width:"100%" }}
+                                style={{ borderRadius: '10px', backgroundColor: '#6002b8', border: 'none', width: "100%" }}
                             >
                                 إرسال
                             </Button>
