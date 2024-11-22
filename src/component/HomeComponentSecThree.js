@@ -11,7 +11,6 @@ export function HomeComponentSecThree() {
     const navigate = useNavigate();
 
     const handleImageClick = () => {
-        // setShowOtherComponent(true); // Set to false if you want to toggle
         navigate('/home');
     };
 
