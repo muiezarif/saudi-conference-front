@@ -63,35 +63,78 @@ export function RegMethodOneDuplicate() {
     };
 
     const handleFileChange = (e) => {
+        console.log(e.target.files)
         setFormData({...formData, file: e.target.files[0]});
+    };
+
+    const fileToBase64 = (file) => {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader(); // Create a new FileReader instance
+            reader.readAsDataURL(file); // Read the file as a data URL
+            reader.onload = () => {
+                const base64String = reader.result.split(',')[1]; // Extract Base64 string
+                resolve(base64String); // Resolve the promise with the Base64 string
+            };
+            reader.onerror = (error) => {
+                reject(error); // Reject the promise with an error if reading fails
+            };
+        });
     };
 
     // Use this encoded data in your axios call
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log(formData.file)
 
-        try {
-            const response = await axios.post(
-                'https://script.google.com/macros/s/AKfycbw0w2UYx_bwSu5WC4CjeYn3-Ue9-Z-UXJWeeYMlDUvtnwdBAEtexjFwWvJi_L-Nzxx6/exec',
-                formData,
-                {
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded',
-                    },
-                }
-            );
+        const url = 'https://www.cognitoforms.com/api/forms/258/entries'; // Replace 256 with your Form ID
+    const apiKey = 'eyJhbGciOiJIUzI1NiIsImtpZCI6Ijg4YmYzNWNmLWM3ODEtNDQ3ZC1hYzc5LWMyODczMjNkNzg3ZCIsInR5cCI6IkpXVCJ9.eyJvcmdhbml6YXRpb25JZCI6IjI5ODJjNjlmLWYzNzctNDQ5Ny05YmRkLWNhYWMwOWIzYmUzYyIsImludGVncmF0aW9uSWQiOiIxN2NlNzczZS03NDY2LTRmMDQtODZmNy00NmM0ZTgxNWFiM2MiLCJjbGllbnRJZCI6IjNkZTNmODMwLWNiYzctNDZlNi1iOTZlLTVmMDE2NzcyMTgzMCIsImp0aSI6Ijg4YjljNWU3LTU2YjctNDM5OC1iMzE0LWFjYzBkMGNiM2Q0MCIsImlhdCI6MTczMjE5MTkyNSwiaXNzIjoiaHR0cHM6Ly93d3cuY29nbml0b2Zvcm1zLmNvbS8iLCJhdWQiOiJhcGkifQ.EcvsXafkPVJjps0Wg_7Q17B5_-SyEksje3AhopIRO40'; // Replace with your actual API key
 
-            if (response.data.result === "success") {
-                alert('Form submitted successfully!');
-            } else {
-                console.error('Server Error:', response);
-                alert('Failed to submit the form. Server Error.');
-            }
-        } catch (error) {
-            console.error('Submission Error:', error);
-            alert('Failed to submit the form.');
-        }
-    };
+ // Convert file to Base64
+ const base64File = await fileToBase64(formData.file);
+
+ // Build the file object
+ const fileObject = [
+     {
+         File: base64File,
+         ContentType: formData.file.type, // MIME type (e.g., "application/pdf")
+         Id: '', // Leave blank unless specified
+         IsEncrypted: false, // Update based on your form settings
+         Name: formData.file.name, // File name with extension
+         Size: formData.file.size, // File size in bytes
+         StorageUrl: null, // Not required for local uploads
+     },
+ ];
+
+ // Build the complete payload
+ const payload = {
+     Entry: {
+         Action: 'Submit',
+         Role: 'Public',
+     },
+     Name: formData.name,
+     Email: formData.email,
+     Phone: formData.phone,
+     Message: formData.message,
+     FileOne: fileObject, // Assuming the field name is "FileOne"
+ };
+
+    try {
+        const response = await axios.post(url, payload, {
+            headers: {
+                Authorization: `Bearer ${apiKey}`,
+                'Content-Type': 'application/json',
+            },
+        });
+        console.log('Form submitted successfully:', response.data);
+    } catch (error) {
+        console.error('Error submitting form:', error.response?.data || error.message);
+    console.error('Full error:', error); // Log the full error object
+    }
+};
+
+        
+
+
     return (
         <Base>
             <Container style={{marginTop: "13rem"}}>
@@ -257,6 +300,13 @@ export function RegMethodOneDuplicate() {
                         </div>
                         <CheckboxWithLabel/>
                     </Row>
+                    <Row>
+                    <Col xs={12} className="text-center">
+
+                    <Button onClick={handleSubmit} style={{ borderRadius: '10px', background: 'linear-gradient(135deg, #0c0c9c, #4132A1, #5f00b8)', border: 'none',paddingBottom:10,width:"100%" }} className="">
+                    إرسال
+                    </Button>
+                    </Col></Row>
                 </div>
             </Container>
         </Base>
