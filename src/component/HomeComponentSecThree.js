@@ -4,9 +4,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {cardData, cardData2, cardData3} from "../data/SecThreeData";
 import "../style/SecThree.css";
 import {useNavigate} from "react-router-dom";
+import button2 from "../asset/SliderImage/Button1.png";
+import button1 from "../asset/SliderImage/Button2.png";
 
 export function HomeComponentSecThree() {
     const navigate = useNavigate();
+
+    const handleImageClick = () => {
+        // setShowOtherComponent(true); // Set to false if you want to toggle
+        navigate('/home');
+    };
 
     const goToForm = () => {
         navigate('/regmethod');
@@ -91,6 +98,13 @@ export function HomeComponentSecThree() {
                 ))}
             </Row>
 
+            <Row className="mt-5 mb-5 justify-content-center align-items-center text-center"
+                 style={{marginTop: '-15px'}}>
+                <Col className="d-flex justify-content-center align-items-center">
+                    <img onClick={handleImageClick} src={button1} width="40%" className='imgBar'/>
+                </Col>
+            </Row>
+
             {/*3nd boxes  */}
             <Row className='d-flex justify-content-between mt-3'>
                 <h2 style={style.topHeading}>الرعايات</h2>
@@ -116,6 +130,12 @@ export function HomeComponentSecThree() {
                         </div>
                     </Col>
                 ))}
+            </Row>
+            <Row className="mt-5 mb-5 justify-content-center align-items-center text-center"
+                 style={{marginTop: '-15px'}}>
+                <Col className="d-flex justify-content-center align-items-center">
+                    <img onClick={handleImageClick} src={button2} width="40%" className='imgBar'/>
+                </Col>
             </Row>
         </Container>
     );

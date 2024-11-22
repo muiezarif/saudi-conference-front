@@ -52,7 +52,7 @@ export function RegMethodOneDuplicate() {
             border: "none",
             textAlign: 'center',
             width: "100%",
-            padding:"7px 0",
+            padding: "7px 0",
             color: "#00B4B2",
         }
     }
@@ -87,63 +87,61 @@ export function RegMethodOneDuplicate() {
         console.log(formData.file)
 
         const url = 'https://www.cognitoforms.com/api/forms/258/entries'; // Replace 256 with your Form ID
-    const apiKey = 'eyJhbGciOiJIUzI1NiIsImtpZCI6Ijg4YmYzNWNmLWM3ODEtNDQ3ZC1hYzc5LWMyODczMjNkNzg3ZCIsInR5cCI6IkpXVCJ9.eyJvcmdhbml6YXRpb25JZCI6IjI5ODJjNjlmLWYzNzctNDQ5Ny05YmRkLWNhYWMwOWIzYmUzYyIsImludGVncmF0aW9uSWQiOiIxN2NlNzczZS03NDY2LTRmMDQtODZmNy00NmM0ZTgxNWFiM2MiLCJjbGllbnRJZCI6IjNkZTNmODMwLWNiYzctNDZlNi1iOTZlLTVmMDE2NzcyMTgzMCIsImp0aSI6Ijg4YjljNWU3LTU2YjctNDM5OC1iMzE0LWFjYzBkMGNiM2Q0MCIsImlhdCI6MTczMjE5MTkyNSwiaXNzIjoiaHR0cHM6Ly93d3cuY29nbml0b2Zvcm1zLmNvbS8iLCJhdWQiOiJhcGkifQ.EcvsXafkPVJjps0Wg_7Q17B5_-SyEksje3AhopIRO40'; // Replace with your actual API key
+        const apiKey = 'eyJhbGciOiJIUzI1NiIsImtpZCI6Ijg4YmYzNWNmLWM3ODEtNDQ3ZC1hYzc5LWMyODczMjNkNzg3ZCIsInR5cCI6IkpXVCJ9.eyJvcmdhbml6YXRpb25JZCI6IjI5ODJjNjlmLWYzNzctNDQ5Ny05YmRkLWNhYWMwOWIzYmUzYyIsImludGVncmF0aW9uSWQiOiIxN2NlNzczZS03NDY2LTRmMDQtODZmNy00NmM0ZTgxNWFiM2MiLCJjbGllbnRJZCI6IjNkZTNmODMwLWNiYzctNDZlNi1iOTZlLTVmMDE2NzcyMTgzMCIsImp0aSI6Ijg4YjljNWU3LTU2YjctNDM5OC1iMzE0LWFjYzBkMGNiM2Q0MCIsImlhdCI6MTczMjE5MTkyNSwiaXNzIjoiaHR0cHM6Ly93d3cuY29nbml0b2Zvcm1zLmNvbS8iLCJhdWQiOiJhcGkifQ.EcvsXafkPVJjps0Wg_7Q17B5_-SyEksje3AhopIRO40'; // Replace with your actual API key
 
- // Convert file to Base64
- const base64File = await fileToBase64(formData.file);
+        // Convert file to Base64
+        const base64File = await fileToBase64(formData.file);
 
- // Build the file object
- const fileObject = [
-     {
-         File: base64File,
-         ContentType: formData.file.type, // MIME type (e.g., "application/pdf")
-         Id: '', // Leave blank unless specified
-         IsEncrypted: false, // Update based on your form settings
-         Name: formData.file.name, // File name with extension
-         Size: formData.file.size, // File size in bytes
-         StorageUrl: null, // Not required for local uploads
-     },
- ];
-
- // Build the complete payload
- const payload = {
-     Entry: {
-         Action: 'Submit',
-         Role: 'Public',
-     },
-     Name: formData.name,
-     Email: formData.email,
-     Phone: formData.phone,
-     Message: formData.message,
-     FileOne: fileObject, // Assuming the field name is "FileOne"
- };
-
-    try {
-        const response = await axios.post(url, payload, {
-            headers: {
-                Authorization: `Bearer ${apiKey}`,
-                'Content-Type': 'application/json',
+        // Build the file object
+        const fileObject = [
+            {
+                File: base64File,
+                ContentType: formData.file.type, // MIME type (e.g., "application/pdf")
+                Id: '', // Leave blank unless specified
+                IsEncrypted: false, // Update based on your form settings
+                Name: formData.file.name, // File name with extension
+                Size: formData.file.size, // File size in bytes
+                StorageUrl: null, // Not required for local uploads
             },
-        });
-        console.log('Form submitted successfully:', response.data);
-    } catch (error) {
-        console.error('Error submitting form:', error.response?.data || error.message);
-    console.error('Full error:', error); // Log the full error object
-    }
-};
+        ];
 
-        
+        // Build the complete payload
+        const payload = {
+            Entry: {
+                Action: 'Submit',
+                Role: 'Public',
+            },
+            Name: formData.name,
+            Email: formData.email,
+            Phone: formData.phone,
+            Message: formData.message,
+            FileOne: fileObject, // Assuming the field name is "FileOne"
+        };
+
+        try {
+            const response = await axios.post(url, payload, {
+                headers: {
+                    Authorization: `Bearer ${apiKey}`,
+                    'Content-Type': 'application/json',
+                },
+            });
+            console.log('Form submitted successfully:', response.data);
+        } catch (error) {
+            console.error('Error submitting form:', error.response?.data || error.message);
+            console.error('Full error:', error); // Log the full error object
+        }
+    };
 
 
     return (
         <Base>
             <Container style={{marginTop: "13rem"}}>
                 <div style={{textAlign: "right", padding: "0", margin: "0"}}>
-                    <h2 style={style.heading}>الرعايات</h2>
+                    <h2 style={style.heading}>نموذج طلب رعاية </h2>
                     <Row>
                         <Col>
                             <FormGroup>
-                                <Label style={style.mainHeading}>الاسم</Label>
+                                <Label style={style.mainHeading}>تنزيل كتيب الرعاية</Label>
                                 {/*<Input*/}
                                 {/*    name="name"*/}
                                 {/*    value={formData.name}*/}
@@ -153,17 +151,18 @@ export function RegMethodOneDuplicate() {
                             </FormGroup>
                         </Col>
                     </Row>
-                    <h2 style={style.heading}>الرعايات</h2>
+                    <h2 style={style.heading}>بيانات الجهة</h2>
                     <Row className="p-0 m-0">
                         <Col>
                             <FormGroup>
-                                <Label style={style.labelStyle}>اسم الشركة</Label>
-                                <Dropdown/>
+                                <Label style={style.labelStyle}>نشاط الجهة</Label>
+                                <Dropdown
+                                    options={["قطاع حكومي", "قطاع خاص", "قطاع غير ربحي", "منشأة قانونية / شركة مهنية"]}/>
                             </FormGroup>
                         </Col>
                         <Col>
                             <FormGroup>
-                                <Label style={style.labelStyle}>الاسم</Label>
+                                <Label style={style.labelStyle}>اسم الجهة</Label>
                                 <Input
                                     name="name"
                                     value={formData.name}
@@ -176,13 +175,13 @@ export function RegMethodOneDuplicate() {
                     <Row className="p-0 m-0">
                         <Col>
                             <FormGroup>
-                                <Label style={style.labelStyle}>رقم الجوال</Label>
-                                <Dropdown/>
+                                <Label style={style.labelStyle}>الدولة</Label>
+                                <Dropdown options={["بريد الكتروني", "اتصال هاتفي", "واتساب"]}/>
                             </FormGroup>
                         </Col>
                         <Col>
                             <FormGroup>
-                                <Label style={style.labelStyle}>البريد الإلكتروني</Label>
+                                <Label style={style.labelStyle}>الموقع الالكتروني</Label>
                                 <Input
                                     name="email"
                                     value={formData.email}
@@ -215,11 +214,11 @@ export function RegMethodOneDuplicate() {
                     </Row>
                 </div>
                 <div style={{textAlign: "right", padding: "0", margin: "50px 0"}}>
-                    <h2 style={style.heading}>الرعايات</h2>
+                    <h2 style={style.heading}>بيانات مقدم الطلب</h2>
                     <Row className="p-0 m-0">
                         <Col>
                             <FormGroup>
-                                <Label style={style.labelStyle}>اسم الشركة</Label>
+                                <Label style={style.labelStyle}>المسمى الوظيفي</Label>
                                 <Input
                                     name="name"
                                     value={formData.name}
@@ -243,7 +242,7 @@ export function RegMethodOneDuplicate() {
                     <Row className="p-0 m-0">
                         <Col>
                             <FormGroup>
-                                <Label style={style.labelStyle}>اسم الشركة</Label>
+                                <Label style={style.labelStyle}>البريد الالكتروني</Label>
                                 <Input
                                     name="name"
                                     value={formData.name}
@@ -254,7 +253,7 @@ export function RegMethodOneDuplicate() {
                         </Col>
                         <Col>
                             <FormGroup>
-                                <Label style={style.labelStyle}>الاسم</Label>
+                                <Label style={style.labelStyle}>رقم التواصل</Label>
                                 <Input
                                     name="name"
                                     value={formData.name}
@@ -267,21 +266,21 @@ export function RegMethodOneDuplicate() {
                     <Row className="p-0 m-0">
                         <Col>
                             <FormGroup>
-                                <Label style={style.labelStyle}>رقم الجوال</Label>
-                                <Dropdown/>
+                                <Label style={style.labelStyle}>نوع الرعاية</Label>
+                                <Dropdown options={["راعي استراتيجي", "راعي بلاتينيؤ", " راعي ذهبي", "راعي فضي"]}/>
                             </FormGroup>
                         </Col>
                         <Col>
                             <FormGroup>
-                                <Label style={style.labelStyle}>البريد الإلكتروني</Label>
-                                <Dropdown/>
+                                <Label style={style.labelStyle}>الوسيلة المناسبة للتواصل</Label>
+                                <Dropdown options={["البريد الالكتروني", "الاتصال", "الواتس", "كل ماسبق"]}/>
                             </FormGroup>
                         </Col>
                     </Row>
                     <Row>
                         <div className="flex flex-col items-end">
                             <label className="text-gray-500 mb-4 mt-3" style={style.labelStyle}>
-                                إرفاق الملف التعريفي
+                                الهدف من الرعاية
                             </label>
                             <div
                                 className="w-full h-20 bg-gray-200 rounded-lg flex justify-center items-center"
@@ -301,22 +300,27 @@ export function RegMethodOneDuplicate() {
                         <CheckboxWithLabel/>
                     </Row>
                     <Row>
-                    <Col xs={12} className="text-center">
+                        <Col xs={12} className="text-center">
 
-                    <Button onClick={handleSubmit} style={{ borderRadius: '10px', background: 'linear-gradient(135deg, #0c0c9c, #4132A1, #5f00b8)', border: 'none',paddingBottom:10,width:"100%" }} className="">
-                    إرسال
-                    </Button>
-                    </Col></Row>
+                            <Button onClick={handleSubmit} style={{
+                                borderRadius: '10px',
+                                background: 'linear-gradient(135deg, #0c0c9c, #4132A1, #5f00b8)',
+                                border: 'none',
+                                paddingBottom: 10,
+                                width: "100%"
+                            }} className="">
+                                إرسال
+                            </Button>
+                        </Col></Row>
                 </div>
             </Container>
         </Base>
     )
 }
 
-export function Dropdown() {
+export function Dropdown({options}) {
     const [selectedOption, setSelectedOption] = useState("");
 
-    const options = ["بريد الكتروني", "اتصال هاتفي", "واتساب"];
 
     return (
         <div style={{direction: "rtl", textAlign: "right", position: "relative",}}>
@@ -390,7 +394,7 @@ export function CheckboxWithLabel() {
                         cursor: "pointer",
                     }}
                 />
-                أتعهد بصحة البيانات المرفقة.
+                أتعهد بصحة البيانات المرفقة
             </label>
         </div>
     );
