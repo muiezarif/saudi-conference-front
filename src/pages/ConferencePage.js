@@ -9,93 +9,52 @@ import balanceIcon from "../asset/ic_tr.png";
 import sheetIcon from "../asset/ic_per.png";
 import hammerIcon from "../asset/ic_hammer.png";
 import dasIcon from "../asset/ic_das.png";
+import "../style/Confernce.css";
 
 
 const ConferencePage = () => {
-    const style = {
-        topCardHeading: {
-            fontFamily: "DiodrumBold",
-            color: "#0C0C9C"
-        },
-        bottomCardHeading: {
-            color: '#0C0C9C',
-            textAlign: 'right',
-            marginBottom: '-16px',
-            fontFamily: "DiodrumBold"
-        },
-        cardText: {
-            fontFamily: "DiodrumRegular",
-            float: "left"
-        },
-        bottomCardText: {
-            flex: "1",
-            fontFamily: "DiodrumRegular",
-        },
-        card: {
-            height: '250px',
-            width: 'auto',
-            border: 'none',
-            backgroundColor: 'rgb(237, 237, 237)',
-            padding: "25px",
-            marginTop: '25px',
-            borderBottom: '10px solid #0C0C9C',
-            borderRadius: '0px'
-        },
-        card2: {
-            height: '100px',
-            width: 'auto',
-            border: 'none',
-            backgroundColor: 'rgb(237, 237, 237)',
-            display: 'flex',
-            alignItems: 'center',
-            textAlign: 'right',
-            justifyContent: 'center',
-            marginTop: '35px',
-            borderRight: '10px solid #5F00B8',
-            borderRadius: '0px'
-        }
-    }
+
     return (
         <Container className="mt-5">
             <Row style={{textAlign: 'right', marginBottom: '25px'}}>
-                <Col md="6">
-                    <h4 style={style.topCardHeading}>الرسالة</h4>
-                    <div className="mb-4 shadow-sm" style={style.card}>
-                        <CardBody>
+                <Col md="6" className="conferenceCustomCol">
+                    <h4 className="conference-top-card-heading">الرسالة</h4>
+                    <Card className="mb-4 conferenceCustomCard">
+                        <CardBody className="bg-transparent">
                             <img style={{float: "right"}} src={mailIcon} width={60} alt=""/>
-                            <CardText className="mt-3" style={style.cardText}>
+                            <CardText className="mt-3 card-text">
                                 تطوير قطاع المحاماة والاستشارات القانونية والعاملين بها، عبر إقامة مؤتمرات المحاماة؛
                                 لربط التواصل ما بين المحامين والممارسين القانونيين والرفع من المستوى المهني لقطاع
                                 مستدام
                             </CardText>
                         </CardBody>
-                    </div>
+                    </Card>
                 </Col>
                 <Col md="6">
-                    <h4 style={style.topCardHeading}>الرؤية</h4>
-                    <div className="mb-4 shadow-sm" style={style.card}>
+                    <h4 className="conference-top-card-heading">الرؤية</h4>
+                    <Card className="mb-4 shadow-sm conferenceCustomCard">
                         <CardBody>
                             <img style={{float: "right"}} src={eyeIcon} width={70} alt=""/>
-                            <CardText className="mt-3" style={style.cardText}>
+                            <CardText className="mt-3 card-text">
                                 أن يكون المحامي والممارس القانوني رائدًا في مجاله، متفاعلًا مع مجتمعه،
                                 رافعا للوطن، متمكنا بعلمه، ساميًا بعدله
                             </CardText>
                         </CardBody>
-                    </div>
+                    </Card>
                 </Col>
             </Row>
 
             {/* Conference Goals Section */}
             <Row>
                 <Col>
-                    <h4 style={style.bottomCardHeading}>أهداف المؤتمر</h4>
+                    <h4 className="bottom-card-heading">أهداف المؤتمر</h4>
                 </Col>
             </Row>
             <Row>
                 <Col md="6">
-                    <Card style={style.card2}>
+                    <Card className="customCard2">
                         <CardBody className="d-flex align-items-center gap-3">
-                            <CardText className="mt-3" style={style.bottomCardText}>
+                            <CardText className="mt-3 bottom-card-text">
                                 إبراز خطوات قطاع المحاماة والاستشارات القانونية في المملكة وأثرها على رفع موثوقية
                                 التأهيل المهني
                             </CardText>
@@ -104,9 +63,9 @@ const ConferencePage = () => {
                     </Card>
                 </Col>
                 <Col md="6">
-                    <Card style={style.card2}>
+                    <Card className="customCard2">
                         <CardBody className="d-flex align-items-center gap-3">
-                            <CardText className="mt-3" style={style.bottomCardText}>
+                            <CardText className="mt-3  bottom-card-text">
                                 إبراز أهم التطورات التشريعية في قطاع المحاماة والاستشارات القانونية في المملكة
                             </CardText>
                             <div><img src={balanceIcon} width={70} alt=""/></div>
@@ -116,9 +75,9 @@ const ConferencePage = () => {
             </Row>
             <Row className="mb-4">
                 <Col md="6">
-                    <Card className="" style={style.card2}>
+                    <Card className="customCard2">
                         <CardBody className="d-flex align-items-center gap-3">
-                            <CardText className="mt-3 text-center" style={style.bottomCardText}>
+                            <CardText className="mt-3 text-center bottom-card-text">
                                 تحقيق العدالة الناجزة، وزيادة الفرص الوظيفية والاستشارية في المملكة
                             </CardText>
                             <div><img src={hammerIcon} width={70} alt=""/></div>
@@ -126,9 +85,9 @@ const ConferencePage = () => {
                     </Card>
                 </Col>
                 <Col md="6">
-                    <Card style={style.card2}>
+                    <Card className="customCard2">
                         <CardBody className="d-flex align-items-center gap-3">
-                            <CardText className="mt-3" style={style.bottomCardText}>
+                            <CardText className="mt-3 bottom-card-text">
                                 إبراز أهم التطورات التقنية والتحولات الرقمية في قطاع المحاماة والاستشارات القانونية
                                 في
                                 المملكة

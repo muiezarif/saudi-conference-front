@@ -5,15 +5,9 @@ import leftArrow from "../asset/socialMedia/leftArrow.png";
 import icon3 from "../asset/icon_calendar.png";
 import icon2 from "../asset/icon_mic.png";
 import icon1 from "../asset/icon_mm.png";
-import HomeComponentSecTwo from "../component/HomeComponentSecTwo";
-import NewImageSlider from "../component/NewImageSlider";
-import HomeComponentSecThree from "../component/HomeComponentSecThree";
-import LogoPage from "../pages/LogoPage"
 import ConferencePage from "../pages/ConferencePage";
 import "../style/CustomSliderImage.css"
-import MainPage from "../component/MainPage";
 import {HomeComponentSecOne} from "../component/HomeComponentSecOne";
-import {Base} from "../component/Base";
 
 export const DuplicateHomePage = () => {
     const data = [
@@ -49,59 +43,6 @@ export const DuplicateHomePage = () => {
             prevIndex === 0 ? data.length - 1 : prevIndex - 1
         );
     };
-
-    // Function to render components based on currentIndex
-    // const renderComponents = () => {
-    //     switch (currentIndex) {
-    //         case 0: // First Slide
-    //             return (
-    //                 <>
-    //                     <Row>
-    //                         <Col xs={12} md={12}>
-    //                             <ConferencePage/>
-    //                         </Col>
-    //                     </Row>
-    //                 </>
-    //             );
-    //         case 1: // Second Slide
-    //             return (
-    //                 <>
-    //                     <Row>
-    //                         <Col xs={12} md={12}>
-    //                             <ConferencePage/>
-    //                         </Col>
-    //                     </Row>
-    //                 </>
-    //             );
-    //         case 2: // Third Slide
-    //             return (
-    //                 <>
-    //                     <Row>
-    //                         <Col xs={12} md={12}>
-    //                             <HomeComponentSecTwo/>
-    //                         </Col>
-    //                     </Row>
-    //                     <Row>
-    //                         <Col xs={12} md={12}>
-    //                             <NewImageSlider/>
-    //                         </Col>
-    //                     </Row>
-    //                     <Row>
-    //                         <Col xs={12} md={12}>
-    //                             <HomeComponentSecThree/>
-    //                         </Col>
-    //                     </Row>
-    //                     <Row>
-    //                         <Col xs={12} md={12}>
-    //                             <LogoPage/>
-    //                         </Col>
-    //                     </Row>
-    //                 </>
-    //             );
-    //         default:
-    //             return null;
-    //     }
-    // };
 
     return (
         <div>

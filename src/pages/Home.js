@@ -26,6 +26,9 @@ import {scroller} from "react-scroll";
 export function Home() {
     const location = useLocation()
     useEffect(() => {
+
+        window.scrollTo(0, 0);
+
         // Check if there's a hash in the URL and scroll to that section
         const hash = location.hash.replace("#", ""); // Remove '#' from hash
         if (hash) {

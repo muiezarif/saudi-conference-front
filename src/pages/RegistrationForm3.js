@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import { Col, Container, Form, FormGroup, Input, Label, Row, Button } from 'reactstrap';
 import { Base } from "../component/Base";
 import axios from 'axios';
 
 const RegistrationForm2 = () => {
+
+    useEffect(() => {
+        // Scroll to the top of the page
+        window.scrollTo(0, 0);
+    }, []);
 
     const [formData, setFormData] = useState({
         firstName: "",

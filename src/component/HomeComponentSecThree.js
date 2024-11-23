@@ -8,10 +8,19 @@ import button2 from "../asset/SliderImage/Button1.png";
 import button1 from "../asset/SliderImage/Button2.png";
 
 export function HomeComponentSecThree() {
+
     const navigate = useNavigate();
 
     const handleImageClick = () => {
         navigate('/home');
+    };
+
+    const handleButtonOneClick = () => {
+        navigate('/reg3');
+    };
+
+    const handleButtonTwoClick = () => {
+        navigate('/regmethod');
     };
 
     const goToForm = () => {
@@ -100,7 +109,7 @@ export function HomeComponentSecThree() {
             <Row className="mt-5 mb-5 justify-content-center align-items-center text-center"
                  style={{marginTop: '-15px'}}>
                 <Col className="d-flex justify-content-center align-items-center">
-                    <img onClick={handleImageClick} src={button1} width="40%" className='imgBar'/>
+                    <img onClick={handleButtonOneClick} src={button1} width="40%" className='imgBar'/>
                 </Col>
             </Row>
 
@@ -133,7 +142,7 @@ export function HomeComponentSecThree() {
             <Row className="mt-5 mb-5 justify-content-center align-items-center text-center"
                  style={{marginTop: '-15px'}}>
                 <Col className="d-flex justify-content-center align-items-center">
-                    <img onClick={handleImageClick} src={button2} width="40%" className='imgBar'/>
+                    <img onClick={handleButtonTwoClick} src={button2} width="40%" className='imgBar'/>
                 </Col>
             </Row>
         </Container>

@@ -12,10 +12,16 @@ import {
     DropdownToggle, DropdownMenu
 } from "reactstrap";
 import uploadingIcon from "../asset/uploadingIcon.png";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import axios from "axios";
 
 export function RegMethodOneDuplicate() {
+
+    useEffect(() => {
+        // Scroll to the top of the page
+        window.scrollTo(0, 0);
+    }, []);
+
 
     const countries = [
         "أفغانستان",
