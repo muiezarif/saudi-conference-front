@@ -54,11 +54,12 @@ const ConferencePage = () => {
                 <Col md="6">
                     <Card className="customCard2">
                         <CardBody className="d-flex align-items-center gap-3">
-                            <CardText className="mt-3 bottom-card-text">
-                                إبراز خطوات قطاع المحاماة والاستشارات القانونية في المملكة وأثرها على رفع موثوقية
-                                التأهيل المهني
+                            <CardText className="mt-3 bottom-card-text ">
+                            إبراز أثر التطورات المهنية والتأهيلية في قطاع المحاماة والاستشارات القانونية في المملكة في رفع كفاءة البيئة القانونية المحلية، وتحسين بيئة الأعمال والاستثمار.
+
                             </CardText>
-                            <div><img src={sheetIcon} width={70} alt=""/></div>
+                            {/* <div><img src={sheetIcon} width={70} alt=""/></div> */}
+                            <div style={{fontWeight:"bold",fontSize:20,color:"#5F00B8"}}>1</div>
                         </CardBody>
                     </Card>
                 </Col>
@@ -66,9 +67,10 @@ const ConferencePage = () => {
                     <Card className="customCard2">
                         <CardBody className="d-flex align-items-center gap-3">
                             <CardText className="mt-3  bottom-card-text">
-                                إبراز أهم التطورات التشريعية في قطاع المحاماة والاستشارات القانونية في المملكة
+                            إبراز دور الهيئة السعودية للمحامين في دعم عملية التأهيل والممارسة المهنية.
                             </CardText>
-                            <div><img src={balanceIcon} width={70} alt=""/></div>
+                            {/* <div><img src={balanceIcon} width={70} alt=""/></div> */}
+                            <div style={{fontWeight:"bold",fontSize:20,color:"#5F00B8"}}>2</div>
                         </CardBody>
                     </Card>
                 </Col>
@@ -78,9 +80,10 @@ const ConferencePage = () => {
                     <Card className="customCard2">
                         <CardBody className="d-flex align-items-center gap-3">
                             <CardText className="mt-3 text-center bottom-card-text">
-                                تحقيق العدالة الناجزة، وزيادة الفرص الوظيفية والاستشارية في المملكة
+                         ...................   تعزيز احترافية المنشآت القانونية والشركات المهنية داخل المملكة.
                             </CardText>
-                            <div><img src={hammerIcon} width={70} alt=""/></div>
+                            {/* <div><img src={hammerIcon} width={70} alt=""/></div> */}
+                            <div style={{fontWeight:"bold",fontSize:20,color:"#5F00B8"}}>3</div>
                         </CardBody>
                     </Card>
                 </Col>
@@ -88,11 +91,34 @@ const ConferencePage = () => {
                     <Card className="customCard2">
                         <CardBody className="d-flex align-items-center gap-3">
                             <CardText className="mt-3 bottom-card-text">
-                                إبراز أهم التطورات التقنية والتحولات الرقمية في قطاع المحاماة والاستشارات القانونية
-                                في
-                                المملكة
+                            تحفيز الممارسة المهنية نحو تحقيق الريادة لقطاع  المحاماة والاستشارات القانونية.
+
                             </CardText>
-                            <div><img src={dasIcon} width={70} alt=""/></div>
+                            {/* <div><img src={dasIcon} width={70} alt=""/></div> */}
+                            <div style={{fontWeight:"bold",fontSize:20,color:"#5F00B8"}}>4</div>
+                        </CardBody>
+                    </Card>
+                </Col>
+            </Row>
+            <Row className="mb-4">
+                <Col md="6">
+                    <Card className="customCard2">
+                        <CardBody className="d-flex align-items-center gap-3">
+                            <CardText className="mt-3 text-center bottom-card-text">
+                            تسليط الضوء على مستقبل قطاع المحاماة في ضوء التطورات التشريعية في المملكة.
+                            </CardText>
+                            {/* <div><img src={hammerIcon} width={70} alt=""/></div> */}
+                            <div style={{fontWeight:"bold",fontSize:20,color:"#5F00B8"}}>5</div>
+                        </CardBody>
+                    </Card>
+                </Col>
+                <Col md="6">
+                    <Card className="customCard2">
+                        <CardBody className="d-flex align-items-center gap-3">
+                            <CardText className="mt-3 bottom-card-text">
+                          ............  إبراز دور جهات التأهيل القانوني في المملكة وأثرها في ممارسة المهنة.                            </CardText>
+                            {/* <div><img src={dasIcon} width={70} alt=""/></div> */}
+                            <div style={{fontWeight:"bold",fontSize:20,color:"#5F00B8"}}>6</div>
                         </CardBody>
                     </Card>
                 </Col>
