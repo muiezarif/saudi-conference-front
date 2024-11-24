@@ -305,6 +305,11 @@ export default function CustomNavbar() {
                                  className="d-flex justify-content-center align-content-center align-items-center">
                                 <Button
                                     color="link"
+                                    onClick={() => {scroller.scrollTo("#firstsection", {
+                                        duration: 800,
+                                        delay: 0,
+                                        smooth: 'easeInOutQuart',
+                                    });}}
                                     style={{
                                         display: 'flex',
                                         flexDirection: 'column',

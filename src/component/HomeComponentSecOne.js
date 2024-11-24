@@ -4,6 +4,9 @@ import mobileImage from '../asset/mobileViewPerson@4x.png';
 import "../style/fonts.css";
 import "../style/HomeCompSecOne.css";
 import {useEffect, useState} from "react";
+import { Element } from 'react-scroll';
+ 
+
 
 export function HomeComponentSecOne({secondSectionRef}) {
     const [imageSrc, setImageSrc] = useState(personImage);
@@ -57,6 +60,8 @@ export function HomeComponentSecOne({secondSectionRef}) {
     }, []);
 
     return (
+        <Element name="firstsection">
+            <section id="firstsection">
         <div className="customDiv">
             <Row className="d-flex">
                 {/* Mobile-only Column */}
@@ -153,5 +158,7 @@ export function HomeComponentSecOne({secondSectionRef}) {
                 </Col>
             </Row>
         </div>
+        </section>
+        </Element>
     );
 }
