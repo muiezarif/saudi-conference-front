@@ -7,9 +7,21 @@ import "../style/MediaCenter.css";
 import {useNavigate} from "react-router-dom";
 
 const data = [
-    {image: videoImage, text: "الفيديو", width: '80px', navigateTo: "/video"},
-    {image: galleryImage, text: "مكتبة الصور", width: '80px', navigateTo: "/library"},
-    {image: micImage, text: "الأخبار", width: '45px', navigateTo: "/news"},
+    {image: videoImage,
+        //  text: "الفيديو",
+         text: "قريبًا",
+          width: '80px',
+           navigateTo: "/video"},
+    {image: galleryImage,
+        //  text: "مكتبة الصور",
+         text: "قريبًا ",
+          width: '80px',
+           navigateTo: "/library"},
+    {image: micImage,
+        //  text: "الأخبار",
+         text: "قريبًا",
+          width: '45px',
+           navigateTo: "/news"},
 ];
 
 export function MediaCenter() {
