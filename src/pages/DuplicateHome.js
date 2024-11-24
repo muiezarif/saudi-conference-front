@@ -7,9 +7,6 @@ import {DuplicateHomePage} from "../testing/DuplicateHomePage";
 export function DuplicateHome() {
     return (
         <Base>
-            {/*<MainPage/>*/}
-            {/*<HomeComponentSecOne/>*/}
-            {/*<ImageSliderForTesting/>*/}
             <DuplicateHomePage/>
         </Base>
     )

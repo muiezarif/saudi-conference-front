@@ -100,8 +100,7 @@ const HomeComponentSecTwo = () => {
     const [showOtherComponent, setShowOtherComponent] = useState(false);
     const navigate = useNavigate(); // Initialize navigate
     const handleImageClick = () => {
-        // setShowOtherComponent(true); // Set to false if you want to toggle
-        navigate('/home');
+        window.open('/home', '_blank');
     };
 
     const style = {
@@ -130,9 +129,10 @@ const HomeComponentSecTwo = () => {
             {/* Title Section */}
             {!showOtherComponent && (
                 <div>
-                    <Row className="mb-5 justify-content-center align-items-center text-center" style={{marginTop:'-15px'}}>
+                    <Row className="mb-5 justify-content-center align-items-center text-center"
+                         style={{marginTop: '-15px'}}>
                         <Col className="d-flex justify-content-center align-items-center">
-                            <img onClick={handleImageClick} src={imageBar} width="40%" className='imgBar' />
+                            <img onClick={handleImageClick} src={imageBar} width="40%" className='imgBar'/>
                         </Col>
                     </Row>
 
@@ -146,18 +146,17 @@ const HomeComponentSecTwo = () => {
                         <Col md={6} className="mt-3">
                             <h3 style={style.cardHeading}>مهني</h3>
                             <p style={style.cardParagraph}>
-                                تطوير المحامين المتدربين من خلال مناقشة ضوابط التسجيل، التزاماتهم المهنية، التحديات التي
-                                تواجههم، وساعات التدريب الإلزامية،
-                                مع التأكيد على أهمية التطوير المهني المستمر ودور الملتقيات والمبادرات القانونية في تأهيل
-                                الكفاءات الشابة.
+                                تعزيز المهارات المهنية للمحامين والممارسين القانونيين، وتبني أفضل الممارسات العالمية،
+                                وإبراز أثر التطورات المهنية والتأهيلية في قطاع المحاماة والاستشارت القانونية في المملكة
+                                في رفع كفاءة البيئة القانونية، وتحسين بيئة الأعمال والاستثمار.
                             </p>
                         </Col>
                         <Col md={6} className="mt-3">
                             <h3 style={style.cardHeading}>تأهيلي</h3>
                             <p style={style.cardParagraph}>
-                                تمكين المهن القانونية وتعزيز قطاع الأعمال، مع التركيز على دور الهيئة السعودية للمحامين في ضبط
-                                المخالفات وزيادة الموثوقية،
-                                واستعراض التطورات القانونية والتقنية وتوطين المهن، إضافة إلى فرص الشراكات المهنية داخل المملكة.
+                                بناء كفاءات وجدارات تسهم في رفع مستوى القدرات المهنية والقانونية، وتعمل على مواكبة
+                                تحديات القضايا القانونية المعاصرة، إضافة إلى بناء مجتمع متكامل يواكب تحديات العصر ويعزز
+                                فرص الشراكات المهنية.
                             </p>
                         </Col>
                     </Row>

@@ -28,7 +28,8 @@ export function HomeComponentSecThree() {
     };
 
     const goToForm2 = () => {
-        navigate('/reg3');
+        // navigate('/reg3');
+        window.open('/reg3', '_blank');
     };
 
     const style = {
@@ -113,7 +114,7 @@ export function HomeComponentSecThree() {
                 </Col>
             </Row>
 
-            {/*3nd boxes  */}
+            {/* 3rd boxes  */}
             <Row className='d-flex justify-content-between mt-3'>
                 <h2 style={style.topHeading}>الرعايات</h2>
                 {cardData3.map((data, index) => (

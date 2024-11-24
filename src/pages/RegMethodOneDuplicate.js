@@ -1,19 +1,8 @@
 import {Base} from "../component/Base";
-import {
-    Col,
-    Container,
-    FormGroup,
-    Input,
-    Label,
-    Row,
-    Button,
-    DropdownItem,
-    UncontrolledDropdown,
-    DropdownToggle, DropdownMenu
-} from "reactstrap";
-import uploadingIcon from "../asset/uploadingIcon.png";
+import {Col, Container, FormGroup, Label, Row} from "reactstrap";
 import {useEffect, useState} from "react";
 import axios from "axios";
+import localFile from "../data/localFile.pdf";
 
 export function RegMethodOneDuplicate() {
 
@@ -254,6 +243,7 @@ export function RegMethodOneDuplicate() {
             width: "100%",
             padding: "7px 0",
             color: "#00B4B2",
+            cursor: "pointer",
         }
     }
 
@@ -332,17 +322,36 @@ export function RegMethodOneDuplicate() {
         }
     };
 
+    const handleDownload = () => {
+        const link = document.createElement('a');
+        link.href = localFile;
+        link.download = 'localFile.pdf';
+        link.click();
+    };
+
 
     return (
         <Base>
-        
-        
+
             <Container style={{marginTop: "13rem"}}>
                 <div style={{textAlign: "right", padding: "0", margin: "0"}}>
-                <iframe src="https://www.cognitoforms.com/f/3y87W470q0-ctEtVkRfdMw/258" allow="payment" style={{border:0,width:"100%"}} height="1027"></iframe>
-                    
+                    <h2 style={style.heading}>نموذج طلب رعاية </h2>
+                    <Row>
+                        <Col>
+                            <FormGroup>
+                                <Label style={style.mainHeading} onClick={handleDownload}
+                                >تنزيل كتيب الرعاية</Label>
+                            </FormGroup>
+                        </Col>
+                    </Row>
                 </div>
-               
+
+                <div style={{textAlign: "right", padding: "0", margin: "0"}}>
+                    <iframe src="https://www.cognitoforms.com/f/3y87W470q0-ctEtVkRfdMw/258" allow="payment"
+                            style={{border: 0, width: "100%"}} height="1027"></iframe>
+
+                </div>
+
             </Container>
         </Base>
     )

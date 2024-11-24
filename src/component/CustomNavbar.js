@@ -218,7 +218,7 @@ export default function CustomNavbar() {
                                     المحاماة والاستشارات
                                     القانونية</p>
 
-                                <Button className="mb-5" style={style.button} size="lg">ﺳﺠـﻞ ﺍﻵﻥ</Button>
+                                <Button className="mb-5" style={style.button} size="lg">قريبًا</Button>
                             </Col>
                         </Row>
 
