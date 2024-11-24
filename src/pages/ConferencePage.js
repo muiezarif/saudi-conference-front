@@ -61,7 +61,7 @@ const ConferencePage = () => {
 
                             </CardText>
                             {/* <div><img src={sheetIcon} width={70} alt=""/></div> */}
-                            <div style={{fontWeight:"bold",fontSize:30,color:"#5F00B8"}}>1</div>
+                            <div style={{fontWeight:"bold",fontSize:20,color:"#5F00B8"}}>1</div>
                         </CardBody>
                     </Card>
                 </Col>
@@ -72,7 +72,7 @@ const ConferencePage = () => {
                             إبراز دور الهيئة السعودية للمحامين في دعم عملية التأهيل والممارسة المهنية.
                             </CardText>
                             {/* <div><img src={balanceIcon} width={70} alt=""/></div> */}
-                            <div style={{fontWeight:"bold",fontSize:30,color:"#5F00B8"}}>2</div>
+                            <div style={{fontWeight:"bold",fontSize:20,color:"#5F00B8"}}>2</div>
                         </CardBody>
                     </Card>
                 </Col>
@@ -84,7 +84,7 @@ const ConferencePage = () => {
                 <CardText className="mt-3 text-center bottom-card-text">
                     تعزيز احترافية المنشآت القانونية والشركات المهنية داخل المملكة.
                 </CardText>
-                <div style={{ fontWeight: "bold", fontSize: 30, color: "#5F00B8", textAlign: "center" }}>
+                <div style={{ fontWeight: "bold", fontSize: 20, color: "#5F00B8", textAlign: "center" }}>
                     3
                 </div>
             </CardBody>
@@ -98,7 +98,7 @@ const ConferencePage = () => {
 
                             </CardText>
                             {/* <div><img src={dasIcon} width={70} alt=""/></div> */}
-                            <div style={{fontWeight:"bold",fontSize:30,color:"#5F00B8"}}>4</div>
+                            <div style={{fontWeight:"bold",fontSize:20,color:"#5F00B8"}}>4</div>
                         </CardBody>
                     </Card>
                 </Col>
@@ -111,7 +111,7 @@ const ConferencePage = () => {
                             تسليط الضوء على مستقبل قطاع المحاماة في ضوء التطورات التشريعية في المملكة.
                             </CardText>
                             {/* <div><img src={hammerIcon} width={70} alt=""/></div> */}
-                            <div style={{fontWeight:"bold",fontSize:30,color:"#5F00B8"}}>5</div>
+                            <div style={{fontWeight:"bold",fontSize:20,color:"#5F00B8"}}>5</div>
                         </CardBody>
                     </Card>
                 </Col>
@@ -121,7 +121,7 @@ const ConferencePage = () => {
                 <CardText className="mt-3 bottom-card-text">
                     إبراز دور جهات التأهيل القانوني في المملكة وأثرها في ممارسة المهنة.
                 </CardText>
-                <div style={{ fontWeight: "bold", fontSize: 30, color: "#5F00B8", textAlign: "center" }}>
+                <div style={{ fontWeight: "bold", fontSize: 20, color: "#5F00B8", textAlign: "center" }}>
                     6
                 </div>
             </CardBody>
