@@ -160,6 +160,8 @@ export function Home() {
     return (
         <Base>
             {/* Person Container */}
+            <section id="firstsectionone">
+
             <div className="customDiv">
                 <Row className="d-flex">
                     {/* Mobile-only Column */}
@@ -257,7 +259,7 @@ export function Home() {
                     </Col>
                 </Row>
             </div>
-
+                                </section>
             <div style={{marginTop: "-20px"}} className="mainDiv">
                 <Row className="justify-content-center align-items-center">
 
@@ -316,6 +318,7 @@ export function Home() {
                         </Card>
                     </Col>
                 </Row>
+                
                 <HomeComponentSecTwo/>
                 <NewImageSlider/>
                 <HomeComponentSecThree/>

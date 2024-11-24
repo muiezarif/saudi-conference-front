@@ -8,6 +8,8 @@ import icon1 from "../asset/icon_mm.png";
 import ConferencePage from "../pages/ConferencePage";
 import "../style/CustomSliderImage.css"
 import {HomeComponentSecOne} from "../component/HomeComponentSecOne";
+import { Element } from 'react-scroll';
+
 
 export const DuplicateHomePage = () => {
     const data = [
@@ -45,7 +47,9 @@ export const DuplicateHomePage = () => {
     };
 
     return (
+        // <Element name="firstsectionone">
         <div>
+            
             <HomeComponentSecOne/>
             <div style={{marginTop: "-20px"}} className="mainDiv">
                 <Row className="justify-content-center align-items-center">
@@ -113,5 +117,7 @@ export const DuplicateHomePage = () => {
                 {/*<div className="mt-4">{renderComponents()}</div>*/}
             </div>
         </div>
+        // </Element>
+
     );
 };

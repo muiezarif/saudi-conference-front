@@ -10,11 +10,13 @@ import sheetIcon from "../asset/ic_per.png";
 import hammerIcon from "../asset/ic_hammer.png";
 import dasIcon from "../asset/ic_das.png";
 import "../style/Confernce.css";
+import { Element } from 'react-scroll';
 
 
 const ConferencePage = () => {
 
     return (
+        <Element name='firstsectionone'>
         <Container className="mt-5">
             <Row style={{textAlign: 'right', marginBottom: '25px'}}>
                 <Col md="6" className="conferenceCustomCol">
@@ -59,7 +61,7 @@ const ConferencePage = () => {
 
                             </CardText>
                             {/* <div><img src={sheetIcon} width={70} alt=""/></div> */}
-                            <div style={{fontWeight:"bold",fontSize:20,color:"#5F00B8"}}>1</div>
+                            <div style={{fontWeight:"bold",fontSize:30,color:"#5F00B8"}}>1</div>
                         </CardBody>
                     </Card>
                 </Col>
@@ -70,22 +72,23 @@ const ConferencePage = () => {
                             إبراز دور الهيئة السعودية للمحامين في دعم عملية التأهيل والممارسة المهنية.
                             </CardText>
                             {/* <div><img src={balanceIcon} width={70} alt=""/></div> */}
-                            <div style={{fontWeight:"bold",fontSize:20,color:"#5F00B8"}}>2</div>
+                            <div style={{fontWeight:"bold",fontSize:30,color:"#5F00B8"}}>2</div>
                         </CardBody>
                     </Card>
                 </Col>
             </Row>
             <Row className="mb-4">
                 <Col md="6">
-                    <Card className="customCard2">
-                        <CardBody className="d-flex align-items-center gap-3">
-                            <CardText className="mt-3 text-center bottom-card-text">
-                         ...................   تعزيز احترافية المنشآت القانونية والشركات المهنية داخل المملكة.
-                            </CardText>
-                            {/* <div><img src={hammerIcon} width={70} alt=""/></div> */}
-                            <div style={{fontWeight:"bold",fontSize:20,color:"#5F00B8"}}>3</div>
-                        </CardBody>
-                    </Card>
+                <Card className="customCard2">
+            <CardBody className="d-flex align-items-center justify-content-between">
+                <CardText className="mt-3 text-center bottom-card-text">
+                    تعزيز احترافية المنشآت القانونية والشركات المهنية داخل المملكة.
+                </CardText>
+                <div style={{ fontWeight: "bold", fontSize: 30, color: "#5F00B8", textAlign: "center" }}>
+                    3
+                </div>
+            </CardBody>
+        </Card>
                 </Col>
                 <Col md="6">
                     <Card className="customCard2">
@@ -95,7 +98,7 @@ const ConferencePage = () => {
 
                             </CardText>
                             {/* <div><img src={dasIcon} width={70} alt=""/></div> */}
-                            <div style={{fontWeight:"bold",fontSize:20,color:"#5F00B8"}}>4</div>
+                            <div style={{fontWeight:"bold",fontSize:30,color:"#5F00B8"}}>4</div>
                         </CardBody>
                     </Card>
                 </Col>
@@ -108,22 +111,25 @@ const ConferencePage = () => {
                             تسليط الضوء على مستقبل قطاع المحاماة في ضوء التطورات التشريعية في المملكة.
                             </CardText>
                             {/* <div><img src={hammerIcon} width={70} alt=""/></div> */}
-                            <div style={{fontWeight:"bold",fontSize:20,color:"#5F00B8"}}>5</div>
+                            <div style={{fontWeight:"bold",fontSize:30,color:"#5F00B8"}}>5</div>
                         </CardBody>
                     </Card>
                 </Col>
                 <Col md="6">
-                    <Card className="customCard2">
-                        <CardBody className="d-flex align-items-center gap-3">
-                            <CardText className="mt-3 bottom-card-text">
-                          ............  إبراز دور جهات التأهيل القانوني في المملكة وأثرها في ممارسة المهنة.                            </CardText>
-                            {/* <div><img src={dasIcon} width={70} alt=""/></div> */}
-                            <div style={{fontWeight:"bold",fontSize:20,color:"#5F00B8"}}>6</div>
-                        </CardBody>
-                    </Card>
+                <Card className="customCard2">
+            <CardBody className="d-flex align-items-center justify-content-between">
+                <CardText className="mt-3 bottom-card-text">
+                    إبراز دور جهات التأهيل القانوني في المملكة وأثرها في ممارسة المهنة.
+                </CardText>
+                <div style={{ fontWeight: "bold", fontSize: 30, color: "#5F00B8", textAlign: "center" }}>
+                    6
+                </div>
+            </CardBody>
+        </Card>
                 </Col>
             </Row>
         </Container>
+        </Element>
     );
 };
 
