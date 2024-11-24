@@ -1,9 +1,9 @@
 const cardData = [
-    {number: '+20', name: 'شريك',},
-    {number: '+2000', name: 'زائر'},
-    {number: '6', name: 'جلسة حوارية'},
-    {number: '20', name: 'ورشة عمل'},
-    {number: '+30', name: 'متحدث'},
+    {number: '+10', name: 'شركاء',},
+    {number: '+2000', name: 'زائز'},
+    {number: '8', name: 'جلسات حوارية'},
+    {number: '18', name: 'ورشة عمل'},
+    {number: '+30', name: 'متحدث وخبير'},
 ];
 const cardData2 = [
     // {name: 'ﻓﺌــــــــــــــــــــﺔ', name1: 'الإعلاميين', cur: 'ﺭﻳــــــــــﺎﻝ', number: '0'},

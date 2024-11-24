@@ -17,7 +17,7 @@ export function MediaCenter() {
     const navigate = useNavigate();
     const handleNavigation = (page) => {
         // setShowOtherComponent(true); // Set to false if you want to toggle
-        navigate(page);
+        // navigate(page);
     };
 
     return (
