@@ -34,12 +34,12 @@ const navigation = [
 
 const navigation2 = [
     {name: 'عن المؤتمر', href: '/'},
-    {name: 'الأجندة وورش العمل', href: '/workshops'},
-    {name: 'المركز الإعلامي', href: '/media'},
-    {name: 'الجهات والرعاة', href: '/#logosection'},
+    {name: 'الأجندة وورش العمل-قريبًا', href: '/workshops'},
+    {name: 'المركز الإعلامي-قريبًا', href: '/media'},
+    {name: 'الجهات والرعاة-قريبًا', href: '/#logosection'},
     {name: 'الرعايات', href: '/regmethod'},
-    {name: 'التسجيل', href: '/reg3'},
-    {name: 'المتحدثين', href: '/#speakersection'},
+    {name: 'التسجيل-قريبًا', href: '/reg3'},
+    {name: 'المتحدثين-قريبًا', href: '/#speakersection'},
 ]
 
 
