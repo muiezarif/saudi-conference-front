@@ -218,7 +218,7 @@ export default function CustomNavbar() {
                                     المحاماة والاستشارات
                                     القانونية</p>
 
-                                <Button className="mb-5" style={style.button} size="lg">قريبًا</Button>
+                                <Button className="mb-5" style={style.button} size="lg">ﺳﺠـﻞ ﺍﻵﻥ  (قريبًا)</Button>
                             </Col>
                         </Row>
 
@@ -253,14 +253,14 @@ export default function CustomNavbar() {
                             <Col md="auto"
                                  className="d-flex flex-row align-items-start justify-content-center"> {/* Updated to 'flex-row' */}
                                 {[
-                                    {href: "#youtube", img: img6, alt: "YouTube"},
-                                    {href: "#linkedin", img: img5, alt: "LinkedIn"},
-                                    {href: "#snapchat", img: img4, alt: "Snapchat"},
-                                    {href: "#instagram", img: img3, alt: "Instagram"},
-                                    {href: "#facebook", img: img2, alt: "Facebook"},
-                                    {href: "#twitter", img: img1, alt: "Twitter"},
+                                    {href: "https://youtube.com/@saudi_sba?si=xI4j9j9kprnY9f58", img: img6, alt: "YouTube"},
+                                    {href: "https://in.linkedin.com/company/saudibarassociation", img: img5, alt: "LinkedIn"},
+                                    {href: "https://www.snapchat.com/add/saudi_sba?share_id=YZt63zQ_Cdg&locale=en-US", img: img4, alt: "Snapchat"},
+                                    {href: "https://www.instagram.com/saudi_sba?igsh=dzRsaWh1ZWJpbnBy", img: img3, alt: "Instagram"},
+                                    {href: "https://www.facebook.com/saudisbaa/?_rdr", img: img2, alt: "Facebook"},
+                                    {href: "https://x.com/Saudi_SBA?t=J1GR0fDNl3eZSTAaZAGvcg&s=09", img: img1, alt: "Twitter"},
                                 ].map((item, index) => (
-                                    <a key={index} href={item.href}
+                                    <a key={index} href={item.href} target='_blank'
                                        className="text-white mb-3 mx-1"> {/* Added 'mx-1' for spacing */}
                                         <img
                                             src={item.img}
@@ -281,14 +281,14 @@ export default function CustomNavbar() {
                              }}>
                             <Col md="auto" className="d-flex flex-column align-items-start">
                                 {[
-                                    {href: "#youtube", img: img6, alt: "YouTube"},
-                                    {href: "#linkedin", img: img5, alt: "LinkedIn"},
-                                    {href: "#snapchat", img: img4, alt: "Snapchat"},
-                                    {href: "#instagram", img: img3, alt: "Instagram"},
-                                    {href: "#facebook", img: img2, alt: "Facebook"},
-                                    {href: "#twitter", img: img1, alt: "Twitter"},
+                                     {href: "https://youtube.com/@saudi_sba?si=xI4j9j9kprnY9f58", img: img6, alt: "YouTube"},
+                                     {href: "https://in.linkedin.com/company/saudibarassociation", img: img5, alt: "LinkedIn"},
+                                     {href: "https://www.snapchat.com/add/saudi_sba?share_id=YZt63zQ_Cdg&locale=en-US", img: img4, alt: "Snapchat"},
+                                     {href: "https://www.instagram.com/saudi_sba?igsh=dzRsaWh1ZWJpbnBy", img: img3, alt: "Instagram"},
+                                     {href: "https://www.facebook.com/saudisbaa/?_rdr", img: img2, alt: "Facebook"},
+                                     {href: "https://x.com/Saudi_SBA?t=J1GR0fDNl3eZSTAaZAGvcg&s=09", img: img1, alt: "Twitter"},
                                 ].map((item, index) => (
-                                    <a key={index} href={item.href} className="text-white mb-3">
+                                    <a key={index} href={item.href} target='_blank' className="text-white mb-3">
                                         <img
                                             src={item.img}
                                             alt={item.alt}
