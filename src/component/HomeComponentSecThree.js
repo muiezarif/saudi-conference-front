@@ -29,7 +29,7 @@ export function HomeComponentSecThree() {
 
     const goToForm2 = () => {
         // navigate('/reg3');
-        window.open('/reg3', '_blank');
+        // window.open('/reg3', '_blank');
     };
 
     const style = {

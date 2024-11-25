@@ -71,7 +71,11 @@
     flex: 1;
     font-family: 'DiodrumRegular', sans-serif;
     text-align: right;
-    margin-right:10px
+    margin-right:10px;
+
+    @media (max-width: 576px) {
+        font-size: 10px; /* Slightly smaller for mobile */
+    }
 }
 
 .customCard2 {
