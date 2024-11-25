@@ -20,11 +20,11 @@ export function HomeComponentSecThree() {
     };
 
     const handleButtonTwoClick = () => {
-        navigate('/regmethod');
+        navigate('/sponsorships');
     };
 
     const goToForm = () => {
-        navigate('/regmethod');
+        navigate('/sponsorships');
     };
 
     const goToForm2 = () => {

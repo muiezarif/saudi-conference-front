@@ -27,7 +27,7 @@ function App() {
                 <Route path="/reg3" element={<RegistrationForm3/>}/>
                 <Route path="/box" element={<HomeComponentSecThree/>}/>
                 <Route path="/workshops" element={<Calendar/>}/>
-                <Route path="/regmethod" element={<RegMethodOneDuplicate/>}/>
+                <Route path="/sponsorships" element={<RegMethodOneDuplicate/>}/>
                 <Route path="/main" element={<MainPage/>}/>
                 <Route path="/home" element={<DuplicateHome/>}/>
                 <Route path="/library" element={<ImageLibrary/>}/>
