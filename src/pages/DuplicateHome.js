@@ -1,5 +1,4 @@
 import {Base} from "../component/Base";
-import {HomeComponentSecOne} from "../component/HomeComponentSecOne";
 import {ImageSliderForTesting} from "../testing/ImageSliderForTesting";
 import {DuplicateHomePage} from "../testing/DuplicateHomePage";
 

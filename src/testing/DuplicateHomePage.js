@@ -8,13 +8,15 @@ import icon1 from "../asset/icon_mm.png";
 import ConferencePage from "../pages/ConferencePage";
 import "../style/CustomSliderImage.css"
 import {HomeComponentSecOne} from "../component/HomeComponentSecOne";
+import { Element } from 'react-scroll';
+
 
 export const DuplicateHomePage = () => {
     const data = [
         {
             title: "ﻳُﺴﻬﻢ",
             subtitle: " في إبراز أهم مستجدات وتطورات قطاع المحاماة والاستشارات القانونية، والدور المهني للهيئة السعودية للمحامين في تطوير القطاع، وحصر التحديات والفرص المهنية للمنشآت القانونية، مما يؤثر إيجابًا في موثوقية التأهيل المهني، ويعزز تمكين المهن القانونية وقطاعي الأعمال والاستثمار، ويحقق رؤية المملكة (2030)",
-            img: icon1
+            img: icon1,
         },
         {
             title: "ﻳﻨﺎﻗﺶ",
@@ -45,7 +47,9 @@ export const DuplicateHomePage = () => {
     };
 
     return (
+        // <Element name="firstsectionone">
         <div>
+            
             <HomeComponentSecOne/>
             <div style={{marginTop: "-20px"}} className="mainDiv">
                 <Row className="justify-content-center align-items-center">
@@ -113,5 +117,7 @@ export const DuplicateHomePage = () => {
                 {/*<div className="mt-4">{renderComponents()}</div>*/}
             </div>
         </div>
+        // </Element>
+
     );
 };

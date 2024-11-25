@@ -25,6 +25,35 @@ import {scroller} from "react-scroll";
 
 export function Home() {
     const location = useLocation()
+    const [timeLeft, setTimeLeft] = useState({
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0,
+    });
+
+    useEffect(() => {
+        const calculateTimeLeft = () => {
+            const now = new Date();
+            const difference = new Date("2024-12-22T00:00:00") - now;
+
+            if (difference > 0) {
+                setTimeLeft({
+                    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+                    hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+                    minutes: Math.floor((difference / (1000 * 60)) % 60),
+                    seconds: Math.floor((difference / 1000) % 60),
+                });
+            } else {
+                clearInterval(timer);
+                setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+            }
+        };
+
+        const timer = setInterval(calculateTimeLeft, 1000);
+
+        return () => clearInterval(timer); // Cleanup on unmount
+    }, ["2024-12-22T00:00:00"]);
     useEffect(() => {
 
         window.scrollTo(0, 0);
@@ -131,12 +160,14 @@ export function Home() {
     return (
         <Base>
             {/* Person Container */}
+            <section id="firstsectionone">
+
             <div className="customDiv">
                 <Row className="d-flex">
                     {/* Mobile-only Column */}
                     <Col xs={12} className="text-center mb-5 d-block d-lg-none">
                         <div className="d-flex justify-content-center gap-2">
-                            {['ﺍﻻﻳﺎﻡ', 'ﺍﻟﺴﺎﻋﺎﺕ', 'ﺍﻟﺪﻗﺎﺋﻖ', 'ﺍﻟﺜﻮﺍﻧﻲ'].map((text, index) => (
+                            {/* {['ﺍﻻﻳﺎﻡ', 'ﺍﻟﺴﺎﻋﺎﺕ', 'ﺍﻟﺪﻗﺎﺋﻖ', 'ﺍﻟﺜﻮﺍﻧﻲ'].map((text, index) => (
                                 <div
                                     key={index}
                                     className={`mobileViewCard ${index === 0 ? 'mobileViewCardLeft' : ''} ${index === 3 ? 'mobileViewCardRight' : ''}`}
@@ -144,7 +175,32 @@ export function Home() {
                                     <h6 className="mobileViewCardHeading">00</h6>
                                     <p className="mobileViewCardSubHeading">{text}</p>
                                 </div>
-                            ))}
+                            ))} */}
+
+                                <div
+                                    className={`mobileViewCard mobileViewCardLeft`}
+                                >
+                                    <h6 className="mobileViewCardHeading">{timeLeft.days}</h6>
+                                    <p className="mobileViewCardSubHeading">ﺍﻻﻳﺎﻡ</p>
+                                </div>
+                                <div
+                                    className={`mobileViewCard `}
+                                >
+                                    <h6 className="mobileViewCardHeading">{timeLeft.hours}</h6>
+                                    <p className="mobileViewCardSubHeading">ﺍﻟﺴﺎﻋﺎﺕ</p>
+                                </div>
+                                <div
+                                    className={`mobileViewCard `}
+                                >
+                                    <h6 className="mobileViewCardHeading">{timeLeft.minutes}</h6>
+                                    <p className="mobileViewCardSubHeading">ﺍﻟﺪﻗﺎﺋﻖ</p>
+                                </div>
+                                <div
+                                    className={`mobileViewCard mobileViewCardRight`}
+                                >
+                                    <h6 className="mobileViewCardHeading">{timeLeft.seconds}</h6>
+                                    <p className="mobileViewCardSubHeading">ﺍﻟﺜﻮﺍﻧﻲ</p>
+                                </div>
                         </div>
                     </Col>
 
@@ -156,7 +212,7 @@ export function Home() {
                     {/* Content Column - Displayed on larger screens only */}
                     <Col xl={7} lg={7} md={4} sm={12} xs={12} className="customCard">
                         <div className="d-inline-flex flex-wrap text-end gap-3 d-none d-lg-flex justify-content-end">
-                            {['ﺍﻻﻳﺎﻡ', 'ﺍﻟﺴﺎﻋﺎﺕ', 'ﺍﻟﺪﻗﺎﺋﻖ', 'ﺍﻟﺜﻮﺍﻧﻲ'].map((text, index) => (
+                            {/* {['ﺍﻻﻳﺎﻡ', 'ﺍﻟﺴﺎﻋﺎﺕ', 'ﺍﻟﺪﻗﺎﺋﻖ', 'ﺍﻟﺜﻮﺍﻧﻲ'].map((text, index) => (
                                 <div
                                     key={index}
                                     className={`cardBase ${index === 0 ? 'cardLeft' : ''} ${index === 3 ? 'cardRight' : ''}`}
@@ -164,7 +220,32 @@ export function Home() {
                                     <h6 className="cardHeading">00</h6>
                                     <p className="cardSubHeading">{text}</p>
                                 </div>
-                            ))}
+                            ))} */}
+
+                                <div
+                                    className={`cardBase cardLeft`}
+                                >
+                                    <h6 className="cardHeading">{timeLeft.days}</h6>
+                                    <p className="cardSubHeading">ﺍﻻﻳﺎﻡ</p>
+                                </div>
+                                <div
+                                    className={`cardBase`}
+                                >
+                                    <h6 className="cardHeading">{timeLeft.hours}</h6>
+                                    <p className="cardSubHeading">ﺍﻟﺴﺎﻋﺎﺕ</p>
+                                </div>
+                                <div
+                                    className={`cardBase`}
+                                >
+                                    <h6 className="cardHeading">{timeLeft.minutes}</h6>
+                                    <p className="cardSubHeading">ﺍﻟﺪﻗﺎﺋﻖ</p>
+                                </div>
+                                <div
+                                    className={`cardBase cardRight`}
+                                >
+                                    <h6 className="cardHeading">{timeLeft.seconds}</h6>
+                                    <p className="cardSubHeading">ﺍﻟﺜﻮﺍﻧﻲ</p>
+                                </div>
                         </div>
 
                         <div className="paragraphAlignment">
@@ -178,7 +259,7 @@ export function Home() {
                     </Col>
                 </Row>
             </div>
-
+                                </section>
             <div style={{marginTop: "-20px"}} className="mainDiv">
                 <Row className="justify-content-center align-items-center">
 
@@ -237,10 +318,11 @@ export function Home() {
                         </Card>
                     </Col>
                 </Row>
+                
                 <HomeComponentSecTwo/>
                 <NewImageSlider/>
                 <HomeComponentSecThree/>
-                <LogoPage/>
+                {/* <LogoPage/> */}
             </div>
         </Base>
     )

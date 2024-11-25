@@ -170,12 +170,12 @@ const CustomFooter = () => {
                 {/* Social Media and Footer Info */}
                 <Row className="justify-content-between align-items-center mt-4">
                     <Col xs={12} md={4} className="d-flex justify-content-center mb-3">
-                        <img src={img1} alt="Twitter" style={{ width: 28, height: 28, margin: '0 5px' }} />
-                        <img src={img2} alt="Facebook" style={{ width: 28, height: 28, margin: '0 5px' }} />
-                        <img src={img3} alt="Instagram" style={{ width: 28, height: 28, margin: '0 5px' }} />
-                        <img src={img4} alt="Snapchat" style={{ width: 28, height: 28, margin: '0 5px' }} />
-                        <img src={img5} alt="LinkedIn" style={{ width: 28, height: 28, margin: '0 5px' }} />
-                        <img src={img6} alt="YouTube" style={{ width: 28, height: 28, margin: '0 5px' }} />
+                        <a href="https://x.com/Saudi_SBA?t=J1GR0fDNl3eZSTAaZAGvcg&s=09" target="_blank"><img src={img1} alt="Twitter" style={{ width: 28, height: 28, margin: '0 5px' }} /></a>
+                        <a href="https://www.facebook.com/saudisbaa/?_rdr" target="_blank"><img src={img2} alt="Facebook" style={{ width: 28, height: 28, margin: '0 5px' }} /></a>
+                        <a href="https://www.instagram.com/saudi_sba?igsh=dzRsaWh1ZWJpbnBy" target="_blank"><img src={img3} alt="Instagram" style={{ width: 28, height: 28, margin: '0 5px' }} /></a>
+                        <a href="https://www.snapchat.com/add/saudi_sba?share_id=YZt63zQ_Cdg&locale=en-US" target="_blank"><img src={img4} alt="Snapchat" style={{ width: 28, height: 28, margin: '0 5px' }} /></a>
+                        <a href="https://in.linkedin.com/company/saudibarassociation" target="_blank"><img src={img5} alt="LinkedIn" style={{ width: 28, height: 28, margin: '0 5px' }} /></a>
+                        <a href="https://youtube.com/@saudi_sba?si=xI4j9j9kprnY9f58" target="_blank"><img src={img6} alt="YouTube" style={{ width: 28, height: 28, margin: '0 5px' }} /></a>
                     </Col>
 
                     <Col xs={12} md={4} className="text-center mb-3" style={{ fontFamily: "DiodrumBold" }}>

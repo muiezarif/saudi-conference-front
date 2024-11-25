@@ -20,16 +20,16 @@ export function HomeComponentSecThree() {
     };
 
     const handleButtonTwoClick = () => {
-        navigate('/regmethod');
+        navigate('/sponsorships');
     };
 
     const goToForm = () => {
-        navigate('/regmethod');
+        navigate('/sponsorships');
     };
 
     const goToForm2 = () => {
         // navigate('/reg3');
-        window.open('/reg3', '_blank');
+        // window.open('/reg3', '_blank');
     };
 
     const style = {
@@ -100,19 +100,23 @@ export function HomeComponentSecThree() {
                                     <strong>
                                         {data.number}
                                     </strong>
+                                    
                                 </div>
+                                <div>
+                                    {index === 1 ?<p style={{fontSize:13,fontWeight:'normal',marginTop:5,color:"#fff"}}>(خصم 15% لأعضاء هيئة المحامين)</p>:null}
+                                    </div>
                             </div>
                         </div>
                     </Col>
                 ))}
             </Row>
 
-            <Row className="mt-5 mb-5 justify-content-center align-items-center text-center"
+            {/* <Row className="mt-5 mb-5 justify-content-center align-items-center text-center"
                  style={{marginTop: '-15px'}}>
                 <Col className="d-flex justify-content-center align-items-center">
                     <img onClick={handleButtonOneClick} src={button1} width="40%" className='imgBar'/>
                 </Col>
-            </Row>
+            </Row> */}
 
             {/* 3rd boxes  */}
             <Row className='d-flex justify-content-between mt-3'>
@@ -127,13 +131,13 @@ export function HomeComponentSecThree() {
                             <div>
                                 <p className="p3 mb-2">{data.name}</p>
                                 <p className="p2">{data.name1}</p>
-                                <div className="p3">
-                                    <strong>
+                                <div style={{display:"flex",alignItems:"center",justifyContent:"center",marginTop:10}}>
+                                    <p style={{fontSize:25,color:"#FFF",fontWeight:"400",marginRight:5}}>
                                         {data.cur}
-                                    </strong>
-                                    <strong>
+                                    </p>
+                                    <p style={{fontSize:25,color:"#FFF",fontWeight:"400"}}>
                                         {data.number}
-                                    </strong>
+                                    </p>
                                 </div>
                             </div>
                         </div>

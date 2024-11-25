@@ -23,29 +23,45 @@ import { scroller } from 'react-scroll';
 
 
 const navigation = [
-    {name: 'المتحدثين', href: '/#speakersection'},
-    {name: 'التسجيل', href: '/reg3'},
-    {name: 'الرعايات', href: '/regmethod'},
-    {name: 'الجهات والرعاة', href: '/#logosection'},
-    {name: 'المركز الإعلامي', href: '/media'},
-    {name: 'الأجندة وورش العمل', href: '/workshops'},
+    // {name: 'المتحدثين', href: '/#speakersection'},
+    {name: 'المتحدثين', href: '/#'},
+    // {name: 'التسجيل', href: '/reg3'},
+    {name: 'التسجيل', href: '/#'},
+    {name: 'الرعايات', href: '/sponsorships'},
+    // {name: 'الجهات والرعاة', href: '/#logosection'},
+    {name: 'الجهات والرعاة', href: '/#'},
+    // {name: 'المركز الإعلامي', href: '/media'},
+    {name: 'المركز الإعلامي', href: '/#'},
+    // {name: 'الأجندة وورش العمل', href: '/workshops'},
+    {name: 'الأجندة وورش العمل', href: '/#'},
     {name: 'عن المؤتمر', href: '/'},
 ]
 
 const navigation2 = [
     {name: 'عن المؤتمر', href: '/'},
-    {name: 'الأجندة وورش العمل', href: '/workshops'},
-    {name: 'المركز الإعلامي', href: '/media'},
-    {name: 'الجهات والرعاة', href: '/#logosection'},
-    {name: 'الرعايات', href: '/regmethod'},
-    {name: 'التسجيل', href: '/reg3'},
-    {name: 'المتحدثين', href: '/#speakersection'},
+    // {name: 'الأجندة وورش العمل-قريبًا', href: '/workshops'},
+    {name: 'الأجندة وورش العمل-قريبًا', href: '/'},
+    // {name: 'المركز الإعلامي-قريبًا', href: '/media'},
+    {name: 'المركز الإعلامي-قريبًا', href: '/'},
+    // {name: 'الجهات والرعاة-قريبًا', href: '/#logosection'},
+    {name: 'الرعايات', href: '/sponsorships'},
+    // {name: 'التسجيل-قريبًا', href: '/reg3'},
+    {name: 'التسجيل-قريبًا', href: '/'},
+    // {name: 'المتحدثين-قريبًا', href: '/#speakersection'},
+    {name: 'المتحدثين-قريبًا', href: '/'},
 ]
 
 
 export default function CustomNavbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const location = useLocation();
+
+    const scrollToSectionFirst = () => {
+        const section = document.getElementById("firstsection");
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    };
     // Reference for the second section
     const secondSectionRef = useRef(null);
 
@@ -218,7 +234,7 @@ export default function CustomNavbar() {
                                     المحاماة والاستشارات
                                     القانونية</p>
 
-                                <Button className="mb-5" style={style.button} size="lg">قريبًا</Button>
+                                <Button className="mb-5" style={style.button} size="lg">ﺳﺠـﻞ ﺍﻵﻥ  (قريبًا)</Button>
                             </Col>
                         </Row>
 
@@ -253,14 +269,14 @@ export default function CustomNavbar() {
                             <Col md="auto"
                                  className="d-flex flex-row align-items-start justify-content-center"> {/* Updated to 'flex-row' */}
                                 {[
-                                    {href: "#youtube", img: img6, alt: "YouTube"},
-                                    {href: "#linkedin", img: img5, alt: "LinkedIn"},
-                                    {href: "#snapchat", img: img4, alt: "Snapchat"},
-                                    {href: "#instagram", img: img3, alt: "Instagram"},
-                                    {href: "#facebook", img: img2, alt: "Facebook"},
-                                    {href: "#twitter", img: img1, alt: "Twitter"},
+                                    {href: "https://youtube.com/@saudi_sba?si=xI4j9j9kprnY9f58", img: img6, alt: "YouTube"},
+                                    {href: "https://in.linkedin.com/company/saudibarassociation", img: img5, alt: "LinkedIn"},
+                                    {href: "https://www.snapchat.com/add/saudi_sba?share_id=YZt63zQ_Cdg&locale=en-US", img: img4, alt: "Snapchat"},
+                                    {href: "https://www.instagram.com/saudi_sba?igsh=dzRsaWh1ZWJpbnBy", img: img3, alt: "Instagram"},
+                                    {href: "https://www.facebook.com/saudisbaa/?_rdr", img: img2, alt: "Facebook"},
+                                    {href: "https://x.com/Saudi_SBA?t=J1GR0fDNl3eZSTAaZAGvcg&s=09", img: img1, alt: "Twitter"},
                                 ].map((item, index) => (
-                                    <a key={index} href={item.href}
+                                    <a key={index} href={item.href} target='_blank'
                                        className="text-white mb-3 mx-1"> {/* Added 'mx-1' for spacing */}
                                         <img
                                             src={item.img}
@@ -281,14 +297,14 @@ export default function CustomNavbar() {
                              }}>
                             <Col md="auto" className="d-flex flex-column align-items-start">
                                 {[
-                                    {href: "#youtube", img: img6, alt: "YouTube"},
-                                    {href: "#linkedin", img: img5, alt: "LinkedIn"},
-                                    {href: "#snapchat", img: img4, alt: "Snapchat"},
-                                    {href: "#instagram", img: img3, alt: "Instagram"},
-                                    {href: "#facebook", img: img2, alt: "Facebook"},
-                                    {href: "#twitter", img: img1, alt: "Twitter"},
+                                     {href: "https://youtube.com/@saudi_sba?si=xI4j9j9kprnY9f58", img: img6, alt: "YouTube"},
+                                     {href: "https://in.linkedin.com/company/saudibarassociation", img: img5, alt: "LinkedIn"},
+                                     {href: "https://www.snapchat.com/add/saudi_sba?share_id=YZt63zQ_Cdg&locale=en-US", img: img4, alt: "Snapchat"},
+                                     {href: "https://www.instagram.com/saudi_sba?igsh=dzRsaWh1ZWJpbnBy", img: img3, alt: "Instagram"},
+                                     {href: "https://www.facebook.com/saudisbaa/?_rdr", img: img2, alt: "Facebook"},
+                                     {href: "https://x.com/Saudi_SBA?t=J1GR0fDNl3eZSTAaZAGvcg&s=09", img: img1, alt: "Twitter"},
                                 ].map((item, index) => (
-                                    <a key={index} href={item.href} className="text-white mb-3">
+                                    <a key={index} href={item.href} target='_blank' className="text-white mb-3">
                                         <img
                                             src={item.img}
                                             alt={item.alt}
@@ -305,6 +321,8 @@ export default function CustomNavbar() {
                                  className="d-flex justify-content-center align-content-center align-items-center">
                                 <Button
                                     color="link"
+                                    href="/#firstsectionone"
+                                    
                                     style={{
                                         display: 'flex',
                                         flexDirection: 'column',
