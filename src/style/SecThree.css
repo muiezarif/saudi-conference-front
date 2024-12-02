@@ -140,3 +140,12 @@
         font-size:25px; /* Center text for all child paragraphs */
     }
 }
+
+@media only screen and (min-width: 992px) and (max-width: 1399px) {
+    .custom-last-card-new{
+        width:100%;
+        /* border-radius:15px */
+        
+    }
+
+}

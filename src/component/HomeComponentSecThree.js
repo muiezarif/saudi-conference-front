@@ -125,7 +125,7 @@ export function HomeComponentSecThree() {
                     <Col
                         key={index}
                         xl={4} lg={4} md={6} sm={6} xs={6}
-                        className={`third-col-style ${index === 0 ? 'firstCard' : index === cardData3.length - 1 ? 'lastCard' : ''}`}
+                        className={`third-col-style ${index === 0 ? 'firstCard' : index === cardData3.length - 1 ? 'lastCard custom-last-card-new' : ''}`}
                     >
                         <div onClick={goToForm} style={style.card}>
                             <div>
