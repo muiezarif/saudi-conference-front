@@ -65,12 +65,12 @@ export function HomeComponentSecThree() {
                         <div style={style.card}>
                             <CardBody>
                                 <strong style={{
-                                    fontSize: '60px',
+                                    fontSize: '58px',
                                     color: '#02b4b2',
                                     fontFamily: "DiodrumBold"
                                 }}>{data.number}</strong>
                                 <p style={{
-                                    fontSize: '30px',
+                                    fontSize: '28px',
                                     color: 'white',
                                     fontFamily: "DiodrumRegular"
                                 }}>{data.name}</p>
