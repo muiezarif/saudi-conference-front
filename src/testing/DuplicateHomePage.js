@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Button, Card, Col, Row} from 'reactstrap';
 import rightArrow from "../asset/socialMedia/rightArrow.png";
 import leftArrow from "../asset/socialMedia/leftArrow.png";
@@ -8,7 +8,7 @@ import icon1 from "../asset/icon_mm.png";
 import ConferencePage from "../pages/ConferencePage";
 import "../style/CustomSliderImage.css"
 import {HomeComponentSecOne} from "../component/HomeComponentSecOne";
-import { Element } from 'react-scroll';
+import { Element, scroller } from 'react-scroll';
 
 
 export const DuplicateHomePage = () => {
@@ -45,6 +45,14 @@ export const DuplicateHomePage = () => {
             prevIndex === 0 ? data.length - 1 : prevIndex - 1
         );
     };
+
+    useEffect(() => {
+        scroller.scrollTo("firstsectionone", {
+            duration: 800,
+            delay: 0,
+            smooth: 'easeInOutQuart',
+        });
+    },[])
 
     return (
         // <Element name="firstsectionone">
