@@ -80,7 +80,7 @@ export function HomeComponentSecOne({secondSectionRef}) {
                                     className={`mobileViewCard mobileViewCardLeft`}
                                 >
                                     <h6 className="mobileViewCardHeading">{timeLeft.days}</h6>
-                                    <p className="mobileViewCardSubHeading">ﺍﻻﻳﺎﻡ</p>
+                                    <p className="mobileViewCardSubHeading">الأيام</p>
                                 </div>
                                 <div
                                     className={`mobileViewCard `}
@@ -124,7 +124,7 @@ export function HomeComponentSecOne({secondSectionRef}) {
                                     className={`cardBase cardLeft`}
                                 >
                                     <h6 className="cardHeading">{timeLeft.days}</h6>
-                                    <p className="cardSubHeading">ﺍﻻﻳﺎﻡ</p>
+                                    <p className="cardSubHeading">الأيام</p>
                                 </div>
                                 <div
                                     className={`cardBase`}

@@ -103,7 +103,7 @@ export function Home() {
         },
         {
             title: " ﻳﻨﻌﻘﺪ",
-            subtitle: " ﻣﺆﺗﻤﺮ ﺍﻟﻤﺤﺎﻣﺎﺓ ﺍﻟﺴﻌﻮﺩﻱ ﻓﻲ ﺩﻳﺴﻤﺒﺮ 2024ﻡ ﺑﺘﻨﻈﻴﻢ ﻣﻦ ﺍﻟﻬﻴﺌﺔ ﺍﻟﺴﻌﻮﺩﻳﺔ ﻟﻠﻤﺤﺎﻣﻴﻦ ﻳﻮﻣﻲ 22 ﻭ 23 ﺩﻳﺴﻤﺒﺮ 2024ﻡ ﺑﻤﺪﻳﻨﺔ ﺍﻟﺮﻳﺎﺽ، ﺗﺤﺖ ﺷﻌﺎﺭ \"ﺗﻄﻮﺭﺍﺕ ﻗﻄﺎﻉ ﺍﻟﻤﺤﺎﻣﺎﺓ ﻭﺍﻻﺳﺘﺸﺎﺭﺍﺕ ﺍﻟﻘﺎﻧﻮﻧﻴﺔ",
+            subtitle: " ﻣﺆﺗﻤﺮ ﺍﻟﻤﺤﺎﻣﺎﺓ ﺍﻟﺴﻌﻮﺩﻱ ﻓﻲ ﺩﻳﺴﻤﺒﺮ 2024ﻡ ﺑﺘﻨﻈﻴﻢ ﻣﻦ ﺍﻟﻬﻴﺌﺔ ﺍﻟﺴﻌﻮﺩﻳﺔ ﻟﻠﻤﺤﺎﻣﻴﻦ ﻳﻮﻣﻲ 22 ﻭ 23 ﺩﻳﺴﻤﺒﺮ 2024ﻡ ﺑﻤﺪﻳﻨﺔ ﺍﻟﺮﻳﺎﺽ، في فندق الفيرمونت، ﺗﺤﺖ ﺷﻌﺎﺭ\"ﺗﻄﻮﺭﺍﺕ ﻗﻄﺎﻉ ﺍﻟﻤﺤﺎﻣﺎﺓ ﻭﺍﻻﺳﺘﺸﺎﺭﺍﺕ ﺍﻟﻘﺎﻧﻮﻧﻴﺔ",
             img: icon3
         },
     ];
@@ -181,7 +181,7 @@ export function Home() {
                                     className={`mobileViewCard mobileViewCardLeft`}
                                 >
                                     <h6 className="mobileViewCardHeading">{timeLeft.days}</h6>
-                                    <p className="mobileViewCardSubHeading">ﺍﻻﻳﺎﻡ</p>
+                                    <p className="mobileViewCardSubHeading">الأيام</p>
                                 </div>
                                 <div
                                     className={`mobileViewCard `}
@@ -226,7 +226,7 @@ export function Home() {
                                     className={`cardBase cardLeft`}
                                 >
                                     <h6 className="cardHeading">{timeLeft.days}</h6>
-                                    <p className="cardSubHeading">ﺍﻻﻳﺎﻡ</p>
+                                    <p className="cardSubHeading">الأيام</p>
                                 </div>
                                 <div
                                     className={`cardBase`}

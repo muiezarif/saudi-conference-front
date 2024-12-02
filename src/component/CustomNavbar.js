@@ -229,7 +229,7 @@ export default function CustomNavbar() {
                         <Row className="justify-content-center">
                             <Col md="8">
                                 <h1 className="display-4 mb-3 mt-4" style={{fontFamily: 'DiodrumBold'}}>تحت عنوان</h1>
-                                <p className="lead mb-4"
+                                <p className="display-4 lead mb-4"
                                    style={{fontFamily: "DiodrumMedium", marginTop: "-15px"}}>تطورات قطاع
                                     المحاماة والاستشارات
                                     القانونية</p>
@@ -244,9 +244,8 @@ export default function CustomNavbar() {
                                 justifyContent: 'center',
                                 alignItems: 'center',
                             }}>
-                                <p style={{margin: '0', padding: '0 10px', textAlign: "center"}}>
-                                    مدينة الرياض
-                                </p>
+                                <p style={{margin: '0', padding: '0 10px', textAlign: "center"}}><a style={{margin: '0', padding: '0 10px', textAlign: "center",color:"white",textDecoration:"none"}} href='https://maps.app.goo.gl/mHifqS1R83RSMq8P9' target='_blank'>
+                                الرياض، فندق الفيرمونت                                </a></p>
                                 <img src={img7} style={{width: '15px', paddingTop: "10px"}} alt=""/>
                                 <p style={{margin: '0', paddingLeft: "20px"}}>
                                     م
@@ -258,7 +257,7 @@ export default function CustomNavbar() {
                                     ديسمبر
                                 </p>
                                 <p style={{margin: '0'}}>
-                                    22 - 23
+                                    23 - 22
                                 </p>
                                 <img src={img8} style={{width: '25px', paddingLeft: '5px', paddingTop: "8px"}} alt=""/>
                             </Col>
@@ -269,12 +268,12 @@ export default function CustomNavbar() {
                             <Col md="auto"
                                  className="d-flex flex-row align-items-start justify-content-center"> {/* Updated to 'flex-row' */}
                                 {[
-                                    {href: "https://youtube.com/@saudi_sba?si=xI4j9j9kprnY9f58", img: img6, alt: "YouTube"},
-                                    {href: "https://in.linkedin.com/company/saudibarassociation", img: img5, alt: "LinkedIn"},
-                                    {href: "https://www.snapchat.com/add/saudi_sba?share_id=YZt63zQ_Cdg&locale=en-US", img: img4, alt: "Snapchat"},
-                                    {href: "https://www.instagram.com/saudi_sba?igsh=dzRsaWh1ZWJpbnBy", img: img3, alt: "Instagram"},
-                                    {href: "https://www.facebook.com/saudisbaa/?_rdr", img: img2, alt: "Facebook"},
-                                    {href: "https://x.com/Saudi_SBA?t=J1GR0fDNl3eZSTAaZAGvcg&s=09", img: img1, alt: "Twitter"},
+                                    // {href: "https://youtube.com/@saudi_sba?si=xI4j9j9kprnY9f58", img: img6, alt: "YouTube"},
+                                    {href: "https://www.linkedin.com/showcase/105401716/admin/dashboard", img: img5, alt: "LinkedIn"},
+                                    // {href: "https://www.snapchat.com/add/saudi_sba?share_id=YZt63zQ_Cdg&locale=en-US", img: img4, alt: "Snapchat"},
+                                    {href: "https://www.instagram.com/sba_conference/profilecard/?igsh=MW96a3liZHN2MXRhNg==", img: img3, alt: "Instagram"},
+                                    {href: "https://www.facebook.com/share/1Aq29xi3rR/?mibextid=kFxxJD", img: img2, alt: "Facebook"},
+                                    {href: "https://x.com/SBA_Conference ", img: img1, alt: "Twitter"},
                                 ].map((item, index) => (
                                     <a key={index} href={item.href} target='_blank'
                                        className="text-white mb-3 mx-1"> {/* Added 'mx-1' for spacing */}
@@ -297,12 +296,12 @@ export default function CustomNavbar() {
                              }}>
                             <Col md="auto" className="d-flex flex-column align-items-start">
                                 {[
-                                     {href: "https://youtube.com/@saudi_sba?si=xI4j9j9kprnY9f58", img: img6, alt: "YouTube"},
-                                     {href: "https://in.linkedin.com/company/saudibarassociation", img: img5, alt: "LinkedIn"},
-                                     {href: "https://www.snapchat.com/add/saudi_sba?share_id=YZt63zQ_Cdg&locale=en-US", img: img4, alt: "Snapchat"},
-                                     {href: "https://www.instagram.com/saudi_sba?igsh=dzRsaWh1ZWJpbnBy", img: img3, alt: "Instagram"},
-                                     {href: "https://www.facebook.com/saudisbaa/?_rdr", img: img2, alt: "Facebook"},
-                                     {href: "https://x.com/Saudi_SBA?t=J1GR0fDNl3eZSTAaZAGvcg&s=09", img: img1, alt: "Twitter"},
+                                    // {href: "https://youtube.com/@saudi_sba?si=xI4j9j9kprnY9f58", img: img6, alt: "YouTube"},
+                                    {href: "https://www.linkedin.com/showcase/105401716/admin/dashboard", img: img5, alt: "LinkedIn"},
+                                    // {href: "https://www.snapchat.com/add/saudi_sba?share_id=YZt63zQ_Cdg&locale=en-US", img: img4, alt: "Snapchat"},
+                                    {href: "https://www.instagram.com/sba_conference/profilecard/?igsh=MW96a3liZHN2MXRhNg==", img: img3, alt: "Instagram"},
+                                    {href: "https://www.facebook.com/share/1Aq29xi3rR/?mibextid=kFxxJD", img: img2, alt: "Facebook"},
+                                    {href: "https://x.com/SBA_Conference ", img: img1, alt: "Twitter"},
                                 ].map((item, index) => (
                                     <a key={index} href={item.href} target='_blank' className="text-white mb-3">
                                         <img

@@ -15,7 +15,7 @@ const cardData3 = [
     {name: 'ﺍﻟﻔﻀــــــــــﻲ', cur: 'فرص', number: '6'},
     {name: ' ﺍﻟﺬﻫﺒـــــــــﻲ', cur: 'فرص', number: '5'},
     {name: 'ﺍﻟﺒﻼﺗﻴﻨـــــــﻲ', cur: 'فرص', number: '4'},
-    {name: 'الاستراتيجية', cur: '', number: 'رعاية حصرية'},
+    {name: 'الاستراتيجي', cur: '', number: 'رعاية حصرية'},
 ];
 const workshops2 = [
     {title: 'عنوان الجلسة 1', date: '2024/12/23', time: '9 - 10 صباحًا'},
