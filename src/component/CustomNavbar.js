@@ -244,19 +244,19 @@ export default function CustomNavbar() {
                                 justifyContent: 'center',
                                 alignItems: 'center',
                             }}>
-                                <p style={{margin: '0', padding: '0 10px', textAlign: "center"}}><a style={{margin: '0', padding: '0 10px', textAlign: "center",color:"white",textDecoration:"none"}} href='https://maps.app.goo.gl/mHifqS1R83RSMq8P9' target='_blank'>
+                                <p style={{margin: '0', padding: '0 10px', textAlign: "center"}}><a style={{margin: '0', padding: '0 10px', textAlign: "center",color:"white",textDecoration:"none"}} className='custom-font-size-nav-link' href='https://maps.app.goo.gl/mHifqS1R83RSMq8P9' target='_blank'>
                                 الرياض، فندق الفيرمونت                                </a></p>
                                 <img src={img7} style={{width: '15px', paddingTop: "10px"}} alt=""/>
-                                <p style={{margin: '0', paddingLeft: "20px"}}>
+                                <p style={{margin: '0', paddingLeft: "20px"}} className='custom-font-size-nav-link'>
                                     م
                                 </p>
-                                <p style={{margin: '0'}}>
+                                <p style={{margin: '0'}} className='custom-font-size-nav-link'>
                                     2024
                                 </p>
-                                <p style={{margin: '0', paddingLeft: "10px"}}>
+                                <p style={{margin: '0', paddingLeft: "10px"}} className='custom-font-size-nav-link'>
                                     ديسمبر
                                 </p>
-                                <p style={{margin: '0'}}>
+                                <p style={{margin: '0'}} className='custom-font-size-nav-link'>
                                     23 - 22
                                 </p>
                                 <img src={img8} style={{width: '25px', paddingLeft: '5px', paddingTop: "8px"}} alt=""/>
