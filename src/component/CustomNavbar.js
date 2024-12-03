@@ -63,17 +63,13 @@ const navigation = [
 // ]
 
 const navigation2 = [
-    {name: 'عن المؤتمر', href: '/'},
-    // {name: 'الأجندة وورش العمل-قريبًا', href: '/workshops'},
-    {name: 'الأجندة وورش العمل-قريبًا', href: '/'},
-    // {name: 'المركز الإعلامي-قريبًا', href: '/media'},
-    {name: 'المركز الإعلامي-قريبًا', href: '/'},
-    // {name: 'الجهات والرعاة-قريبًا', href: '/#logosection'},
+    {name: 'المركز الإعلامي', href: '/#'},
+    {name: 'التسجيل', href: '/#'},
     {name: 'الرعايات', href: '/sponsorships'},
-    // {name: 'التسجيل-قريبًا', href: '/reg3'},
-    {name: 'التسجيل-قريبًا', href: '/'},
-    // {name: 'المتحدثين-قريبًا', href: '/#speakersection'},
-    {name: 'المتحدثين-قريبًا', href: '/'},
+    {name: 'الجهات المشاركة', href: '/#'},
+    {name: 'الجلسات الحوارية وورش العمل', href: '/#'},
+    {name: 'الأجندة', href: '/#'},
+    {name: 'عن المؤتمر', href: '/'},
 ]
 
 
