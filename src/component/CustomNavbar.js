@@ -22,20 +22,45 @@ import bannerLogo from "../asset/Logo.png";
 import { scroller } from 'react-scroll';
 
 
+// const navigation = [
+//     // {name: 'المتحدثين', href: '/#speakersection'},
+//     {name: 'المتحدثين', href: '/#'},
+//     // {name: 'التسجيل', href: '/reg3'},
+//     {name: 'التسجيل', href: '/#'},
+//     {name: 'الرعايات', href: '/sponsorships'},
+//     // {name: 'الجهات والرعاة', href: '/#logosection'},
+//     {name: 'الجهات والرعاة', href: '/#'},
+//     // {name: 'المركز الإعلامي', href: '/media'},
+//     {name: 'المركز الإعلامي', href: '/#'},
+//     // {name: 'الأجندة وورش العمل', href: '/workshops'},
+//     {name: 'الأجندة وورش العمل', href: '/#'},
+//     {name: 'عن المؤتمر', href: '/'},
+// ]
+
 const navigation = [
-    // {name: 'المتحدثين', href: '/#speakersection'},
-    {name: 'المتحدثين', href: '/#'},
-    // {name: 'التسجيل', href: '/reg3'},
+   
+    {name: 'المركز الإعلامي', href: '/#'},
     {name: 'التسجيل', href: '/#'},
     {name: 'الرعايات', href: '/sponsorships'},
-    // {name: 'الجهات والرعاة', href: '/#logosection'},
-    {name: 'الجهات والرعاة', href: '/#'},
-    // {name: 'المركز الإعلامي', href: '/media'},
-    {name: 'المركز الإعلامي', href: '/#'},
-    // {name: 'الأجندة وورش العمل', href: '/workshops'},
-    {name: 'الأجندة وورش العمل', href: '/#'},
+    {name: 'الجهات المشاركة', href: '/#'},
+    {name: 'الجلسات الحوارية وورش العمل', href: '/#'},
+    {name: 'الأجندة', href: '/#'},
     {name: 'عن المؤتمر', href: '/'},
 ]
+
+// const navigation2 = [
+//     {name: 'عن المؤتمر', href: '/'},
+//     // {name: 'الأجندة وورش العمل-قريبًا', href: '/workshops'},
+//     {name: 'الأجندة وورش العمل-قريبًا', href: '/'},
+//     // {name: 'المركز الإعلامي-قريبًا', href: '/media'},
+//     {name: 'المركز الإعلامي-قريبًا', href: '/'},
+//     // {name: 'الجهات والرعاة-قريبًا', href: '/#logosection'},
+//     {name: 'الرعايات', href: '/sponsorships'},
+//     // {name: 'التسجيل-قريبًا', href: '/reg3'},
+//     {name: 'التسجيل-قريبًا', href: '/'},
+//     // {name: 'المتحدثين-قريبًا', href: '/#speakersection'},
+//     {name: 'المتحدثين-قريبًا', href: '/'},
+// ]
 
 const navigation2 = [
     {name: 'عن المؤتمر', href: '/'},
