@@ -34,7 +34,7 @@ function App() {
                 <Route path="/library" element={<ImageLibrary/>}/>
                 <Route path="/video" element={<Vedio/>}/>
                 <Route path="/news" element={<News/>}/>
-                <Route path="/form-input1" element={<FormInput1/>}/>
+                <Route path="/confirm-invitation" element={<FormInput1/>}/>
             </Routes>
         </BrowserRouter>
     );
