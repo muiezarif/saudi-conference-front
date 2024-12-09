@@ -15,6 +15,7 @@ import ImageLibrary from "./pages/ImageLibrary";
 import {News} from "./pages/News";
 import Vedio from "./pages/VideoPage"
 import {RegMethodOneDuplicate} from "./pages/RegMethodOneDuplicate";
+import { FormInput1 } from './pages/FormInput1';
 
 function App() {
     return (
@@ -33,6 +34,7 @@ function App() {
                 <Route path="/library" element={<ImageLibrary/>}/>
                 <Route path="/video" element={<Vedio/>}/>
                 <Route path="/news" element={<News/>}/>
+                <Route path="/form-input1" element={<FormInput1/>}/>
             </Routes>
         </BrowserRouter>
     );
