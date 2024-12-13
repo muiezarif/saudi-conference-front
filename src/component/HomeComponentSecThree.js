@@ -6,6 +6,8 @@ import "../style/SecThree.css";
 import {useNavigate} from "react-router-dom";
 import button2 from "../asset/SliderImage/Button1.png";
 import button1 from "../asset/SliderImage/Button2.png";
+import localFile from "../data/downloadfile2.pdf";
+
 
 export function HomeComponentSecThree() {
 
@@ -30,6 +32,13 @@ export function HomeComponentSecThree() {
     const goToForm2 = () => {
         // navigate('/reg3');
         // window.open('/reg3', '_blank');
+    };
+
+    const handleDownload = () => {
+        const link = document.createElement('a');
+        link.href = localFile;
+        link.download = 'localFile.pdf';
+        link.click();
     };
 
     const style = {
@@ -89,8 +98,8 @@ export function HomeComponentSecThree() {
                         xl={4} lg={4} md={6} sm={6} xs={6}
                         className={`second-col-style ${index === 0 ? 'firstCard' : index === cardData2.length - 1 ? 'lastCard' : ''}`}
                     >
-                        <div onClick={goToForm2} style={style.card}>
-                            <div>
+                        <div  style={style.card}>
+                            <div onClick={goToForm2}>
                                 <p className="p1">{data.name}</p>
                                 <p className="p2">{data.name1}</p>
                                 <div className="p3">
@@ -103,12 +112,19 @@ export function HomeComponentSecThree() {
                                     
                                 </div>
                                 <div>
-                                    {index === 1 ?<p style={{fontSize:13,fontWeight:'normal',marginTop:5,color:"#fff"}}>(خصم 15% لأعضاء هيئة المحامين)</p>:null}
+                                    {index === 1 ?<p style={{fontSize:13,fontWeight:'normal',marginTop:5,marginBottom:0,color:"#fff"}}>(خصم 15% لأعضاء هيئة المحامين)</p>:null}
+                                    </div>
+                                    <div>
+                                    {<p onClick={handleDownload} className='absoluteStyle' style={{fontSize:15,fontWeight:'bold',color:"#fff",marginTop:index === 1?0:40,marginBottom:0,textDecoration:"underline"}}>مزايا التذكرة</p>}
                                     </div>
                             </div>
+                            
                         </div>
+
                     </Col>
+                    
                 ))}
+
             </Row>
 
             {/* <Row className="mt-5 mb-5 justify-content-center align-items-center text-center"

@@ -37,6 +37,10 @@
     justify-content: center;
     margin-bottom: 25px;
 }
+.absoluteStyle{
+    position:"absolute";
+    top:20
+}
 
 .third-col-style {
     background: #0b1a8a;
@@ -149,3 +153,4 @@
     }
 
 }
+
