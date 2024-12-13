@@ -255,7 +255,7 @@ export default function CustomNavbar() {
                                     المحاماة والاستشارات
                                     القانونية</p>
 
-                                <Button className="mb-5" style={style.button} size="lg">ﺳﺠـﻞ ﺍﻵﻥ  (قريبًا)</Button>
+                                <Button onClick={() => window.open('https://register.slc.sba.gov.sa', '_blank')} className="mb-5" style={style.button} size="lg">ﺳﺠـﻞ ﺍﻵﻥ </Button>
                             </Col>
                         </Row>
 
