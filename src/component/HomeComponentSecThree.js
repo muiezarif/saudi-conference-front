@@ -115,7 +115,7 @@ export function HomeComponentSecThree() {
                                     {index === 1 ?<p style={{fontSize:13,fontWeight:'normal',marginTop:5,marginBottom:0,color:"#fff"}}>(خصم 15% لأعضاء هيئة المحامين)</p>:null}
                                     </div>
                                     <div>
-                                    {<p onClick={handleDownload} className='absoluteStyle' style={{fontSize:15,fontWeight:'bold',color:"#fff",marginTop:index === 1?0:40,marginBottom:0,textDecoration:"underline"}}>مزايا التذكرة</p>}
+                                    {<p onClick={handleDownload} className={index === 1?'absoluteStyleCenter':'absoluteStyle'} style={{fontSize:15,fontWeight:'bold',color:"#fff",marginBottom:0,textDecoration:"underline",textDecorationThickness: '2px',textUnderlineOffset: '5px'}}>مزايا التذكرة</p>}
                                     </div>
                             </div>
                             

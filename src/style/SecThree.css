@@ -38,8 +38,10 @@
     margin-bottom: 25px;
 }
 .absoluteStyle{
-    position:"absolute";
-    top:20
+    margin-top:60px
+}
+.absoluteStyleCenter{
+    margin-top:40px
 }
 
 .third-col-style {
@@ -109,6 +111,13 @@
     .p3 {
         font-size: 16px;
     }
+    .absoluteStyle{
+        margin-top:100px
+    }
+    .absoluteStyleCenter{
+        margin-top:80px
+    }
+
 }
 
 @media only screen and (max-width: 588px) {
@@ -123,6 +132,12 @@
         height: 150px;
         width: 150px;
         border-radius: 15px;
+    }
+    .absoluteStyle{
+        margin-top:40px
+    }
+    .absoluteStyleCenter{
+        margin-top:0px
     }
 }
 
@@ -142,6 +157,12 @@
     .third-col-style .p2,
     .third-col-style .p3 {
         font-size:25px; /* Center text for all child paragraphs */
+    }
+    .absoluteStyle{
+        margin-top:100px
+    }
+    .absoluteStyleCenter{
+        margin-top:80px
     }
 }
 
