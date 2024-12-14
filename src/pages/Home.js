@@ -322,7 +322,7 @@ export function Home() {
                 <HomeComponentSecTwo/>
                 <NewImageSlider/>
                 <HomeComponentSecThree/>
-                {/* <LogoPage/> */}
+                <LogoPage/>
             </div>
         </Base>
     )

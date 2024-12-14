@@ -9,6 +9,7 @@ import ConferencePage from "../pages/ConferencePage";
 import "../style/CustomSliderImage.css"
 import {HomeComponentSecOne} from "../component/HomeComponentSecOne";
 import { Element, scroller } from 'react-scroll';
+import LogoPage from '../pages/LogoPage';
 
 
 export const DuplicateHomePage = () => {
@@ -120,7 +121,7 @@ export const DuplicateHomePage = () => {
                 <ConferencePage/>
                 {/*<NewImageSlider/>*/}
                 {/*<HomeComponentSecThree/>*/}
-                {/*<LogoPage/>*/}
+                <LogoPage/>
                 {/* Display Components Below Slider */}
                 {/*<div className="mt-4">{renderComponents()}</div>*/}
             </div>
