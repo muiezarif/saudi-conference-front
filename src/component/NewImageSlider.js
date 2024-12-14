@@ -51,7 +51,7 @@ const NewImageSlider = () => {
 
     return (
         <Element name='speakersection'>
-        {/* <Container className="mt-2">
+        <Container className="mt-2">
             <h2 className='mb-5 custom-heading'>المتحدثين</h2>
             <Row className="justify-content-center align-items-center p-0 m-0">
                 <Col xl={1} md={1} sm={1} xs={1} style={{textAlign: 'right', margin: "0", padding: "0"}}>
@@ -99,7 +99,7 @@ const NewImageSlider = () => {
                     </Button>
                 </Col>
             </Row>
-        </Container> */}
+        </Container>
         </Element>
     );
 };
