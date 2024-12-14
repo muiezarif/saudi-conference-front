@@ -292,7 +292,7 @@ export default function CustomNavbar() {
                                 alignItems: 'center',
                             }}>
                                 <p style={{margin: '0'}} className='custom-font-size-nav-link'>
-                                    09:00pm - 12:00 AM
+                                    12:00 am - 09:00 pm
                                 </p>
                                 <img src={img9} style={{width: '25px', paddingLeft: '5px', paddingTop: "8px"}} alt=""/>
 
