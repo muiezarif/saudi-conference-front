@@ -52,10 +52,22 @@ const LogoPage = () => {
                 <Col xs="6" sm="4" md="2" className="text-center mb-4">
                     <img src={image1} alt="Ministry of Commerce" style={imageStyle}/>
                 </Col>
+                <Col xs="6" sm="4" md="2" className="text-center mb-4">
+                    <img src={image6} alt="Ministry of Commerce" style={imageStyle}/>
+                </Col>
+                <Col xs="6" sm="4" md="2" className="text-center mb-4">
+                    <img src={image7} alt="Ministry of Commerce" style={imageStyle}/>
+                </Col>
+                <Col xs="6" sm="4" md="2" className="text-center mb-4">
+                    <img src={image8} alt="Ministry of Commerce" style={imageStyle}/>
+                </Col>
+                <Col xs="6" sm="4" md="2" className="text-center mb-4">
+                    <img src={image9} alt="Ministry of Commerce" style={imageStyle}/>
+                </Col>
             </Row>
 
             {/* second row company logo */}
-            <h2 className="mb-4" style={{color: '#2a2a94', fontFamily: "DiodrumBold", textAlign: 'right'}}>الرعاة</h2>
+            {/* <h2 className="mb-4" style={{color: '#2a2a94', fontFamily: "DiodrumBold", textAlign: 'right'}}>الرعاة</h2>
             <Row className="justify-content-center align-items-center mb-5" style={{gap: '55px'}}>
                 <Col xs="6" sm="4" md="2" className="text-center mb-4">
                     <img src={image6} alt="Zakat, Tax and Customs Authority" style={imageStyle}/>
@@ -69,10 +81,10 @@ const LogoPage = () => {
                 <Col xs="6" sm="4" md="2" className="text-center mb-4">
                     <img src={image9} alt="Monshaat" style={imageStyle}/>
                 </Col>
-                {/* <Col xs="6" sm="4" md="2" className="text-center mb-4">
+                <Col xs="6" sm="4" md="2" className="text-center mb-4">
                     <img src={image1} alt="Ministry of Commerce" style={imageStyle}/>
-                </Col> */}
-            </Row>
+                </Col>
+            </Row> */}
         </Container>
         </section>
         </Element>
