@@ -10,6 +10,7 @@ import Logo from "../asset/HeaderLogo.png";
 import "../style/fonts.css";
 import img7 from "../asset/socialMedia/location.png";
 import img8 from "../asset/icon_calender.png";
+import img9 from "../asset/timeicon.png";
 import img6 from "../asset/socialMedia/img6.png";
 import img5 from "../asset/socialMedia/img5.png";
 import img4 from "../asset/socialMedia/img4.png";
@@ -281,6 +282,20 @@ export default function CustomNavbar() {
                                     23 - 22
                                 </p>
                                 <img src={img8} style={{width: '25px', paddingLeft: '5px', paddingTop: "8px"}} alt=""/>
+                            </Col>
+                            
+                        </Row>
+                        <Row className="mb-4">
+                        <Col style={{
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                            }}>
+                                <p style={{margin: '0'}} className='custom-font-size-nav-link'>
+                                    09:00pm - 12:00 AM
+                                </p>
+                                <img src={img9} style={{width: '25px', paddingLeft: '5px', paddingTop: "8px"}} alt=""/>
+
                             </Col>
                         </Row>
 

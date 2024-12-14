@@ -1,7 +1,7 @@
 const cardData = [
     {number: '+10', name: 'شركاء',},
     {number: '+2000', name: 'زائر'},
-    {number: '8', name: 'جلسات حوارية'},
+    {number: '6', name: 'جلسات حوارية'},
     {number: '18', name: 'ورشة عمل'},
     {number: '+30', name: 'متحدث وخبير'},
 ];
