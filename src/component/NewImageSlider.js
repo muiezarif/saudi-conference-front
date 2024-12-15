@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Button, Card, CardImg, Col, Container, Row} from 'reactstrap';
-import image1 from "../asset/SliderImage/sliderImg1.png";
+import image1 from "../asset/SliderImage/1.png";
 import image2 from "../asset/SliderImage/sliderImg2.png";
 import image3 from "../asset/SliderImage/sliderImg3.png";
 import image4 from "../asset/SliderImage/sliderImg4.png";
