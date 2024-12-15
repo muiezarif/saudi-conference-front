@@ -9,6 +9,7 @@ import image6 from "../asset/companyLogo/Quality of Life Program.png";
 import image7 from "../asset/companyLogo/Saudi Business Center-01.png";
 import image8 from "../asset/companyLogo/Social-Development-Bank-01-01.png";
 import image9 from "../asset/companyLogo/Zakat Tax and Customs Authority 2-01.png";
+import image10 from "../asset/companyLogo/image001.png";
 import { Element } from 'react-scroll';
 
 const LogoPage = () => {
@@ -63,6 +64,9 @@ const LogoPage = () => {
                 </Col>
                 <Col xs="6" sm="4" md="2" className="text-center mb-4">
                     <img src={image9} alt="Ministry of Commerce" style={imageStyle}/>
+                </Col>
+                <Col xs="6" sm="4" md="2" className="text-center mb-4">
+                    <img src={image10} alt="Ministry of Commerce" style={imageStyle}/>
                 </Col>
             </Row>
 
