@@ -52,17 +52,17 @@ const NewImageSlider = () => {
     ];
 
     const folder1 = [
-        {src: folder1_image1}, {src: folder1_image2}, {src: folder1_image3}, {src: folder1_image4}, {src: folder1_image5},
+        {src: folder1_image1}, {src: folder1_image2}, {src: folder1_image3}, {src: folder1_image5},
         {src: folder1_image6}, {src: folder1_image7}, {src: folder1_image8}, {src: folder1_image9}, {src: folder1_image10},
         {src: folder1_image11}, {src: folder1_image12}, {src: folder1_image13}, {src: folder1_image14}];
 
     const folder2 = [
-        {src: folder2_image1}, {src: folder2_image2}, {src: folder2_image3}, {src: folder2_image4}, {src: folder2_image5},
+         {src: folder2_image2}, {src: folder2_image3}, {src: folder2_image4}, {src: folder2_image5},
         {src: folder2_image6}, {src: folder2_image7}, {src: folder2_image8}, {src: folder2_image9}, {src: folder2_image10},
         {src: folder2_image11}];
 
     const folder3 = [
-        {src: folder3_image1}, {src: folder3_image2}, {src: folder3_image3}, {src: folder3_image4}, {src: folder3_image5},
+        {src: folder3_image1}, {src: folder3_image2}, {src: folder3_image3}, {src: folder3_image4}, {src: folder3_image5},{src:folder1_image4},
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -136,7 +136,8 @@ const NewImageSlider = () => {
     return (
         <Element name='speakersection'>
             <Container className="mt-2">
-                <h2 className='mb-5 custom-heading'>المتحدثين</h2>
+                {/* <h2 className='mb-5 custom-heading'>المتحدثين</h2> */}
+                <h2 className='mb-5 custom-heading'>متحدثين الجلسات</h2>
                 <Row className="justify-content-center align-items-center p-0 mb-5">
                     <Col xl={1} md={1} sm={1} xs={1} style={{textAlign: 'right', margin: "0", padding: "0"}}>
                         <Button onClick={prevSlide} className="mr-2"
@@ -183,6 +184,8 @@ const NewImageSlider = () => {
                         </Button>
                     </Col>
                 </Row>
+                <h2 className='mb-5 custom-heading'>محاورين الجلسات</h2>
+
                 <Row className="justify-content-center align-items-center p-0 mb-5">
                     <Col xl={1} md={1} sm={1} xs={1} style={{textAlign: 'right', margin: "0", padding: "0"}}>
                         <Button onClick={folder2PrevSlide} className="mr-2"
@@ -229,6 +232,8 @@ const NewImageSlider = () => {
                         </Button>
                     </Col>
                 </Row>
+                <h2 className='mb-5 custom-heading'>متحدثين الورش</h2>
+
                 <Row className="justify-content-center align-items-center p-0 m-0">
                     <Col xl={1} md={1} sm={1} xs={1} style={{textAlign: 'right', margin: "0", padding: "0"}}>
                         <Button onClick={folder3PrevSlide} className="mr-2"
