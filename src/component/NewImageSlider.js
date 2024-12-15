@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Button, Card, CardImg, Col, Container, Row} from 'reactstrap';
 import image1 from "../asset/SliderImage/sliderImg1.png";
 import image2 from "../asset/SliderImage/sliderImg2.png";
@@ -9,7 +9,6 @@ import rightArrow from "../asset/socialMedia/rightArrow.png";
 import leftArrow from "../asset/socialMedia/leftArrow.png";
 import "../style/NewImageSlider.css";
 import {Element} from 'react-scroll';
-import {folder1, folder2, folder3} from '../data/NewImageSliderData';
 import folder1_image1 from '../asset/Folder1/A1.png'
 import folder1_image2 from '../asset/Folder1/A2.png'
 import folder1_image3 from '../asset/Folder1/A3.png'
