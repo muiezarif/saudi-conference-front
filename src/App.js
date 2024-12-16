@@ -16,6 +16,7 @@ import {News} from "./pages/News";
 import Vedio from "./pages/VideoPage"
 import {RegMethodOneDuplicate} from "./pages/RegMethodOneDuplicate";
 import { FormInput1 } from './pages/FormInput1';
+import { FormInput2 } from './pages/FormInput2';
 
 function App() {
     return (
@@ -35,6 +36,7 @@ function App() {
                 <Route path="/video" element={<Vedio/>}/>
                 <Route path="/news" element={<News/>}/>
                 <Route path="/confirm-invitation" element={<FormInput1/>}/>
+                <Route path="/exhibitor-registration" element={<FormInput2/>}/>
             </Routes>
         </BrowserRouter>
     );
