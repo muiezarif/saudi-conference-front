@@ -6,6 +6,9 @@ import iconSit from "../asset/icon_sit.png";
 import iconCal from "../asset/icon_calender.png";
 import iconClock from "../asset/icon_clock.png";
 import iconWrite from "../asset/icon_write.png";
+import image1 from '../asset/Untitled.png'
+import image2 from '../asset/Untitled2.png'
+
 import '../style/Calendar.css';
 
 
@@ -153,7 +156,20 @@ const Calendar = () => {
     return (
         <Base>
             <Container>
-                <h1 style={{
+            <Row style={{display: "flex", justifyContent: "center"}}>
+            <Col className={`d-flex justify-content-center flex-wrap`}>
+            <img src={image1} className='imgBar'/>
+
+            </Col>
+            </Row>
+            <Row style={{display: "flex", justifyContent: "center"}}>
+            <Col className={`d-flex justify-content-center flex-wrap`}>
+            <img src={image2} className='imgBar'/>
+
+            </Col>
+            </Row>
+
+                {/* <h1 style={{
                     textAlign: "right",
                     fontFamily: "DiodrumBold",
                     marginBottom: "25px",
@@ -193,12 +209,12 @@ const Calendar = () => {
                         <div style={{
                             backgroundColor: "#00b4b2",
                             width: "80px",
-                            height: height, // Responsive height
-                            minHeight: minHeight, // Mobile view minHeight
+                            height: height, 
+                            minHeight: minHeight, 
                             alignContent: "center",
                             textAlign: "center",
                             color: "white",
-                            position: window.innerWidth <= 768 ? "absolute" : "static", // Position change on mobile
+                            position: window.innerWidth <= 768 ? "absolute" : "static",
                             right: window.innerWidth <= 768 ? 0 : "auto",
                             marginRight: rightColMargin,
                         }}>
@@ -209,7 +225,6 @@ const Calendar = () => {
                     </Col>
                 </Row>
 
-                {/* Second Row */}
                 <h1 style={{
                     textAlign: "right",
                     marginTop: "50px",
@@ -223,7 +238,6 @@ const Calendar = () => {
                         {data2.map(item => (
                             <div style={{
                                 backgroundColor: "#0c0c9c",
-                                // backgroundColor: background,
                                 width: isMobile,
                                 height: customCardHeight,
                                 alignContent: "center",
@@ -263,7 +277,8 @@ const Calendar = () => {
                                 الثاني</p>
                         </div>
                     </Col>
-                </Row>
+                </Row> */}
+
             </Container>
         </Base>
     );

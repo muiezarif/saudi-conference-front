@@ -44,7 +44,7 @@ const navigation = [
     {name: 'التسجيل', href: '/#'},
     {name: 'الرعايات', href: '/sponsorships'},
     {name: 'الجهات المشاركة', href: '/#'},
-    {name: 'الجلسات الحوارية وورش العمل', href: '/#'},
+    {name: 'الجلسات الحوارية وورش العمل', href: '/workshops'},
     {name: 'الأجندة', href: '/#'},
     {name: 'عن المؤتمر', href: '/'},
 ]
@@ -68,7 +68,7 @@ const navigation2 = [
     {name: 'التسجيل', href: '/#'},
     {name: 'الرعايات', href: '/sponsorships'},
     {name: 'الجهات المشاركة', href: '/#'},
-    {name: 'الجلسات الحوارية وورش العمل', href: '/#'},
+    {name: 'الجلسات الحوارية وورش العمل', href: '/workshops'},
     {name: 'الأجندة', href: '/#'},
     {name: 'عن المؤتمر', href: '/'},
 ]
