@@ -6,8 +6,8 @@ import iconSit from "../asset/icon_sit.png";
 import iconCal from "../asset/icon_calender.png";
 import iconClock from "../asset/icon_clock.png";
 import iconWrite from "../asset/icon_write.png";
-import image1 from '../asset/Untitled.png'
-import image2 from '../asset/Untitled2.png'
+import image1 from '../asset/one.png'
+import image2 from '../asset/two.png'
 
 import '../style/Calendar.css';
 
