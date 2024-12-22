@@ -184,7 +184,9 @@ const NewImageSlider = () => {
                         </Button>
                     </Col>
                 </Row>
-                <h2 className='mb-5 custom-heading'>محاورين الجلسات</h2>
+                <h2 className='mb-5 custom-heading'>متحدثين الورش</h2>
+
+                {/* <h2 className='mb-5 custom-heading'>محاورين الجلسات</h2> */}
 
                 <Row className="justify-content-center align-items-center p-0 mb-5">
                     <Col xl={1} md={1} sm={1} xs={1} style={{textAlign: 'right', margin: "0", padding: "0"}}>
@@ -232,7 +234,8 @@ const NewImageSlider = () => {
                         </Button>
                     </Col>
                 </Row>
-                <h2 className='mb-5 custom-heading'>متحدثين الورش</h2>
+                {/* <h2 className='mb-5 custom-heading'>متحدثين الورش</h2> */}
+                <h2 className='mb-5 custom-heading'>محاورين الجلسات</h2>
 
                 <Row className="justify-content-center align-items-center p-0 m-0">
                     <Col xl={1} md={1} sm={1} xs={1} style={{textAlign: 'right', margin: "0", padding: "0"}}>
